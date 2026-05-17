@@ -41,6 +41,7 @@ import {
 import { getInteractionExplanation, getDrugSummary } from './services/ruleBasedReadoutService';
 import logoVine from './assets/logo-vine.png';
 import referencesMd from '../knowledge-base/sources/Reference_List.md?raw';
+import publicDocsMd from '../docs/public-documentation.md?raw';
 
 // --- Components ---
 
@@ -289,6 +290,7 @@ const getMechanismFamilyLabel = (
 };
 
 export default function App() {
+  const [currentPath, setCurrentPath] = useState(() => window.location.pathname);
   const [drug1, setDrug1] = useState<string>('');
   const [drug2, setDrug2] = useState<string>('');
   const [showResult, setShowResult] = useState(false);
@@ -309,6 +311,20 @@ export default function App() {
   });
   const favoritesStorageKey = 'entheogen_favorites';
   const currentPairKey = useMemo(() => [drug1 || '', drug2 || ''].sort().join('|'), [drug1, drug2]);
+  const normalizedPath = currentPath.replace(/\/+$/, '') || '/';
+  const isDocsPage = normalizedPath === '/docs' || normalizedPath === '/documentation';
+
+  useEffect(() => {
+    const handlePopState = () => setCurrentPath(window.location.pathname);
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const navigateTo = (path: string) => {
+    window.history.pushState({}, '', path);
+    setCurrentPath(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   // Load favorites
   useEffect(() => {
@@ -473,6 +489,56 @@ export default function App() {
       default: return <Sparkles className="w-8 h-8" />;
     }
   };
+
+  if (isDocsPage) {
+    return (
+      <div className="min-h-screen bg-noise relative overflow-x-hidden">
+        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-emerald-900/20 blur-[120px] pointer-events-none" />
+        <div className="absolute top-[40%] right-[-20%] w-[60%] h-[60%] rounded-full bg-indigo-900/10 blur-[150px] pointer-events-none" />
+
+        <nav className="fixed w-full z-50 top-0 glass-panel border-x-0 border-t-0 py-4 px-6 md:px-8 flex justify-between items-center bg-black/20">
+          <button
+            type="button"
+            onClick={() => navigateTo('/')}
+            className="flex items-center gap-3 text-left"
+            aria-label="Return to EntheoGen interaction guide"
+          >
+            <div className="w-10 h-10 bg-emerald-900/40 border border-emerald-500/20 rounded-xl flex items-center justify-center backdrop-blur-md shadow-lg overflow-hidden">
+              <img
+                src={logoVine}
+                alt="EntheoGen logo"
+                width={34}
+                height={34}
+                style={{ filter: 'invert(1) sepia(0.3) saturate(1.5) brightness(0.9)', mixBlendMode: 'screen' }}
+              />
+            </div>
+            <span className="text-xl font-bold tracking-widest text-white/90">EntheoGen</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => navigateTo('/')}
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+          >
+            Interaction Guide
+          </button>
+        </nav>
+
+        <main className="relative z-10 mx-auto max-w-4xl px-6 pb-20 pt-28 sm:pt-32">
+          <article className="rounded-[2rem] border border-white/10 bg-black/35 p-6 shadow-2xl backdrop-blur-xl sm:p-10">
+            <div className="markdown-body">
+              <Markdown
+                components={{
+                  a: ({node, ...props}) => <a {...props} target="_blank" rel="noopener noreferrer" />
+                }}
+              >
+                {publicDocsMd}
+              </Markdown>
+            </div>
+          </article>
+        </main>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-noise relative overflow-x-hidden">
@@ -813,6 +879,17 @@ export default function App() {
         <footer className="max-w-2xl mx-auto mt-32 pt-12 border-t border-white/5 text-center relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
             <a
+              href="/docs"
+              onClick={(event) => {
+                event.preventDefault();
+                navigateTo('/docs');
+              }}
+              className="group inline-flex items-center gap-2 text-sm text-[var(--text-muted)] hover:text-white transition-colors"
+            >
+              <span className="border-b border-transparent group-hover:border-white/30 transition-colors pb-0.5">Project documentation</span>
+              <ExternalLink className="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 transition-opacity" />
+            </a>
+            <a
               href="https://www.newpsychonaut.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -970,6 +1047,9 @@ export default function App() {
                   <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--text-muted)] border-b border-white/5 pb-3">Useful Links</h3>
                   <div className="grid gap-3">
                     {[
+                      { name: 'Project documentation', url: '/docs', local: true },
+                      { name: 'EntheoGen Development Hub', url: 'https://github.com/EntheoGen-Development-Hub' },
+                      { name: 'Research Mode repository', url: 'https://github.com/EntheoGen-Development-Hub/EntheoGen-Research-Mode' },
                       { name: 'Crisis Help UK', url: 'https://thatsmental.co.uk/crisis' },
                       { name: 'Drug Science', url: 'https://www.drugscience.org.uk/' },
                       { name: 'PsyCare', url: 'https://www.psycareuk.org/psychedelic-support' },
@@ -980,8 +1060,13 @@ export default function App() {
                       <a
                         key={link.name}
                         href={link.url}
-                        target="_blank"
+                        target={link.local ? undefined : '_blank'}
                         rel="noopener noreferrer"
+                        onClick={link.local ? (event) => {
+                          event.preventDefault();
+                          setIsMenuOpen(false);
+                          navigateTo(link.url);
+                        } : undefined}
                         className="flex justify-between items-center p-4 rounded-2xl bg-black/5 hover:bg-black/10 transition-colors group"
                       >
                         <span className="font-semibold">{link.name}</span>

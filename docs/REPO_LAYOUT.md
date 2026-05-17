@@ -137,7 +137,9 @@ EntheoGen/
 |   `-- run_kb_tests.ts
 |
 |-- docs/                             # contributor and project documentation
+|   |-- DEPLOYMENT.md                 # canonical deploy model and safe-change boundaries
 |   |-- REPO_LAYOUT.md                # this repository layout guide
+|   |-- public-documentation.md       # content rendered by the Vite app at /docs
 |   `-- assets/                       # README/demo/release media
 |
 |-- public/                           # static files served by the app
@@ -165,6 +167,7 @@ EntheoGen/
 | `src/curation/` | research/curation operators | Proposed interaction updates, natural-language report intake, parsing prompts |
 | `knowledge-base/` | evidence reviewers, dataset maintainers | Source corpus, extracted claims, schemas, indexes, ingestion reports |
 | `scripts/` | maintainers, automation operators | Dataset builds, migrations, validation, ingestion, report generation |
+| `docs/` | contributors, maintainers, public readers | Repo layout, deployment notes, and Markdown content rendered by the app |
 | `public/` and `docs/assets/` | project/comms owners | Static public assets, demo media, release visuals |
 | `.github/` | maintainers | GitHub issue templates and Azure deployment workflow metadata |
 | `.cursor/` | local operators | Machine-local editor state; do not treat as product data |
