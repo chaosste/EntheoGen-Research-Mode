@@ -523,7 +523,7 @@ export default function App() {
             {' '}
             Information:{' '}
             <a
-              href="https://github.com/EntheoGen-Development-Hub/EntheoGen-Dataset/wiki"
+              href="https://github.com/EntheoGen-Development-Hub"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-emerald-200 underline decoration-emerald-300/40 underline-offset-4 hover:text-white"
