@@ -1,0 +1,33 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+
+# Local environment and secrets (Cursor/Node/Python). `.env*` keeps new variants
+# (.env.local, .env.development, etc.) out of git; commit templates only via `.env.example`.
+.env*
+!.env.example
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.omx/
+
+# Local-only agent memory state
+.cursor/hooks/state/continual-learning.json
+.cursor/hooks/state/continual-learning-index.json
+
+# Supabase dashboard CSV snapshots (duplicates of workspace root; local import convenience)
+exports/supabase_*/*.csv
+
+# Phase 1 pipeline: Metabase SQL copy produced by `npm run supabase:phase1-csv-pipeline -- emit-bundle`
+scripts/automation/generated/*
+!scripts/automation/generated/.gitkeep
+
+# Local Slack capture artifacts (keep records off git)
+scripts/slack/*.local.json
+scripts/slack/*.local.jsonl
+scripts/slack/channel-records/

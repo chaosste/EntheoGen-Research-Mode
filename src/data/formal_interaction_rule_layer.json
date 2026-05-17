@@ -1,0 +1,86 @@
+{
+  "rules": [
+    {
+      "rule_id": "maoi_sri_serotonin_toxicity_v1",
+      "if": {
+        "agent_a.mechanisms.includes": "mao_inhibition",
+        "agent_b.mechanisms.any": [
+          "serotonin_reuptake_inhibition",
+          "serotonin_release",
+          "serotonergic_opioid"
+        ]
+      },
+      "then": {
+        "classification": "DETERMINISTIC",
+        "mechanism": ["serotonergic_toxicity", "mao_inhibition"],
+        "risk_level": "high",
+        "clinical_actionability": "avoid",
+        "evidence_status": "supported"
+      },
+      "source_refs": ["gillman_2005_maoi_opioid_serotonin_toxicity"]
+    },
+    {
+      "rule_id": "maoi_non_serotonergic_opioid_low_risk_v1",
+      "if": {
+        "agent_a.mechanisms.includes": "mao_inhibition",
+        "agent_b.class": "opioid",
+        "agent_b.mechanisms.not_includes": "serotonergic_activity"
+      },
+      "then": {
+        "classification": "SUPPORTED_LOW_RISK",
+        "mechanism": ["non_serotonergic_opioid"],
+        "risk_level": "low",
+        "clinical_actionability": "monitor"
+      },
+      "source_refs": ["gillman_2005_maoi_opioid_serotonin_toxicity"]
+    },
+    {
+      "rule_id": "mdma_cyp2d6_inhibitor_exposure_v1",
+      "if": {
+        "agent_a": "MDMA",
+        "agent_b.mechanisms.includes": "CYP2D6_inhibition"
+      },
+      "then": {
+        "classification": "SUPPORTED_CLASS_RULE",
+        "mechanism": ["CYP2D6_inhibition", "increased_MDMA_exposure"],
+        "risk_level": "moderate",
+        "clinical_actionability": "caution",
+        "evidence_status": "supported"
+      },
+      "source_refs": ["schmid_2015_bupropion_mdma_interactions"]
+    },
+    {
+      "rule_id": "mdma_net_modulation_cardiovascular_v1",
+      "if": {
+        "agent_a": "MDMA",
+        "agent_b.mechanisms.includes": "NET_inhibition"
+      },
+      "then": {
+        "classification": "SUPPORTED_CLASS_RULE",
+        "mechanism": ["norepinephrine_modulation", "cardiovascular_response_modulation"],
+        "risk_level": "moderate",
+        "clinical_actionability": "monitor",
+        "evidence_status": "supported"
+      },
+      "source_refs": ["schmid_2015_bupropion_mdma_interactions"]
+    },
+    {
+      "rule_id": "mdma_bupropion_direct_interaction_v1",
+      "if": {
+        "pair": ["MDMA", "bupropion"]
+      },
+      "then": {
+        "classification": "DETERMINISTIC",
+        "mechanism": [
+          "CYP2D6_inhibition",
+          "bidirectional_pharmacokinetic_interaction",
+          "NET_DAT_modulation"
+        ],
+        "risk_level": "moderate",
+        "clinical_actionability": "caution",
+        "evidence_status": "supported"
+      },
+      "source_refs": ["schmid_2015_bupropion_mdma_interactions"]
+    }
+  ]
+}

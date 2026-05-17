@@ -1,0 +1,78 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - img "EntheoGen logo" [ref=e7]
+      - generic [ref=e8]: EntheoGen
+    - button [ref=e10]:
+      - img [ref=e11]
+  - main [ref=e12]:
+    - paragraph [ref=e14]:
+      - text: "Private Student Project Beta Test Version. Not medical advice. Information:"
+      - link "Here" [ref=e15] [cursor=pointer]:
+        - /url: https://github.com/EntheoGen-Development-Hub/EntheoGen-Dataset/wiki
+        - text: Here
+        - img [ref=e16]
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - img [ref=e22]
+        - text: Entheogenic Interaction Guidance
+      - heading "EntheoGen Plant Medicine Interaction Guide" [level=1] [ref=e25]:
+        - text: EntheoGen
+        - text: Plant Medicine
+        - text: Interaction Guide
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - text: Choose first substance class
+          - generic [ref=e29]:
+            - combobox "Choose first substance class" [ref=e30]
+            - button "Open Choose first substance class" [ref=e31]:
+              - img [ref=e32]
+        - generic [ref=e34]:
+          - text: Choose second substance class
+          - generic [ref=e35]:
+            - combobox "Choose second substance class" [ref=e36]
+            - button "Open Choose second substance class" [ref=e37]:
+              - img [ref=e38]
+      - button "Synthesize" [disabled] [ref=e41]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: Synthesize
+          - img [ref=e45]
+    - paragraph [ref=e48]: Local browser storage is used for favourites only. Third-party hosting providers may still process network logs.
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - heading "Research Mode" [level=2] [ref=e51]
+        - paragraph [ref=e52]: "Highlight relative knowledge gaps: low confidence, inferred classifications, and evidence-gap notes."
+      - generic [ref=e53]:
+        - generic [ref=e54] [cursor=pointer]:
+          - checkbox "Show Low Confidence Show interactions with low or unknown confidence ratings." [ref=e55]
+          - generic [ref=e56]:
+            - generic [ref=e57]: Show Low Confidence
+            - generic [ref=e58]: Show interactions with low or unknown confidence ratings.
+        - generic [ref=e59] [cursor=pointer]:
+          - checkbox "Show Inferred / Theoretical Show interactions driven by class-level inference rather than direct pair evidence." [ref=e60]
+          - generic [ref=e61]:
+            - generic [ref=e62]: Show Inferred / Theoretical
+            - generic [ref=e63]: Show interactions driven by class-level inference rather than direct pair evidence.
+        - generic [ref=e64] [cursor=pointer]:
+          - checkbox "Show Evidence Gaps Show interactions with explicit uncertainty notes, source gaps, or mechanistic-only evidence." [ref=e65]
+          - generic [ref=e66]:
+            - generic [ref=e67]: Show Evidence Gaps
+            - generic [ref=e68]: Show interactions with explicit uncertainty notes, source gaps, or mechanistic-only evidence.
+    - generic [ref=e70]:
+      - link "NewPsychonaut (NeuroPhenom + research projects)" [ref=e71] [cursor=pointer]:
+        - /url: https://www.newpsychonaut.com
+        - generic [ref=e72]: NewPsychonaut (NeuroPhenom + research projects)
+        - img [ref=e73]
+      - link "Citizen science pathway" [ref=e77] [cursor=pointer]:
+        - /url: https://www.newpsychonaut.com
+        - generic [ref=e78]: Citizen science pathway
+        - img [ref=e79]
+      - link "@newpsychonaut on X" [ref=e83] [cursor=pointer]:
+        - /url: https://x.com/newpsychonaut
+        - generic [ref=e84]: "@newpsychonaut on X"
+        - img [ref=e85]
+      - link "@newpsychonaut on Instagram" [ref=e89] [cursor=pointer]:
+        - /url: https://www.instagram.com/newpsychonaut/
+        - generic [ref=e90]: "@newpsychonaut on Instagram"
+        - img [ref=e91]

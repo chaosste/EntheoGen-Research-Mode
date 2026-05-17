@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+@layer base {
+  :root {
+    --bg-color: #050D08;
+    /* Deep dark forest/obsidian */
+    --text-primary: #f0f4f1;
+    --text-muted: #8a9f91;
+    --glass-bg: rgba(20, 30, 24, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.08);
+  }
+
+  body {
+    @apply antialiased bg-[var(--bg-color)] text-[var(--text-primary)] min-h-[100dvh] selection:bg-[var(--text-primary)] selection:text-[var(--bg-color)];
+    font-family: var(--font-sans);
+  }
+
+  /* Optional: Noise overlay for texture */
+  .bg-noise {
+    position: relative;
+  }
+
+  .bg-noise::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 50;
+    mix-blend-mode: overlay;
+  }
+
+  .glass-panel {
+    @apply bg-[var(--glass-bg)] border border-[var(--glass-border)] backdrop-blur-xl shadow-2xl;
+  }
+}
+
+@layer components {
+  .markdown-body {
+    @apply prose prose-invert prose-p:font-serif prose-p:leading-relaxed prose-p:text-[1.05rem] prose-headings:font-sans prose-headings:font-semibold prose-a:text-indigo-400 prose-strong:text-white max-w-none text-[var(--text-primary)];
+  }
+}

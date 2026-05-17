@@ -1,0 +1,1033 @@
+{
+  "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+  "source_path": "sources/expert-guidelines/perplexity_ayahuasca_interactions_synthesis_2026.md",
+  "source_metadata": {},
+  "claims": [
+    {
+      "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_1_ce76305d57",
+      "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+      "claim": "# Ayahuasca Drug Interaction Research (Perplexity Synthesis) ## Metadata - source_id: perplexity_ayahuasca_interactions_synthesis_2026 - source_type: ai_synthesis - authority_level: low - evidence_domain: aggregated_clinical - year: 2026 - authors: Perplexity AI synthesis (compiled by user) - citation: Perplexity AI research synthesis, compiled 2026 - url: null - file_origin: ai_generated_notes - review_state: machine_extracted - derivation: ai_synthesized - confidence_penalty: true --- ## Summary This document aggregates multiple Perplexity-generated research outputs on ayahuasca drug interactions.",
+      "claim_type": "interaction",
+      "entities": [
+        "perplexity_ayahuasca_interactions_synthesis_2026",
+        "perplexity",
+        "ayahuasca",
+        "interactions",
+        "synthesis",
+        "2026",
+        "drug",
+        "interaction",
+        "research",
+        "metadata",
+        "source_id"
+      ],
+      "evidence_strength": "theoretical",
+      "confidence": "low",
+      "clinical_actionability": "none",
+      "review_state": "needs_verification",
+      "notes": "Extracted from perplexity_ayahuasca_interactions_synthesis_2026 using rule-based keyword matching.",
+      "provenance": {
+        "source_type": "ai_synthesis",
+        "requires_verification": true,
+        "ingestion_method": "perplexity_ingestion_v1",
+        "cited_sources": [
+          {
+            "title": "The pharmacological interaction of compounds in ayahuasca: a systematic review",
+            "url": "https://doi.org/10.1590/1516-4446-2020-0884",
+            "doi": "10.1590/1516-4446-2020-0884",
+            "authors": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF",
+            "year": 2020,
+            "citation_text": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF. The pharmacological interaction of compounds in ayahuasca: a systematic review. Brazilian Journal of Psychiatry. 2020. doi:10.1590/1516-4446-2020-0884."
+          },
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          },
+          {
+            "title": "Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity",
+            "url": "https://doi.org/10.1093/bja/aei210",
+            "doi": "10.1093/bja/aei210",
+            "authors": "Gillman PK",
+            "year": 2005,
+            "citation_text": "Gillman PK. Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity. British Journal of Anaesthesia. 2005. doi:10.1093/bja/aei210."
+          },
+          {
+            "title": "Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects",
+            "url": "https://doi.org/10.1124/jpet.114.222356",
+            "doi": "10.1124/jpet.114.222356",
+            "authors": "Schmid Y et al.",
+            "year": 2015,
+            "citation_text": "Schmid Y et al. Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects. Journal of Pharmacology and Experimental Therapeutics. 2015. doi:10.1124/jpet.114.222356."
+          },
+          {
+            "title": "Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/22034656/",
+            "authors": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME",
+            "year": 2012,
+            "citation_text": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME. Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers. Journal of Pharmacology and Experimental Therapeutics. 2012. doi:10.1124/jpet.111.188425.",
+            "doi": "10.1124/jpet.111.188425"
+          },
+          {
+            "title": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35203296/",
+            "doi": "10.3390/cells11040645",
+            "year": 2022,
+            "citation_text": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review. 2022. doi:10.3390/cells11040645."
+          }
+        ]
+      },
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "ayahuasca",
+          "methylphenidate"
+        ],
+        [
+          "ayahuasca",
+          "cocaine"
+        ],
+        [
+          "ayahuasca",
+          "mdma_2cx_dox_nbome"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ]
+      ]
+    },
+    {
+      "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_2_f601bb3960",
+      "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+      "claim": "It synthesizes pharmacological mechanisms, interaction risks, and clinical considerations based on cited literature within the Perplexity responses.",
+      "claim_type": "mechanism",
+      "entities": [
+        "perplexity_ayahuasca_interactions_synthesis_2026",
+        "perplexity",
+        "ayahuasca",
+        "interactions",
+        "synthesis",
+        "2026",
+        "drug",
+        "interaction",
+        "research",
+        "metadata",
+        "source_id"
+      ],
+      "mechanism": "It synthesizes pharmacological mechanisms, interaction risks, and clinical considerations based on cited literature within the Perplexity responses.",
+      "evidence_strength": "theoretical",
+      "confidence": "low",
+      "clinical_actionability": "none",
+      "review_state": "needs_verification",
+      "notes": "Extracted from perplexity_ayahuasca_interactions_synthesis_2026 using rule-based keyword matching.",
+      "provenance": {
+        "source_type": "ai_synthesis",
+        "requires_verification": true,
+        "ingestion_method": "perplexity_ingestion_v1",
+        "cited_sources": [
+          {
+            "title": "The pharmacological interaction of compounds in ayahuasca: a systematic review",
+            "url": "https://doi.org/10.1590/1516-4446-2020-0884",
+            "doi": "10.1590/1516-4446-2020-0884",
+            "authors": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF",
+            "year": 2020,
+            "citation_text": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF. The pharmacological interaction of compounds in ayahuasca: a systematic review. Brazilian Journal of Psychiatry. 2020. doi:10.1590/1516-4446-2020-0884."
+          },
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          },
+          {
+            "title": "Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity",
+            "url": "https://doi.org/10.1093/bja/aei210",
+            "doi": "10.1093/bja/aei210",
+            "authors": "Gillman PK",
+            "year": 2005,
+            "citation_text": "Gillman PK. Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity. British Journal of Anaesthesia. 2005. doi:10.1093/bja/aei210."
+          },
+          {
+            "title": "Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects",
+            "url": "https://doi.org/10.1124/jpet.114.222356",
+            "doi": "10.1124/jpet.114.222356",
+            "authors": "Schmid Y et al.",
+            "year": 2015,
+            "citation_text": "Schmid Y et al. Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects. Journal of Pharmacology and Experimental Therapeutics. 2015. doi:10.1124/jpet.114.222356."
+          },
+          {
+            "title": "Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/22034656/",
+            "authors": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME",
+            "year": 2012,
+            "citation_text": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME. Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers. Journal of Pharmacology and Experimental Therapeutics. 2012. doi:10.1124/jpet.111.188425.",
+            "doi": "10.1124/jpet.111.188425"
+          },
+          {
+            "title": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35203296/",
+            "doi": "10.3390/cells11040645",
+            "year": 2022,
+            "citation_text": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review. 2022. doi:10.3390/cells11040645."
+          }
+        ]
+      },
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "ayahuasca",
+          "methylphenidate"
+        ],
+        [
+          "ayahuasca",
+          "cocaine"
+        ],
+        [
+          "ayahuasca",
+          "mdma_2cx_dox_nbome"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ]
+      ]
+    },
+    {
+      "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_3_4181eb8e34",
+      "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+      "claim": "This source functions as a **tertiary synthesis layer**, useful for: - identifying candidate interaction pairs - highlighting mechanistic hypotheses - discovering citations for further validation It is not considered primary or authoritative evidence.",
+      "claim_type": "interaction",
+      "entities": [
+        "perplexity_ayahuasca_interactions_synthesis_2026",
+        "perplexity",
+        "ayahuasca",
+        "interactions",
+        "synthesis",
+        "2026",
+        "drug",
+        "interaction",
+        "research",
+        "metadata",
+        "source_id"
+      ],
+      "evidence_strength": "theoretical",
+      "confidence": "low",
+      "clinical_actionability": "none",
+      "review_state": "needs_verification",
+      "notes": "Extracted from perplexity_ayahuasca_interactions_synthesis_2026 using rule-based keyword matching.",
+      "provenance": {
+        "source_type": "ai_synthesis",
+        "requires_verification": true,
+        "ingestion_method": "perplexity_ingestion_v1",
+        "cited_sources": [
+          {
+            "title": "The pharmacological interaction of compounds in ayahuasca: a systematic review",
+            "url": "https://doi.org/10.1590/1516-4446-2020-0884",
+            "doi": "10.1590/1516-4446-2020-0884",
+            "authors": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF",
+            "year": 2020,
+            "citation_text": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF. The pharmacological interaction of compounds in ayahuasca: a systematic review. Brazilian Journal of Psychiatry. 2020. doi:10.1590/1516-4446-2020-0884."
+          },
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          },
+          {
+            "title": "Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity",
+            "url": "https://doi.org/10.1093/bja/aei210",
+            "doi": "10.1093/bja/aei210",
+            "authors": "Gillman PK",
+            "year": 2005,
+            "citation_text": "Gillman PK. Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity. British Journal of Anaesthesia. 2005. doi:10.1093/bja/aei210."
+          },
+          {
+            "title": "Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects",
+            "url": "https://doi.org/10.1124/jpet.114.222356",
+            "doi": "10.1124/jpet.114.222356",
+            "authors": "Schmid Y et al.",
+            "year": 2015,
+            "citation_text": "Schmid Y et al. Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects. Journal of Pharmacology and Experimental Therapeutics. 2015. doi:10.1124/jpet.114.222356."
+          },
+          {
+            "title": "Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/22034656/",
+            "authors": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME",
+            "year": 2012,
+            "citation_text": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME. Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers. Journal of Pharmacology and Experimental Therapeutics. 2012. doi:10.1124/jpet.111.188425.",
+            "doi": "10.1124/jpet.111.188425"
+          },
+          {
+            "title": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35203296/",
+            "doi": "10.3390/cells11040645",
+            "year": 2022,
+            "citation_text": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review. 2022. doi:10.3390/cells11040645."
+          }
+        ]
+      },
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "ayahuasca",
+          "methylphenidate"
+        ],
+        [
+          "ayahuasca",
+          "cocaine"
+        ],
+        [
+          "ayahuasca",
+          "mdma_2cx_dox_nbome"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ]
+      ]
+    },
+    {
+      "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_4_9dd8021b7d",
+      "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+      "claim": "--- ## Key Claims ### Claim 1 - claim: Ayahuasca exhibits MAO-A inhibitory activity via harmala alkaloids, affecting monoamine metabolism - type: mechanism - entities: [ayahuasca, MAOI, harmine, harmaline] - directionality: inhibits metabolism - confidence: low - evidence_strength: theoretical ### Claim 2 - claim: Combining ayahuasca with serotonergic agents (SSRIs, SNRIs, TCAs, certain opioids) may increase risk of serotonin syndrome - type: contraindication - entities: [ayahuasca, SSRIs, SNRIs, TCAs, opioids] - directionality: increases serotonin toxicity - confidence: low - evidence_strength: theoretical ### Claim 3 - claim: Sympathomimetic agents (e.g.",
+      "claim_type": "contraindication",
+      "entities": [
+        "perplexity_ayahuasca_interactions_synthesis_2026",
+        "perplexity",
+        "ayahuasca",
+        "interactions",
+        "synthesis",
+        "2026",
+        "drug",
+        "interaction",
+        "research",
+        "metadata",
+        "source_id"
+      ],
+      "evidence_strength": "theoretical",
+      "confidence": "low",
+      "clinical_actionability": "caution",
+      "review_state": "needs_verification",
+      "notes": "Extracted from perplexity_ayahuasca_interactions_synthesis_2026 using rule-based keyword matching.",
+      "provenance": {
+        "source_type": "ai_synthesis",
+        "requires_verification": true,
+        "ingestion_method": "perplexity_ingestion_v1",
+        "cited_sources": [
+          {
+            "title": "The pharmacological interaction of compounds in ayahuasca: a systematic review",
+            "url": "https://doi.org/10.1590/1516-4446-2020-0884",
+            "doi": "10.1590/1516-4446-2020-0884",
+            "authors": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF",
+            "year": 2020,
+            "citation_text": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF. The pharmacological interaction of compounds in ayahuasca: a systematic review. Brazilian Journal of Psychiatry. 2020. doi:10.1590/1516-4446-2020-0884."
+          },
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          },
+          {
+            "title": "Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity",
+            "url": "https://doi.org/10.1093/bja/aei210",
+            "doi": "10.1093/bja/aei210",
+            "authors": "Gillman PK",
+            "year": 2005,
+            "citation_text": "Gillman PK. Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity. British Journal of Anaesthesia. 2005. doi:10.1093/bja/aei210."
+          },
+          {
+            "title": "Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects",
+            "url": "https://doi.org/10.1124/jpet.114.222356",
+            "doi": "10.1124/jpet.114.222356",
+            "authors": "Schmid Y et al.",
+            "year": 2015,
+            "citation_text": "Schmid Y et al. Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects. Journal of Pharmacology and Experimental Therapeutics. 2015. doi:10.1124/jpet.114.222356."
+          },
+          {
+            "title": "Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/22034656/",
+            "authors": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME",
+            "year": 2012,
+            "citation_text": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME. Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers. Journal of Pharmacology and Experimental Therapeutics. 2012. doi:10.1124/jpet.111.188425.",
+            "doi": "10.1124/jpet.111.188425"
+          },
+          {
+            "title": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35203296/",
+            "doi": "10.3390/cells11040645",
+            "year": 2022,
+            "citation_text": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review. 2022. doi:10.3390/cells11040645."
+          }
+        ]
+      },
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "ayahuasca",
+          "methylphenidate"
+        ],
+        [
+          "ayahuasca",
+          "cocaine"
+        ],
+        [
+          "ayahuasca",
+          "mdma_2cx_dox_nbome"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ]
+      ]
+    },
+    {
+      "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_5_cc8b7434d2",
+      "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+      "claim": "stimulants) combined with ayahuasca may produce hypertensive crisis due to catecholamine accumulation - type: contraindication - entities: [ayahuasca, stimulants] - directionality: increases blood pressure - confidence: low - evidence_strength: theoretical ### Claim 4 - claim: Lamotrigine may interact with ketamine and glutamatergic systems, potentially modulating psychedelic or dissociative effects - type: interaction - entities: [lamotrigine, ketamine] - directionality: attenuates effect - confidence: low - evidence_strength: theoretical ### Claim 5 - claim: Alpha-2 agonists (e.g.",
+      "claim_type": "contraindication",
+      "entities": [
+        "perplexity_ayahuasca_interactions_synthesis_2026",
+        "perplexity",
+        "ayahuasca",
+        "interactions",
+        "synthesis",
+        "2026",
+        "drug",
+        "interaction",
+        "research",
+        "metadata",
+        "source_id"
+      ],
+      "evidence_strength": "theoretical",
+      "confidence": "low",
+      "clinical_actionability": "caution",
+      "review_state": "needs_verification",
+      "notes": "Extracted from perplexity_ayahuasca_interactions_synthesis_2026 using rule-based keyword matching.",
+      "provenance": {
+        "source_type": "ai_synthesis",
+        "requires_verification": true,
+        "ingestion_method": "perplexity_ingestion_v1",
+        "cited_sources": [
+          {
+            "title": "The pharmacological interaction of compounds in ayahuasca: a systematic review",
+            "url": "https://doi.org/10.1590/1516-4446-2020-0884",
+            "doi": "10.1590/1516-4446-2020-0884",
+            "authors": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF",
+            "year": 2020,
+            "citation_text": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF. The pharmacological interaction of compounds in ayahuasca: a systematic review. Brazilian Journal of Psychiatry. 2020. doi:10.1590/1516-4446-2020-0884."
+          },
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          },
+          {
+            "title": "Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity",
+            "url": "https://doi.org/10.1093/bja/aei210",
+            "doi": "10.1093/bja/aei210",
+            "authors": "Gillman PK",
+            "year": 2005,
+            "citation_text": "Gillman PK. Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity. British Journal of Anaesthesia. 2005. doi:10.1093/bja/aei210."
+          },
+          {
+            "title": "Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects",
+            "url": "https://doi.org/10.1124/jpet.114.222356",
+            "doi": "10.1124/jpet.114.222356",
+            "authors": "Schmid Y et al.",
+            "year": 2015,
+            "citation_text": "Schmid Y et al. Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects. Journal of Pharmacology and Experimental Therapeutics. 2015. doi:10.1124/jpet.114.222356."
+          },
+          {
+            "title": "Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/22034656/",
+            "authors": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME",
+            "year": 2012,
+            "citation_text": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME. Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers. Journal of Pharmacology and Experimental Therapeutics. 2012. doi:10.1124/jpet.111.188425.",
+            "doi": "10.1124/jpet.111.188425"
+          },
+          {
+            "title": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35203296/",
+            "doi": "10.3390/cells11040645",
+            "year": 2022,
+            "citation_text": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review. 2022. doi:10.3390/cells11040645."
+          }
+        ]
+      },
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "ayahuasca",
+          "methylphenidate"
+        ],
+        [
+          "ayahuasca",
+          "cocaine"
+        ],
+        [
+          "ayahuasca",
+          "mdma_2cx_dox_nbome"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ]
+      ]
+    },
+    {
+      "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_6_b0c9f7884a",
+      "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+      "claim": "clonidine, guanfacine) may interact with psychedelics through sedation and blood pressure modulation - type: interaction - entities: [clonidine, guanfacine, psychedelics] - directionality: alters sedation and BP - confidence: low - evidence_strength: theoretical ### Claim 6 - claim: Antipsychotics and certain antidepressants may attenuate psychedelic effects via receptor antagonism or downstream signaling effects - type: interaction - entities: [antipsychotics, SSRIs, psychedelics] - directionality: decreases effect - confidence: low - evidence_strength: theoretical --- ## Mechanisms Described - Monoamine oxidase inhibition (MAO-A) - Serotonergic potentiation - Catecholamine accumulation - Glutamatergic modulation (NMDA-related) - Receptor antagonism (5-HT2A blockade) - Hemodynamic modulation (BP/HR changes) --- ## Clinical / Practical Guidance - Avoid combining ayahuasca with serotonergic medications - Avoid stimulants and sympathomimetics - Exercise caution with CNS depressants - Consider washout periods prior to psychedelic use - Monitor cardiovascular responses during administration --- ## Contraindications / Risks - Serotonin syndrome - Hypertensive crisis - CNS depression (additive) - Seizure risk (drug-specific) - Psychiatric destabilization --- ## Interaction Relevance This synthesis suggests interaction relevance across: - antidepressants (SSRIs, SNRIs, TCAs) - stimulants - opioids (subset) - antipsychotics - antihypertensives - anticonvulsants (e.g.",
+      "claim_type": "contraindication",
+      "entities": [
+        "perplexity_ayahuasca_interactions_synthesis_2026",
+        "perplexity",
+        "ayahuasca",
+        "interactions",
+        "synthesis",
+        "2026",
+        "drug",
+        "interaction",
+        "research",
+        "metadata",
+        "source_id"
+      ],
+      "evidence_strength": "theoretical",
+      "confidence": "low",
+      "clinical_actionability": "caution",
+      "review_state": "needs_verification",
+      "notes": "Extracted from perplexity_ayahuasca_interactions_synthesis_2026 using rule-based keyword matching.",
+      "provenance": {
+        "source_type": "ai_synthesis",
+        "requires_verification": true,
+        "ingestion_method": "perplexity_ingestion_v1",
+        "cited_sources": [
+          {
+            "title": "The pharmacological interaction of compounds in ayahuasca: a systematic review",
+            "url": "https://doi.org/10.1590/1516-4446-2020-0884",
+            "doi": "10.1590/1516-4446-2020-0884",
+            "authors": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF",
+            "year": 2020,
+            "citation_text": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF. The pharmacological interaction of compounds in ayahuasca: a systematic review. Brazilian Journal of Psychiatry. 2020. doi:10.1590/1516-4446-2020-0884."
+          },
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          },
+          {
+            "title": "Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity",
+            "url": "https://doi.org/10.1093/bja/aei210",
+            "doi": "10.1093/bja/aei210",
+            "authors": "Gillman PK",
+            "year": 2005,
+            "citation_text": "Gillman PK. Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity. British Journal of Anaesthesia. 2005. doi:10.1093/bja/aei210."
+          },
+          {
+            "title": "Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects",
+            "url": "https://doi.org/10.1124/jpet.114.222356",
+            "doi": "10.1124/jpet.114.222356",
+            "authors": "Schmid Y et al.",
+            "year": 2015,
+            "citation_text": "Schmid Y et al. Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects. Journal of Pharmacology and Experimental Therapeutics. 2015. doi:10.1124/jpet.114.222356."
+          },
+          {
+            "title": "Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/22034656/",
+            "authors": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME",
+            "year": 2012,
+            "citation_text": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME. Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers. Journal of Pharmacology and Experimental Therapeutics. 2012. doi:10.1124/jpet.111.188425.",
+            "doi": "10.1124/jpet.111.188425"
+          },
+          {
+            "title": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35203296/",
+            "doi": "10.3390/cells11040645",
+            "year": 2022,
+            "citation_text": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review. 2022. doi:10.3390/cells11040645."
+          }
+        ]
+      },
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "ayahuasca",
+          "methylphenidate"
+        ],
+        [
+          "ayahuasca",
+          "cocaine"
+        ],
+        [
+          "ayahuasca",
+          "mdma_2cx_dox_nbome"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ]
+      ]
+    },
+    {
+      "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_8_c72d86ed8e",
+      "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+      "claim": "ketamine) These should be treated as **candidate interaction pairs** requiring validation.",
+      "claim_type": "interaction",
+      "entities": [
+        "perplexity_ayahuasca_interactions_synthesis_2026",
+        "perplexity",
+        "ayahuasca",
+        "interactions",
+        "synthesis",
+        "2026",
+        "drug",
+        "interaction",
+        "research",
+        "metadata",
+        "source_id"
+      ],
+      "evidence_strength": "theoretical",
+      "confidence": "low",
+      "clinical_actionability": "none",
+      "review_state": "needs_verification",
+      "notes": "Extracted from perplexity_ayahuasca_interactions_synthesis_2026 using rule-based keyword matching.",
+      "provenance": {
+        "source_type": "ai_synthesis",
+        "requires_verification": true,
+        "ingestion_method": "perplexity_ingestion_v1",
+        "cited_sources": [
+          {
+            "title": "The pharmacological interaction of compounds in ayahuasca: a systematic review",
+            "url": "https://doi.org/10.1590/1516-4446-2020-0884",
+            "doi": "10.1590/1516-4446-2020-0884",
+            "authors": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF",
+            "year": 2020,
+            "citation_text": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF. The pharmacological interaction of compounds in ayahuasca: a systematic review. Brazilian Journal of Psychiatry. 2020. doi:10.1590/1516-4446-2020-0884."
+          },
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          },
+          {
+            "title": "Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity",
+            "url": "https://doi.org/10.1093/bja/aei210",
+            "doi": "10.1093/bja/aei210",
+            "authors": "Gillman PK",
+            "year": 2005,
+            "citation_text": "Gillman PK. Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity. British Journal of Anaesthesia. 2005. doi:10.1093/bja/aei210."
+          },
+          {
+            "title": "Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects",
+            "url": "https://doi.org/10.1124/jpet.114.222356",
+            "doi": "10.1124/jpet.114.222356",
+            "authors": "Schmid Y et al.",
+            "year": 2015,
+            "citation_text": "Schmid Y et al. Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects. Journal of Pharmacology and Experimental Therapeutics. 2015. doi:10.1124/jpet.114.222356."
+          },
+          {
+            "title": "Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/22034656/",
+            "authors": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME",
+            "year": 2012,
+            "citation_text": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME. Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers. Journal of Pharmacology and Experimental Therapeutics. 2012. doi:10.1124/jpet.111.188425.",
+            "doi": "10.1124/jpet.111.188425"
+          },
+          {
+            "title": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35203296/",
+            "doi": "10.3390/cells11040645",
+            "year": 2022,
+            "citation_text": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review. 2022. doi:10.3390/cells11040645."
+          }
+        ]
+      },
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "ayahuasca",
+          "methylphenidate"
+        ],
+        [
+          "ayahuasca",
+          "cocaine"
+        ],
+        [
+          "ayahuasca",
+          "mdma_2cx_dox_nbome"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ]
+      ]
+    },
+    {
+      "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_9_31dede4960",
+      "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+      "claim": "--- ## Limitations - AI-generated synthesis (not primary evidence) - Dependent on underlying cited sources (not independently verified) - May contain inference stacking - Mechanisms not always explicitly sourced - Potential hallucinated or overgeneralized claims --- ## Notes This source should be treated as: - **provisional discovery layer** - **input for claim extraction** - **guide for literature retrieval** It must not: - upgrade interaction classifications alone - define mechanisms without corroboration - be used as sole evidence for risk grading All claims require: → secondary validation against academic or clinical sources --- ## Extraction Notes - Source type: AI synthesis - Claim quality: heterogeneous - Suitable for: - provisional claim generation - citation discovery - gap detection - Not suitable for: - deterministic classification - standalone clinical guidance",
+      "claim_type": "mechanism",
+      "entities": [
+        "perplexity_ayahuasca_interactions_synthesis_2026",
+        "perplexity",
+        "ayahuasca",
+        "interactions",
+        "synthesis",
+        "2026",
+        "drug",
+        "interaction",
+        "research",
+        "metadata",
+        "source_id"
+      ],
+      "mechanism": "--- ## Limitations - AI-generated synthesis (not primary evidence) - Dependent on underlying cited sources (not independently verified) - May contain inference stacking - Mechanisms not always explicitly sourced - Potential hallucinated or overgeneralized claims --- ## Notes This source should be treated as: - **provisional discovery layer** - **input for claim extraction** - **guide for literature retrieval** It must not: - upgrade interaction classifications alone - define mechanisms without corroboration - be used as sole evidence for risk grading All claims require: → secondary validation against academic or clinical sources --- ## Extraction Notes - Source type: AI synthesis - Claim quality: heterogeneous - Suitable for: - provisional claim generation - citation discovery - gap detection - Not suitable for: - deterministic classification - standalone clinical guidance",
+      "evidence_strength": "theoretical",
+      "confidence": "low",
+      "clinical_actionability": "none",
+      "review_state": "needs_verification",
+      "notes": "Extracted from perplexity_ayahuasca_interactions_synthesis_2026 using rule-based keyword matching.",
+      "provenance": {
+        "source_type": "ai_synthesis",
+        "requires_verification": true,
+        "ingestion_method": "perplexity_ingestion_v1",
+        "cited_sources": [
+          {
+            "title": "The pharmacological interaction of compounds in ayahuasca: a systematic review",
+            "url": "https://doi.org/10.1590/1516-4446-2020-0884",
+            "doi": "10.1590/1516-4446-2020-0884",
+            "authors": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF",
+            "year": 2020,
+            "citation_text": "Ruffell S, Netzband N, Bird C, Young AH, Juruena MF. The pharmacological interaction of compounds in ayahuasca: a systematic review. Brazilian Journal of Psychiatry. 2020. doi:10.1590/1516-4446-2020-0884."
+          },
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          },
+          {
+            "title": "Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity",
+            "url": "https://doi.org/10.1093/bja/aei210",
+            "doi": "10.1093/bja/aei210",
+            "authors": "Gillman PK",
+            "year": 2005,
+            "citation_text": "Gillman PK. Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity. British Journal of Anaesthesia. 2005. doi:10.1093/bja/aei210."
+          },
+          {
+            "title": "Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects",
+            "url": "https://doi.org/10.1124/jpet.114.222356",
+            "doi": "10.1124/jpet.114.222356",
+            "authors": "Schmid Y et al.",
+            "year": 2015,
+            "citation_text": "Schmid Y et al. Interactions between bupropion and 3,4-Methylenedioxymethamphetamine in healthy subjects. Journal of Pharmacology and Experimental Therapeutics. 2015. doi:10.1124/jpet.114.222356."
+          },
+          {
+            "title": "Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/22034656/",
+            "authors": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME",
+            "year": 2012,
+            "citation_text": "Hysek CM, Brugger R, Simmler LD, Bruggisser M, Donzelli M, Grouzmann E, Hoener MC, Liechti ME. Effects of the α2-adrenergic agonist clonidine on the pharmacodynamics and pharmacokinetics of 3,4-methylenedioxymethamphetamine in healthy volunteers. Journal of Pharmacology and Experimental Therapeutics. 2012. doi:10.1124/jpet.111.188425.",
+            "doi": "10.1124/jpet.111.188425"
+          },
+          {
+            "title": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35203296/",
+            "doi": "10.3390/cells11040645",
+            "year": 2022,
+            "citation_text": "Ketamine and Lamotrigine Combination in Psychopharmacology: Systematic Review. 2022. doi:10.3390/cells11040645."
+          }
+        ]
+      },
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "ayahuasca",
+          "methylphenidate"
+        ],
+        [
+          "ayahuasca",
+          "cocaine"
+        ],
+        [
+          "ayahuasca",
+          "mdma_2cx_dox_nbome"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ]
+      ]
+    }
+  ]
+}

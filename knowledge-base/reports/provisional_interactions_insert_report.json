@@ -1,0 +1,14 @@
+{
+  "dataset_path_used": "/Users/stephenbeale/Projects/EntheoGen/src/data/interactionDatasetV2.json",
+  "records_requested": 15,
+  "records_inserted": 15,
+  "records_skipped_existing": 0,
+  "skipped_existing_keys": [],
+  "final_total_interactions": 708,
+  "substances_added_or_retained": 52,
+  "schema_assumptions": [
+    "Dataset may be array-shaped or wrapped in pairs/interactions/records; canonical repo dataset uses pairs.",
+    "New provisional rows are intentionally source-ref empty and use provisional_gap_fill provenance.",
+    "Missing substance stubs are added only when the dataset needs them for validation."
+  ]
+}

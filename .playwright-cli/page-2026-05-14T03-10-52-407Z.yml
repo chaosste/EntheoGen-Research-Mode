@@ -1,0 +1,151 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - img "EntheoGen logo" [ref=e7]
+      - generic [ref=e8]: EntheoGen
+    - button [ref=e10]:
+      - img [ref=e11]
+  - main [ref=e12]:
+    - paragraph [ref=e14]:
+      - text: "Private Student Project Beta Test Version. Not medical advice. Information:"
+      - link "Here" [ref=e15] [cursor=pointer]:
+        - /url: https://github.com/EntheoGen-Development-Hub/EntheoGen-Dataset/wiki
+        - text: Here
+        - img [ref=e16]
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - img [ref=e22]
+        - text: Entheogenic Interaction Guidance
+      - heading "EntheoGen Plant Medicine Interaction Guide" [level=1] [ref=e25]:
+        - text: EntheoGen
+        - text: Plant Medicine
+        - text: Interaction Guide
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - text: Choose first substance class
+          - generic [ref=e29]:
+            - combobox "Choose first substance class" [ref=e30]
+            - button "Open Choose first substance class" [ref=e31]:
+              - img [ref=e32]
+        - generic [ref=e34]:
+          - text: Choose second substance class
+          - generic [ref=e35]:
+            - combobox "Choose second substance class" [ref=e36]
+            - button "Open Choose second substance class" [ref=e37]:
+              - img [ref=e38]
+      - button "Synthesize" [disabled] [ref=e41]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: Synthesize
+          - img [ref=e45]
+    - paragraph [ref=e48]: Local browser storage is used for favourites only. Third-party hosting providers may still process network logs.
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - heading "Research Mode" [level=2] [ref=e51]
+        - paragraph [ref=e52]: "Highlight relative knowledge gaps: low confidence, inferred classifications, and evidence-gap notes."
+      - generic [ref=e53]:
+        - generic [ref=e54] [cursor=pointer]:
+          - checkbox "Show Low Confidence Show interactions with low or unknown confidence ratings." [checked] [active] [ref=e55]
+          - generic [ref=e56]:
+            - generic [ref=e57]: Show Low Confidence
+            - generic [ref=e58]: Show interactions with low or unknown confidence ratings.
+        - generic [ref=e59] [cursor=pointer]:
+          - checkbox "Show Inferred / Theoretical Show interactions driven by class-level inference rather than direct pair evidence." [ref=e60]
+          - generic [ref=e61]:
+            - generic [ref=e62]: Show Inferred / Theoretical
+            - generic [ref=e63]: Show interactions driven by class-level inference rather than direct pair evidence.
+        - generic [ref=e64] [cursor=pointer]:
+          - checkbox "Show Evidence Gaps Show interactions with explicit uncertainty notes, source gaps, or mechanistic-only evidence." [ref=e65]
+          - generic [ref=e66]:
+            - generic [ref=e67]: Show Evidence Gaps
+            - generic [ref=e68]: Show interactions with explicit uncertainty notes, source gaps, or mechanistic-only evidence.
+    - generic [ref=e96]:
+      - article [ref=e97]:
+        - generic [ref=e98]: Alcohol + Alcohol
+        - generic [ref=e99]: "Risk: Same substance / not an interaction | Mechanism: Same substance / not an interaction | Confidence: Unknown"
+      - article [ref=e100]:
+        - generic [ref=e101]: Alcohol + Antihypertensives
+        - generic [ref=e102]: "Risk: Theoretical interaction | Mechanism: Hemodynamic interaction | Confidence: Low"
+      - article [ref=e103]:
+        - generic [ref=e104]: Alcohol + DOx
+        - generic [ref=e105]: "Risk: Mechanistic inference | Mechanism: Psychiatric destabilization | Confidence: Low"
+      - article [ref=e106]:
+        - generic [ref=e107]: Alcohol + MDMA
+        - generic [ref=e108]: "Risk: Mechanistic inference | Mechanism: Psychiatric destabilization | Confidence: Low"
+      - article [ref=e109]:
+        - generic [ref=e110]: Alcohol + NBOMe Series
+        - generic [ref=e111]: "Risk: Mechanistic inference | Mechanism: Psychiatric destabilization | Confidence: Low"
+      - article [ref=e112]:
+        - generic [ref=e113]: Alcohol + 2C-x
+        - generic [ref=e114]: "Risk: Mechanistic inference | Mechanism: Psychiatric destabilization | Confidence: Low"
+      - article [ref=e115]:
+        - generic [ref=e116]: Amphetamine Stimulants + Amphetamine Stimulants
+        - generic [ref=e117]: "Risk: Same substance / not an interaction | Mechanism: Same substance / not an interaction | Confidence: Unknown"
+      - article [ref=e118]:
+        - generic [ref=e119]: Amphetamine Stimulants + Antihypertensives
+        - generic [ref=e120]: "Risk: Theoretical interaction | Mechanism: Hemodynamic interaction | Confidence: Low"
+      - article [ref=e121]:
+        - generic [ref=e122]: Amphetamine Stimulants + Antipsychotics
+        - generic [ref=e123]: "Risk: Theoretical interaction | Mechanism: Sympathomimetic load | Confidence: Low"
+      - article [ref=e124]:
+        - generic [ref=e125]: Atypical Antidepressants + Amphetamine Stimulants
+        - generic [ref=e126]: "Risk: Theoretical interaction | Mechanism: Sympathomimetic load | Confidence: Low"
+      - article [ref=e127]:
+        - generic [ref=e128]: Belladonna + Amphetamine Stimulants
+        - generic [ref=e129]: "Risk: Theoretical interaction | Mechanism: Sympathomimetic load | Confidence: Low"
+      - article [ref=e130]:
+        - generic [ref=e131]: Amphetamine Stimulants + Beta-Blockers
+        - generic [ref=e132]: "Risk: Theoretical interaction | Mechanism: Hemodynamic interaction | Confidence: Low"
+      - article [ref=e133]:
+        - generic [ref=e134]: Amphetamine Stimulants + Beta-Blockers / Rate-Controlling CCBs
+        - generic [ref=e135]: "Risk: Theoretical interaction | Mechanism: Sympathomimetic load | Confidence: Low"
+      - article [ref=e136]:
+        - generic [ref=e137]: Brugmansia + Amphetamine Stimulants
+        - generic [ref=e138]: "Risk: Theoretical interaction | Mechanism: Sympathomimetic load | Confidence: Low"
+      - article [ref=e139]:
+        - generic [ref=e140]: Amphetamine Stimulants + Calcium Channel Blockers
+        - generic [ref=e141]: "Risk: Theoretical interaction | Mechanism: Hemodynamic interaction | Confidence: Low"
+      - article [ref=e142]:
+        - generic [ref=e143]: Cannabis + Amphetamine Stimulants
+        - generic [ref=e144]: "Risk: Theoretical interaction | Mechanism: Sympathomimetic load | Confidence: Low"
+      - article [ref=e145]:
+        - generic [ref=e146]: Amphetamine Stimulants + Clonidine / Guanfacine
+        - generic [ref=e147]: "Risk: Theoretical interaction | Mechanism: Sympathomimetic load | Confidence: Low"
+      - article [ref=e148]:
+        - generic [ref=e149]: Amphetamine Stimulants + Cocaine
+        - generic [ref=e150]: "Risk: Theoretical interaction | Mechanism: Sympathomimetic load | Confidence: Low"
+      - article [ref=e151]:
+        - generic [ref=e152]: Amphetamine Stimulants + DOx
+        - generic [ref=e153]: "Risk: Mechanistic inference | Mechanism: Psychiatric destabilization | Confidence: Low"
+      - article [ref=e154]:
+        - generic [ref=e155]: 5-MeO-DMT + Amphetamine Stimulants
+        - generic [ref=e156]: "Risk: Theoretical interaction | Mechanism: Sympathomimetic load | Confidence: Low"
+      - article [ref=e157]:
+        - generic [ref=e158]: Kambo + Amphetamine Stimulants
+        - generic [ref=e159]: "Risk: Theoretical interaction | Mechanism: Sympathomimetic load | Confidence: Low"
+      - article [ref=e160]:
+        - generic [ref=e161]: Amphetamine Stimulants + Ketamine
+        - generic [ref=e162]: "Risk: Theoretical interaction | Mechanism: Sympathomimetic load | Confidence: Low"
+      - article [ref=e163]:
+        - generic [ref=e164]: Amphetamine Stimulants + Lamotrigine
+        - generic [ref=e165]: "Risk: Theoretical interaction | Mechanism: Sympathomimetic load | Confidence: Low"
+      - article [ref=e166]:
+        - generic [ref=e167]: Amphetamine Stimulants + Lithium
+        - generic [ref=e168]: "Risk: Theoretical interaction | Mechanism: Sympathomimetic load | Confidence: Low"
+    - generic [ref=e70]:
+      - link "NewPsychonaut (NeuroPhenom + research projects)" [ref=e71] [cursor=pointer]:
+        - /url: https://www.newpsychonaut.com
+        - generic [ref=e72]: NewPsychonaut (NeuroPhenom + research projects)
+        - img [ref=e73]
+      - link "Citizen science pathway" [ref=e77] [cursor=pointer]:
+        - /url: https://www.newpsychonaut.com
+        - generic [ref=e78]: Citizen science pathway
+        - img [ref=e79]
+      - link "@newpsychonaut on X" [ref=e83] [cursor=pointer]:
+        - /url: https://x.com/newpsychonaut
+        - generic [ref=e84]: "@newpsychonaut on X"
+        - img [ref=e85]
+      - link "@newpsychonaut on Instagram" [ref=e89] [cursor=pointer]:
+        - /url: https://www.instagram.com/newpsychonaut/
+        - generic [ref=e90]: "@newpsychonaut on Instagram"
+        - img [ref=e91]

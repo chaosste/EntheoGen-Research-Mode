@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://entheogen.local/knowledge-base/claim.schema.json",
+  "title": "Knowledge Base Extracted Claim",
+  "type": "object",
+  "required": [
+    "claim_id",
+    "source_id",
+    "claim",
+    "claim_type",
+    "entities",
+    "review_state"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_type": {
+      "type": "string",
+      "enum": [
+        "mechanism",
+        "interaction",
+        "risk",
+        "contraindication",
+        "guidance"
+      ]
+    },
+    "entities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "mechanism": {
+      "type": [
+        "string",
+        "array"
+      ],
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "evidence_strength": {
+      "type": "string",
+      "enum": [
+        "strong",
+        "moderate",
+        "weak",
+        "theoretical"
+      ]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "supports_pairs": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "clinical_actionability": {
+      "type": "string",
+      "enum": [
+        "none",
+        "monitor",
+        "caution",
+        "avoid",
+        "contraindicated"
+      ]
+    },
+    "review_state": {
+      "type": "string",
+      "enum": [
+        "machine_extracted",
+        "needs_verification",
+        "human_reviewed",
+        "rejected",
+        "needs_revision"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "source_type": {
+          "type": "string",
+          "enum": [
+            "ai_synthesis"
+          ]
+        },
+        "requires_verification": {
+          "type": "boolean"
+        },
+        "ingestion_method": {
+          "type": "string"
+        },
+        "cited_sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "doi": {
+                "type": "string"
+              },
+              "authors": {
+                "type": "string"
+              },
+              "year": {
+                "type": [
+                  "integer",
+                  "string"
+                ]
+              },
+              "citation_text": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "confidence_tier": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "source_specific": {
+      "type": "object",
+      "properties": {
+        "original_medication_name": {
+          "type": "string"
+        },
+        "normalized_medication_name": {
+          "type": "string"
+        },
+        "severity_label": {
+          "type": "string"
+        },
+        "other_information": {
+          "type": "string"
+        },
+        "derivation": {
+          "type": "string"
+        },
+        "original_row": {
+          "type": "string"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "evidence_status": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "mechanistic_inference",
+        "provisional_secondary",
+        "limited_data",
+        "no_data",
+        "not_reviewed",
+        "conflicting_evidence"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

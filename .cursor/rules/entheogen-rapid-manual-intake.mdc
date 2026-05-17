@@ -1,0 +1,19 @@
+---
+description: EntheoGen rapid manual intake (human-directed candidate updates only)
+globs:
+  - "**/*"
+---
+
+When work matches the globs above and involves EntheoGen manual intake, curation proposals, or submission parsing, follow:
+
+- `/Users/stephenbeale/.codex/skills/entheogen-rapid-manual-intake/SKILL.md`
+- `/Users/stephenbeale/.codex/skills/entheogen-rapid-manual-intake/references/intake-checklist.md`
+
+Hard constraints from that skill:
+
+- Produce **reviewable candidate updates only**; do not treat outputs as approved clinical interpretation, publication, deployment, or dataset acceptance.
+- Prefer repo canonical docs in this workspace when deeper detail is needed:
+  - `docs/automation/RAPID_MANUAL_INTAKE.md`
+  - `docs/automation/SUBMISSION_HOW_TO.md`
+  - `docs/automation/SUBMISSION_INTAKE_FLOW.md`
+  - `src/curation/prompts/nl-report-to-jsonl.md`

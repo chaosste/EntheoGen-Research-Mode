@@ -1,0 +1,87 @@
+[
+  {
+    "update_id": "nl_rape_ndri_bupropion_nicotine_seizure_cv_stress_01",
+    "created_at": "2026-04-25T00:00:00.000Z",
+    "created_by": "manual_nl_report",
+    "pair": ["rape", "ndri_bupropion"],
+    "claim": "Rapé combined with bupropion may increase seizure and cardiovascular risk through rapid high-dose nicotine exposure layered onto bupropion’s pro-convulsant NDRI profile.",
+    "source_refs": [
+      { "source_id": "5", "claim_support": "direct" },
+      { "source_id": "6", "claim_support": "direct" },
+      { "source_id": "10", "claim_support": "direct" },
+      { "source_id": "11", "claim_support": "direct" },
+      { "source_id": "12", "claim_support": "direct" },
+      { "source_id": "13", "claim_support": "direct" },
+      { "source_id": "8", "claim_support": "indirect" },
+      { "source_id": "9", "claim_support": "indirect" }
+    ],
+    "requested_change": {
+      "classification.code": "CAUTION",
+      "classification.confidence": "low_medium",
+      "clinical_summary.headline": "High-nicotine snuff may add seizure and cardiovascular stress with bupropion",
+      "clinical_summary.mechanism": "Rapé can deliver rapid high-dose nicotine exposure, causing sympathetic activation, increased blood pressure and heart rate, nausea, vomiting, sweating, dizziness, and physiologic stress. Bupropion is an NDRI and nicotinic receptor antagonist that lowers seizure threshold in a dose-dependent manner. Together, acute nicotine stimulation, vomiting, dehydration, sleep deprivation, stimulant co-use, or high bupropion dose may compound seizure and cardiovascular risk.",
+      "clinical_summary.practical_guidance": "Treat rapé as a strong stimulant when using bupropion. Use only small test doses if used at all, avoid repeated or high-intensity applications, and avoid combining with other stimulants such as amphetamines, cocaine, or high caffeine. Avoid rapé when sleep-deprived, dehydrated, fasting heavily, or otherwise seizure-prone. Seek urgent care for seizure, loss of consciousness, chest pain, severe headache, focal neurological symptoms, or collapse.",
+      "clinical_summary.timing_guidance": "Risk is likely highest during and shortly after rapé administration, when nicotine levels, autonomic activation, nausea, vomiting, and dehydration risk are greatest.",
+      "mechanism.primary_category": "seizure_threshold",
+      "mechanism.categories": [
+        "seizure_threshold",
+        "cardiovascular_load",
+        "stimulant_load",
+        "nicotinic_interaction",
+        "dehydration_risk"
+      ],
+      "evidence.tier": "mechanistic_inference",
+      "evidence.support_type": [
+        "mechanistic",
+        "indirect"
+      ],
+      "evidence.evidence_gaps": "No formal studies or case reports specifically evaluate rapé with bupropion. Risk assessment is extrapolated from chemical analyses of rapé nicotine content, known acute nicotine effects, and bupropion’s established seizure and cardiovascular risk profile."
+    },
+    "rationale": "Chemical analyses show tobacco-containing rapé can contain high nicotine levels, especially in alkaline handmade blends, producing rapid nicotine exposure and acute sympathetic effects. Bupropion lowers seizure threshold in a dose-dependent way and seizure risk rises with additional stressors such as sleep deprivation, dehydration, electrolyte disturbance, and other stimulants. Although nicotine exposure itself is not contraindicated with bupropion, rapé’s fast, potentially high-dose delivery and purge-like effects make it a higher-risk nicotine exposure mode than ordinary tobacco use. Direct interaction data are absent, supporting caution with low-medium confidence.",
+    "reviewer_notes": "Use the substance key preferred by the database for rapé/hapé; if diacritics are unsupported, normalize to `rape` or `hape_rape`. This entry should not be interpreted as a serotonergic interaction; the primary concern is seizure threshold plus acute cardiovascular/nicotinic stimulation.",
+    "status": "proposed"
+  },
+  {
+    "update_id": "nl_rape_serotonergic_opioids_respiratory_cv_aspiration_risk_01",
+    "created_at": "2026-04-25T00:00:00.000Z",
+    "created_by": "manual_nl_report",
+    "pair": ["rape", "serotonergic_opioids"],
+    "claim": "Rapé combined with serotonergic opioids may increase respiratory, aspiration, cardiovascular, and dependence-related risks, though serotonin syndrome is mainly driven by the opioid and other serotonergic co-medications rather than rapé itself.",
+    "source_refs": [
+      { "source_id": "5", "claim_support": "direct" },
+      { "source_id": "6", "claim_support": "direct" },
+      { "source_id": "14", "claim_support": "direct" },
+      { "source_id": "15", "claim_support": "direct" },
+      { "source_id": "16", "claim_support": "direct" },
+      { "source_id": "17", "claim_support": "direct" },
+      { "source_id": "22", "claim_support": "indirect" },
+      { "source_id": "23", "claim_support": "direct" }
+    ],
+    "requested_change": {
+      "classification.code": "CAUTION",
+      "classification.confidence": "low_medium",
+      "clinical_summary.headline": "Respiratory, aspiration, and cardiovascular risks may rise with opioid co-use",
+      "clinical_summary.mechanism": "Rapé is best understood as rapid high-dose nasal nicotine exposure with possible mild MAO-A modulation from trace beta-carbolines. It can acutely increase blood pressure and heart rate and may cause nausea, sweating, dizziness, and vomiting. Serotonergic opioids can cause sedation, respiratory depression, seizures, and serotonin syndrome when combined with other serotonergic drugs. Rapé is not primarily serotonergic, so the main interaction concerns are respiratory depression, aspiration during vomiting, cardiovascular strain, and reinforcement of nicotine-opioid co-use.",
+      "clinical_summary.practical_guidance": "Avoid heavy or ritualised rapé use while taking serotonergic opioids, especially tramadol, tapentadol, meperidine, dextromethorphan, methadone, or fentanyl. Use extra caution if serotonergic antidepressants, MAOIs, alcohol, benzodiazepines, or other CNS depressants are also present. If used at all, keep doses low and infrequent, remain upright, and use sober supervision. Treat severe sedation, slow or irregular breathing, cyanosis, chest pain, collapse, or unresponsiveness as an emergency.",
+      "clinical_summary.timing_guidance": "Risk is likely highest during acute rapé effects and periods of opioid intoxication, dose escalation, withdrawal, or concurrent CNS depressant use.",
+      "mechanism.primary_category": "respiratory_depression",
+      "mechanism.categories": [
+        "respiratory_depression",
+        "aspiration_risk",
+        "cardiovascular_load",
+        "behavioural_impairment",
+        "dependence_reinforcement",
+        "serotonergic_toxicity"
+      ],
+      "evidence.tier": "mechanistic_inference",
+      "evidence.support_type": [
+        "mechanistic",
+        "indirect"
+      ],
+      "evidence.evidence_gaps": "No direct clinical literature addresses rapé with serotonergic opioids. Risk assessment is extrapolated from rapé nicotine chemistry, nicotine-opioid co-use data, opioid-induced respiratory-depression evidence, and serotonergic opioid serotonin-syndrome literature."
+    },
+    "rationale": "Rapé can deliver large, fast nicotine exposures that acutely increase blood pressure and heart rate and may provoke nausea or vomiting. Serotonergic opioids carry risks of sedation, respiratory depression, seizures, and serotonin syndrome when combined with other serotonergic medicines. Nicotine and opioids interact through reward, analgesia, dependence, and respiratory-control pathways, and vomiting during opioid sedation increases aspiration risk. Rapé itself is not clearly serotonergic, so the serotonin-toxicity concern mainly depends on the opioid and any additional serotonergic drugs. Direct evidence is absent, supporting an amber caution rating with low-medium confidence.",
+    "reviewer_notes": "This entry should not overstate serotonin syndrome from rapé itself. Consider separate higher-risk flags when serotonergic opioids are combined with SSRIs, SNRIs, MAOIs, MDMA, or other serotonergic agents, and separate respiratory-depression escalation when alcohol, benzodiazepines, or other CNS depressants are present.",
+    "status": "proposed"
+  }
+]

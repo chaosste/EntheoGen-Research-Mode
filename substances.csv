@@ -1,0 +1,42 @@
+id,name,class,mechanism_tag,notes,deprecated,superseded_by,source_schema_version,source_generated_at
+alcohol,Alcohol,Non Ceremonial,CNS depressant,Explicitly advised against with ayahuasca in provided text.,false,NULL,v2,2026-04-25 12:28:03.51+00
+amphetamine_stims,Amphetamine Stimulants,Pharmaceutical Or Recreational,Monoamine releasing stimulant,Explicitly high risk with MAOI context; potential hypertensive crisis/serotonin toxicity.,false,NULL,v2,2026-04-25 12:28:03.51+00
+antihypertensives,Antihypertensives,Pharmaceutical Class,Blood pressure modulation,Mentioned as risk area and also emergency management context.,false,NULL,v2,2026-04-25 12:28:03.51+00
+antipsychotics,Antipsychotics,Pharmaceutical Class,Dopamine/serotonin modulation,Mixed source signals; treat as elevated caution/high risk with ayahuasca.,false,NULL,v2,2026-04-25 12:28:03.51+00
+atypical_ad,Atypical Antidepressants,Pharmaceutical Class,Mixed serotonergic mechanisms,"Buspirone, trazodone, mirtazapine in psilocybin chart mostly blunted.",false,NULL,v2,2026-04-25 12:28:03.51+00
+ayahuasca,Ayahuasca,Ceremonial Psychedelic,MAOI + DMT,Contains harmala alkaloids; interaction profile strongly MAOI-mediated.,false,NULL,v2,2026-04-25 12:28:03.51+00
+belladonna,Belladonna,Deliriant,Anticholinergic deliriant,Marked distinct per request; no explicit risk ratings in provided documents.,false,NULL,v2,2026-04-25 12:28:03.51+00
+benzodiazepines,Benzodiazepines,Pharmaceutical Class,GABAergic sedatives,Listed as generally low-risk emergency management option in supplied slides.,false,NULL,v2,2026-04-25 12:28:03.51+00
+beta_blockers,Beta-Blockers,Pharmaceutical Class,Cardiovascular rate control,Rate-limiting beta-adrenergic antagonists; distinct from calcium-channel blockers.,false,NULL,v2,2026-04-25 12:28:03.51+00
+beta_blockers_ccb,Beta-Blockers / Rate-Controlling CCBs,Pharmaceutical Class,Cardiovascular rate and pressure control,Aggregate node preserved for backward compatibility; superseded by beta-blockers and calcium channel blockers.,false,NULL,v2,2026-04-25 12:28:03.51+00
+brugmansia,Brugmansia,Deliriant,Anticholinergic deliriant,Marked distinct per request; no explicit risk ratings in provided documents.,false,NULL,v2,2026-04-25 12:28:03.51+00
+calcium_channel_blockers,Calcium Channel Blockers,Pharmaceutical Class,Cardiovascular rate and pressure control,Distinct class from beta-blockers; includes agent-specific differences in conduction and vasodilation.,false,NULL,v2,2026-04-25 12:28:03.51+00
+cannabis,Cannabis,Ceremonial Or Recreational,Cannabinoid,Listed in lower-risk ayahuasca combinations.,false,NULL,v2,2026-04-25 12:28:03.51+00
+clonidine,Clonidine,Pharmaceutical Class,Alpha-2 agonist sympatholytic,More sedating and hypotensive than guanfacine in many settings.,false,NULL,v2,2026-04-25 12:28:03.51+00
+clonidine_guanfacine,Clonidine / Guanfacine,Pharmaceutical Class,Alpha-2 agonist sympatholytic,Aggregate node preserved for backward compatibility; superseded by clonidine and guanfacine.,false,NULL,v2,2026-04-25 12:28:03.51+00
+cocaine,Cocaine,Recreational Stimulant,Monoamine reuptake inhibition,Contraindication list item with ayahuasca in source slides.,false,NULL,v2,2026-04-25 12:28:03.51+00
+dox,DOx,Recreational Serotonergic,Psychedelic amphetamine series,Split from legacy aggregate node mdma_2cx_dox_nbome.,false,NULL,v2,2026-05-01 13:42:43.198765+00
+five_meo_dmt,5-MeO-DMT,Ceremonial Psychedelic,Serotonergic tryptamine,Specifically flagged as dangerous with MAOIs in supplied sources.,false,NULL,v2,2026-04-25 12:28:03.51+00
+guanfacine,Guanfacine,Pharmaceutical Class,Alpha-2 agonist sympatholytic,Similar class to clonidine but often somewhat less sedating.,false,NULL,v2,2026-04-25 12:28:03.51+00
+kambo,Kambo,Ceremonial Adjunct,Ceremonial adjunct,Caution advised around co-presentation with ayahuasca.,false,NULL,v2,2026-04-25 12:28:03.51+00
+ketamine,Ketamine,Pharmaceutical Or Clinical Psychedelic,NMDA-antagonist dissociative,"No formal ayahuasca interaction trials; concern is mainly confusion, sedation, and autonomic instability.",false,NULL,v2,2026-04-25 12:28:03.51+00
+lamotrigine,Lamotrigine,Pharmaceutical Class,Anticonvulsant / sodium-channel modulation,Observational data suggest lower seizure concern than lithium with classic psychedelics.,false,NULL,v2,2026-04-25 12:28:03.51+00
+lithium,Lithium,Pharmaceutical Class,Mood stabilizer / second-messenger modulation,Strong seizure signal reported in observational psychedelic co-use data.,false,NULL,v2,2026-04-25 12:28:03.51+00
+lsd,LSD,Ceremonial Psychedelic,Serotonergic psychedelic,Included in lower-risk ayahuasca combination examples.,false,NULL,v2,2026-04-25 12:28:03.51+00
+maoi_pharma,Pharmaceutical MAOIs,Pharmaceutical Class,Monoamine oxidase inhibition,Major contraindication category around ayahuasca and serotonergic combinations.,false,NULL,v2,2026-04-25 12:28:03.51+00
+mdma,MDMA,Recreational Serotonergic,Serotonergic entactogen,Split from legacy aggregate node mdma_2cx_dox_nbome.,false,NULL,v2,2026-05-01 13:42:43.198765+00
+mdma_2cx_dox_nbome,MDMA / 2C-x / DOx / NBOMe,Recreational Serotonergic,Serotonergic stimulant/psychedelic cluster,"Contraindication cluster with ayahuasca in source slides. Deprecated after entactogen split into mdma, two_c_x, dox, nbome_series.",true,mdma,v2,2026-05-01 13:42:43.198765+00
+mescaline_peyote,Mescaline / Peyote,Ceremonial Psychedelic,Phenethylamine psychedelic,Listed with spacing guidance relative to ayahuasca.,false,NULL,v2,2026-04-25 12:28:03.51+00
+methylphenidate,Methylphenidate,Pharmaceutical,Catecholaminergic stimulant,Contraindication list item with ayahuasca in source slides.,false,NULL,v2,2026-04-25 12:28:03.51+00
+nbome_series,NBOMe Series,Recreational Serotonergic,NBOMe phenethylamine series,Split from legacy aggregate node mdma_2cx_dox_nbome.,false,NULL,v2,2026-05-01 13:42:43.198765+00
+ndri_bupropion,NDRI (Bupropion),Pharmaceutical Class,Norepinephrine + dopamine reuptake inhibition,Psilocybin chart flags reduced seizure threshold and individualized risk.,false,NULL,v2,2026-04-25 12:28:03.51+00
+nn_dmt,"N,N-DMT",Ceremonial Psychedelic,Serotonergic tryptamine,Referenced as generally lower risk with ayahuasca context than 5-MeO-DMT.,false,NULL,v2,2026-04-25 12:28:03.51+00
+psilocybin,Psilocybin Mushrooms,Ceremonial Psychedelic,Serotonergic psychedelic,Classical psychedelic; medication interactions include blunting/intensification.,false,NULL,v2,2026-04-25 12:28:03.51+00
+salvia,Salvia divinorum,Ceremonial Psychedelic,Atypical dissociative/dysphoric profile,Marked distinct per request; no explicit risk ratings in provided documents.,false,NULL,v2,2026-04-25 12:28:03.51+00
+serotonergic_opioids,Serotonergic Opioids (Tramadol/Methadone/Meperidine/Tapentadol),Pharmaceutical Class,Opioid + serotonergic action,Contraindication list item with ayahuasca in source slides.,false,NULL,v2,2026-04-25 12:28:03.51+00
+snri,SNRIs,Pharmaceutical Class,Serotonin + norepinephrine reuptake inhibition,Psilocybin chart: blunted effects; ayahuasca contraindication list includes SNRIs.,false,NULL,v2,2026-04-25 12:28:03.51+00
+ssri,SSRIs,Pharmaceutical Class,Serotonin reuptake inhibition,Psilocybin chart: blunted effects; ayahuasca: serotonin syndrome risk.,false,NULL,v2,2026-04-25 12:28:03.51+00
+tobacco_rape,Tobacco / Rapé,Ceremonial Adjunct,Nicotinic stimulant (traditional adjunct),Generally noted as acceptable with caveats on admixtures.,false,NULL,v2,2026-04-25 12:28:03.51+00
+tricyclic_ad,Tricyclic Antidepressants,Pharmaceutical Class,Mixed monoamine reuptake effects,Psilocybin chart: intensified effects; specific tricyclics listed as contraindicated with ayahuasca.,false,NULL,v2,2026-04-25 12:28:03.51+00
+two_c_x,2C-x,Recreational Serotonergic,Phenethylamine psychedelic series,Split from legacy aggregate node mdma_2cx_dox_nbome.,false,NULL,v2,2026-05-01 13:42:43.198765+00
+yopo,Yopo,Ceremonial Psychedelic,5-MeO-DMT + bufotenine containing seeds,Source notes caution due active constituents.,false,NULL,v2,2026-04-25 12:28:03.51+00

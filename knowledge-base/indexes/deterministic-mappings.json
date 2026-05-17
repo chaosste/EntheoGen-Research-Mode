@@ -1,0 +1,105 @@
+{
+  "deterministic_mappings": [
+    {
+      "pair_key": "beta_blockers::clonidine",
+      "agents": [
+        "clonidine",
+        "beta_blockers"
+      ],
+      "classification": {
+        "code": "DETERMINISTIC",
+        "label": "Established clinically significant interaction"
+      },
+      "mechanism": {
+        "primary_category": "rebound_hypertension",
+        "categories": [
+          "hemodynamic_interaction",
+          "adrenergic_rebound",
+          "sympathetic_overactivity"
+        ]
+      },
+      "clinical_effect": {
+        "primary": "Risk of severe rebound hypertension if clonidine is withdrawn while beta-blockade is present",
+        "direction": "hypertensive_rebound",
+        "severity": "high"
+      },
+      "risk_score": 8,
+      "risk_assessment": {
+        "level": "high",
+        "rationale": "Clonidine withdrawal can cause sympathetic rebound; beta-blockade may worsen hypertensive response through unopposed alpha-adrenergic activity."
+      },
+      "evidence": {
+        "tier": "established",
+        "status": "supported",
+        "support_type": "class_level_clinical_pharmacology",
+        "evidence_strength": "strong",
+        "review_state": "human_reviewed",
+        "source_refs": []
+      },
+      "management": {
+        "recommendation": "Avoid abrupt clonidine discontinuation. If both are used, taper beta-blocker before tapering clonidine where clinically appropriate.",
+        "monitoring": [
+          "blood_pressure",
+          "heart_rate",
+          "withdrawal_symptoms"
+        ]
+      },
+      "provenance": {
+        "source": "deterministic_mapping_table",
+        "method": "manual_clinical_rule_v1",
+        "confidence_tier": "high"
+      }
+    },
+    {
+      "pair_key": "calcium_channel_blockers::clonidine",
+      "agents": [
+        "clonidine",
+        "calcium_channel_blockers"
+      ],
+      "classification": {
+        "code": "DETERMINISTIC",
+        "label": "Predictable pharmacodynamic interaction"
+      },
+      "mechanism": {
+        "primary_category": "additive_hypotension",
+        "categories": [
+          "hemodynamic_interaction",
+          "blood_pressure_lowering",
+          "pharmacodynamic_additivity"
+        ]
+      },
+      "clinical_effect": {
+        "primary": "Additive blood-pressure lowering with possible hypotension, dizziness, bradycardia, or syncope",
+        "direction": "hypotensive_additive",
+        "severity": "moderate"
+      },
+      "risk_score": 5,
+      "risk_assessment": {
+        "level": "moderate",
+        "rationale": "Clonidine reduces sympathetic outflow while calcium-channel blockers reduce vascular tone and/or cardiac conduction, producing predictable additive cardiovascular effects."
+      },
+      "evidence": {
+        "tier": "established",
+        "status": "supported",
+        "support_type": "class_level_clinical_pharmacology",
+        "evidence_strength": "moderate",
+        "review_state": "human_reviewed",
+        "source_refs": []
+      },
+      "management": {
+        "recommendation": "Use with monitoring, especially during initiation or dose changes.",
+        "monitoring": [
+          "blood_pressure",
+          "heart_rate",
+          "orthostatic_symptoms",
+          "syncope"
+        ]
+      },
+      "provenance": {
+        "source": "deterministic_mapping_table",
+        "method": "manual_clinical_rule_v1",
+        "confidence_tier": "medium"
+      }
+    }
+  ]
+}

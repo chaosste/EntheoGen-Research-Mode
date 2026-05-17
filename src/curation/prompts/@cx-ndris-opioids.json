@@ -1,0 +1,93 @@
+[
+  {
+    "update_id": "nl_mdma_2cx_dox_nbome_ndri_bupropion_seizure_cardiotoxicity_01",
+    "created_at": "2026-04-25T00:00:00.000Z",
+    "created_by": "manual_nl_report",
+    "pair": ["mdma_2cx_dox_nbome", "ndri_bupropion"],
+    "claim": "MDMA, 2C-x, DOx, or NBOMe compounds combined with bupropion may substantially increase seizure, hyperthermia, sympathomimetic, and cardiotoxic risk, with strongest direct evidence for MDMA plus bupropion.",
+    "source_refs": [
+      { "source_id": "1", "claim_support": "direct" },
+      { "source_id": "2", "claim_support": "direct" },
+      { "source_id": "4", "claim_support": "direct" },
+      { "source_id": "5", "claim_support": "direct" },
+      { "source_id": "11", "claim_support": "direct" },
+      { "source_id": "12", "claim_support": "direct" },
+      { "source_id": "17", "claim_support": "direct" },
+      { "source_id": "20", "claim_support": "direct" }
+    ],
+    "requested_change": {
+      "classification.code": "DANGER",
+      "classification.confidence": "medium",
+      "clinical_summary.headline": "Avoid due to compounded seizure, hyperthermia, and cardiotoxic risk",
+      "clinical_summary.mechanism": "Bupropion is a stimulant-like NDRI and CYP2D6 inhibitor that lowers seizure threshold and can cause cardiotoxicity at higher exposures. MDMA exposure is increased and prolonged by bupropion, while MDMA, 2C-x, DOx, and NBOMe compounds can produce serotonergic or sympathomimetic toxicity including hypertension, tachycardia, hyperthermia, seizures, vasoconstriction, rhabdomyolysis, and serotonin-syndrome-like presentations. The combination creates additive pro-convulsant and cardiovascular stress.",
+      "clinical_summary.practical_guidance": "Do not combine bupropion with MDMA, 2C-x, DOx, or NBOMe compounds. Risk is especially high with recreational MDMA doses, high-dose bupropion, NBOMe compounds, DOx compounds, sleep deprivation, dehydration, stimulant co-use, seizure history, cardiac disease, or overheating. Seek emergency care for hyperthermia, confusion, severe agitation, seizures, severe headache, chest pain, collapse, or focal neurological symptoms.",
+      "clinical_summary.timing_guidance": "Risk is highest during acute intoxication and may be prolonged with DOx compounds due to long duration, and with MDMA because bupropion can increase and prolong MDMA exposure.",
+      "mechanism.primary_category": "seizure_threshold",
+      "mechanism.categories": [
+        "seizure_threshold",
+        "cardiovascular_load",
+        "hyperthermia",
+        "serotonergic_toxicity",
+        "sympathomimetic_toxicity",
+        "arrhythmia_risk"
+      ],
+      "evidence.tier": "mixed_direct_mechanistic",
+      "evidence.support_type": [
+        "human_pk_pd",
+        "mechanistic",
+        "case_report",
+        "pharmacovigilance"
+      ],
+      "evidence.evidence_gaps": "Direct human interaction data are strongest for MDMA plus bupropion. Evidence for 2C-x, DOx, and NBOMe combinations with bupropion is largely extrapolated from each drug class’s seizure, cardiovascular, hyperthermia, and toxicity profile."
+    },
+    "rationale": "A controlled human study found that bupropion increased MDMA plasma levels and prolonged subjective effects, consistent with CYP2D6-mediated interaction, and pharmacovigilance analysis associated MDMA plus bupropion with high mortality risk among antidepressant co-users. Bupropion is dose-dependently pro-convulsant, while MDMA carries seizure risk through hyperthermia, hyponatremia, and neuroexcitation. 2C-B can increase BP/HR and has case reports of serotonin syndrome, seizures, and cerebral edema. DOx compounds are long-acting psychedelic amphetamines with sympathomimetic and vasoconstrictive risk. NBOMe compounds have well-documented severe toxicity including seizures, hyperthermia, vasoconstriction, rhabdomyolysis, serotonin-syndrome-like presentations, and deaths. These convergent mechanisms support a dangerous classification.",
+    "reviewer_notes": "Consider splitting this grouped entry into substance-family entries if the database supports granularity: MDMA × bupropion has the strongest direct evidence; NBOMe × bupropion remains red due to standalone NBOMe toxicity; DOx × bupropion has lower confidence but high mechanistic concern.",
+    "status": "proposed"
+  },
+  {
+    "update_id": "nl_mdma_2cx_dox_nbome_serotonergic_opioids_serotonin_seizure_respiratory_01",
+    "created_at": "2026-04-25T00:00:00.000Z",
+    "created_by": "manual_nl_report",
+    "pair": ["mdma_2cx_dox_nbome", "serotonergic_opioids"],
+    "claim": "MDMA, 2C-x, DOx, or NBOMe compounds combined with serotonergic opioids may increase serotonin-toxicity, seizure, hyperthermia, cardiovascular, and respiratory-depression risks.",
+    "source_refs": [
+      { "source_id": "24", "claim_support": "direct" },
+      { "source_id": "25", "claim_support": "direct" },
+      { "source_id": "28", "claim_support": "direct" },
+      { "source_id": "29", "claim_support": "direct" },
+      { "source_id": "30", "claim_support": "direct" },
+      { "source_id": "11", "claim_support": "indirect" },
+      { "source_id": "12", "claim_support": "indirect" },
+      { "source_id": "20", "claim_support": "direct" }
+    ],
+    "requested_change": {
+      "classification.code": "DANGER",
+      "classification.confidence": "medium",
+      "clinical_summary.headline": "Avoid due to serotonin-toxicity, seizure, hyperthermia, and respiratory risks",
+      "clinical_summary.mechanism": "MDMA releases serotonin, norepinephrine, and dopamine and can cause serotonin syndrome, hyperthermia, hyponatremia, and seizures. 2C-x, DOx, and NBOMe compounds add 5-HT2A agonism, sympathomimetic stress, and in some cases serotonin-syndrome-like toxicity, vasoconstriction, hyperthermia, and seizures. Serotonergic opioids such as tramadol, tapentadol, dextromethorphan, and meperidine can increase serotonin tone, lower seizure threshold, and cause sedation or respiratory depression. Combined use can produce mixed serotonergic, stimulant-like, seizure, cardiovascular, and opioid-toxicity presentations.",
+      "clinical_summary.practical_guidance": "Avoid combining serotonergic opioids with MDMA, 2C-x, DOx, or NBOMe compounds, especially tramadol, tapentadol, dextromethorphan, meperidine, methadone, or fentanyl. Avoid entirely when SSRIs, SNRIs, MAOIs, TCAs, MDMA, stimulants, alcohol, benzodiazepines, or other CNS depressants are also present. Seek emergency care for agitation, clonus, hyperreflexia, hyperthermia, confusion, seizures, severe hypertension, chest pain, slow or irregular breathing, cyanosis, collapse, or unresponsiveness.",
+      "clinical_summary.timing_guidance": "Monitor risk throughout acute intoxication and longer for DOx compounds due to prolonged duration. Respiratory depression may overlap with or follow periods of agitation, hyperthermia, or serotonin-toxicity signs.",
+      "mechanism.primary_category": "serotonergic_toxicity",
+      "mechanism.categories": [
+        "serotonergic_toxicity",
+        "seizure_threshold",
+        "hyperthermia",
+        "cardiovascular_load",
+        "respiratory_depression",
+        "sympathomimetic_toxicity",
+        "rhabdomyolysis"
+      ],
+      "evidence.tier": "mechanistic_inference",
+      "evidence.support_type": [
+        "mechanistic",
+        "case_report",
+        "in_vitro",
+        "indirect"
+      ],
+      "evidence.evidence_gaps": "Direct human combination data are limited. Evidence is strongest for MDMA with serotonergic opioids and for severe NBOMe toxicity; 2C-x and DOx interaction ratings rely mainly on extrapolation from toxicity profiles and serotonergic opioid interaction literature."
+    },
+    "rationale": "MDMA is a serotonin-releasing drug with known risks of serotonin syndrome, hyperthermia, hyponatremia, and seizures. Serotonergic opioids are recognised causes of serotonin toxicity and seizures, especially when combined with other serotonergic drugs, and also add opioid sedation and respiratory-depression risk. In-vitro data suggest MDMA combined with tramadol or tapentadol can increase cytotoxicity, oxidative stress, mitochondrial dysfunction, and apoptosis markers beyond single-drug conditions. 2C-B has documented cardiovascular stimulation and severe serotonin-syndrome/seizure case reports. DOx compounds are long-acting psychedelic amphetamines with prolonged sympathomimetic and cardiovascular stress. NBOMe compounds are associated with seizures, hyperthermia, vasoconstriction, rhabdomyolysis, serotonin-syndrome-like presentations, and fatalities. The overlapping serotonin, seizure, hyperthermia, cardiovascular, and respiratory risks justify a dangerous classification.",
+    "reviewer_notes": "Consider splitting if the schema permits: MDMA × serotonergic_opioids and NBOMe × serotonergic_opioids should remain red with medium confidence; 2C-x may be high caution/amber-red if finer gradation exists; DOx leans red but has lower direct-evidence confidence.",
+    "status": "proposed"
+  }
+]

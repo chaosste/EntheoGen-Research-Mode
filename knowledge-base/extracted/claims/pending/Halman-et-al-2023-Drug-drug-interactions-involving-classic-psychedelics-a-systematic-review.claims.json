@@ -1,0 +1,657 @@
+{
+  "source_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review",
+  "source_path": "sources/academic-papers/Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review.md",
+  "source_metadata": {},
+  "claims": [
+    {
+      "claim_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review_1_f5562568af",
+      "source_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review",
+      "claim": "# Drug–drug interactions involving classic psychedelics: A systematic review ## Metadata - source_id: halman_psychedelic_ddi_2023 - source_type: academic_paper - authority_level: high - evidence_domain: clinical - year: 2023 - authors: Halman A, Kong G, Sarris J, Perkins D - citation: Halman A et al.",
+      "claim_type": "interaction",
+      "entities": [
+        "halman_et_al_2023_drug_drug_interactions_involving_classic_psychedelics_a_systematic_review",
+        "halman",
+        "et",
+        "al",
+        "2023",
+        "drug",
+        "interactions",
+        "involving",
+        "classic",
+        "psychedelics",
+        "a",
+        "systematic",
+        "review"
+      ],
+      "evidence_strength": "weak",
+      "confidence": "low",
+      "clinical_actionability": "none",
+      "review_state": "machine_extracted",
+      "notes": "Extracted from Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review using rule-based keyword matching.",
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "ayahuasca",
+          "lithium"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ]
+      ],
+      "provenance": {
+        "requires_verification": false,
+        "cited_sources": [
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          }
+        ]
+      }
+    },
+    {
+      "claim_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review_3_ef10d74a97",
+      "source_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review",
+      "claim": "Drug–drug interactions involving classic psychedelics: A systematic review.",
+      "claim_type": "interaction",
+      "entities": [
+        "halman_et_al_2023_drug_drug_interactions_involving_classic_psychedelics_a_systematic_review",
+        "halman",
+        "et",
+        "al",
+        "2023",
+        "drug",
+        "interactions",
+        "involving",
+        "classic",
+        "psychedelics",
+        "a",
+        "systematic",
+        "review"
+      ],
+      "evidence_strength": "weak",
+      "confidence": "low",
+      "clinical_actionability": "none",
+      "review_state": "machine_extracted",
+      "notes": "Extracted from Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review using rule-based keyword matching.",
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "ayahuasca",
+          "lithium"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ]
+      ],
+      "provenance": {
+        "requires_verification": false,
+        "cited_sources": [
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          }
+        ]
+      }
+    },
+    {
+      "claim_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review_5_cd2f3a1aee",
+      "source_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review",
+      "claim": "- url: https://doi.org/10.1177/02698811231211219 - file_origin: pdf - review_state: extracted --- ## Summary This systematic review evaluates drug–drug interactions involving classic psychedelics, including LSD, psilocybin, mescaline, DMT, and ayahuasca.",
+      "claim_type": "interaction",
+      "entities": [
+        "halman_et_al_2023_drug_drug_interactions_involving_classic_psychedelics_a_systematic_review",
+        "halman",
+        "et",
+        "al",
+        "2023",
+        "drug",
+        "interactions",
+        "involving",
+        "classic",
+        "psychedelics",
+        "a",
+        "systematic",
+        "review"
+      ],
+      "evidence_strength": "weak",
+      "confidence": "low",
+      "clinical_actionability": "none",
+      "review_state": "machine_extracted",
+      "notes": "Extracted from Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review using rule-based keyword matching.",
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "ayahuasca",
+          "lithium"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ]
+      ],
+      "provenance": {
+        "requires_verification": false,
+        "cited_sources": [
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          }
+        ]
+      }
+    },
+    {
+      "claim_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review_6_4f73b68e98",
+      "source_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review",
+      "claim": "It identifies pharmacokinetic and pharmacodynamic interactions across multiple drug classes, including antidepressants, antipsychotics, and MAOIs.",
+      "claim_type": "interaction",
+      "entities": [
+        "halman_et_al_2023_drug_drug_interactions_involving_classic_psychedelics_a_systematic_review",
+        "halman",
+        "et",
+        "al",
+        "2023",
+        "drug",
+        "interactions",
+        "involving",
+        "classic",
+        "psychedelics",
+        "a",
+        "systematic",
+        "review"
+      ],
+      "evidence_strength": "weak",
+      "confidence": "low",
+      "clinical_actionability": "none",
+      "review_state": "machine_extracted",
+      "notes": "Extracted from Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review using rule-based keyword matching.",
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "ayahuasca",
+          "lithium"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ]
+      ],
+      "provenance": {
+        "requires_verification": false,
+        "cited_sources": [
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          }
+        ]
+      }
+    },
+    {
+      "claim_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review_9_0f0be52621",
+      "source_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review",
+      "claim": "--- ## Key Claims ### Claim 1 - claim: Psychedelic drug interactions can be pharmacokinetic (metabolism-related) or pharmacodynamic (effect-related) - type: mechanism - entities: [psychedelics] - confidence: high - evidence_strength: strong ### Claim 2 - claim: Activation of 5-HT2A receptors is the primary mechanism underlying psychedelic effects - type: mechanism - entities: [LSD, psilocybin, DMT] - confidence: high - evidence_strength: strong ### Claim 3 - claim: 5-HT2A receptor antagonists (e.g.",
+      "claim_type": "mechanism",
+      "entities": [
+        "halman_et_al_2023_drug_drug_interactions_involving_classic_psychedelics_a_systematic_review",
+        "halman",
+        "et",
+        "al",
+        "2023",
+        "drug",
+        "interactions",
+        "involving",
+        "classic",
+        "psychedelics",
+        "a",
+        "systematic",
+        "review"
+      ],
+      "mechanism": "--- ## Key Claims ### Claim 1 - claim: Psychedelic drug interactions can be pharmacokinetic (metabolism-related) or pharmacodynamic (effect-related) - type: mechanism - entities: [psychedelics] - confidence: high - evidence_strength: strong ### Claim 2 - claim: Activation of 5-HT2A receptors is the primary mechanism underlying psychedelic effects - type: mechanism - entities: [LSD, psilocybin, DMT] - confidence: high - evidence_strength: strong ### Claim 3 - claim: 5-HT2A receptor antagonists (e.g.",
+      "evidence_strength": "theoretical",
+      "confidence": "low",
+      "clinical_actionability": "none",
+      "review_state": "machine_extracted",
+      "notes": "Extracted from Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review using rule-based keyword matching.",
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "ayahuasca",
+          "lithium"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ]
+      ],
+      "provenance": {
+        "requires_verification": false,
+        "cited_sources": [
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          }
+        ]
+      }
+    },
+    {
+      "claim_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review_10_8b65128c55",
+      "source_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review",
+      "claim": "antipsychotics) attenuate or block psychedelic effects - type: interaction - entities: [psychedelics, antipsychotics] - directionality: decreases effect - confidence: high - evidence_strength: strong ### Claim 4 - claim: SSRIs and other antidepressants can attenuate psychedelic effects - type: interaction - entities: [psychedelics, SSRIs] - confidence: medium - evidence_strength: moderate ### Claim 5 - claim: MAO inhibition enables oral activity of DMT by preventing rapid metabolism - type: mechanism - entities: [DMT, MAOI] - confidence: high - evidence_strength: strong ### Claim 6 - claim: Drug interactions with psychedelics may result in potentiation, attenuation, or no observable effect depending on mechanism - type: interaction - entities: [psychedelics, various drugs] - confidence: high - evidence_strength: moderate ### Claim 7 - claim: Serious adverse drug interactions involving psychedelics are rare but evidence is limited - type: risk - entities: [psychedelics] - confidence: medium - evidence_strength: moderate --- ## Mechanisms Described - 5-HT2A receptor agonism - CYP450-mediated metabolism - MAO-mediated metabolism - Receptor competition (pharmacodynamic) - Transporter interactions (e.g.",
+      "claim_type": "mechanism",
+      "entities": [
+        "halman_et_al_2023_drug_drug_interactions_involving_classic_psychedelics_a_systematic_review",
+        "halman",
+        "et",
+        "al",
+        "2023",
+        "drug",
+        "interactions",
+        "involving",
+        "classic",
+        "psychedelics",
+        "a",
+        "systematic",
+        "review"
+      ],
+      "mechanism": "antipsychotics) attenuate or block psychedelic effects - type: interaction - entities: [psychedelics, antipsychotics] - directionality: decreases effect - confidence: high - evidence_strength: strong ### Claim 4 - claim: SSRIs and other antidepressants can attenuate psychedelic effects - type: interaction - entities: [psychedelics, SSRIs] - confidence: medium - evidence_strength: moderate ### Claim 5 - claim: MAO inhibition enables oral activity of DMT by preventing rapid metabolism - type: mechanism - entities: [DMT, MAOI] - confidence: high - evidence_strength: strong ### Claim 6 - claim: Drug interactions with psychedelics may result in potentiation, attenuation, or no observable effect depending on mechanism - type: interaction - entities: [psychedelics, various drugs] - confidence: high - evidence_strength: moderate ### Claim 7 - claim: Serious adverse drug interactions involving psychedelics are rare but evidence is limited - type: risk - entities: [psychedelics] - confidence: medium - evidence_strength: moderate --- ## Mechanisms Described - 5-HT2A receptor agonism - CYP450-mediated metabolism - MAO-mediated metabolism - Receptor competition (pharmacodynamic) - Transporter interactions (e.g.",
+      "evidence_strength": "theoretical",
+      "confidence": "low",
+      "clinical_actionability": "none",
+      "review_state": "machine_extracted",
+      "notes": "Extracted from Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review using rule-based keyword matching.",
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "ayahuasca",
+          "lithium"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ]
+      ],
+      "provenance": {
+        "requires_verification": false,
+        "cited_sources": [
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          }
+        ]
+      }
+    },
+    {
+      "claim_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review_11_d626745fec",
+      "source_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review",
+      "claim": "P-gp) --- ## Clinical / Practical Guidance - Avoid combining psychedelics with strong serotonergic medications without supervision - Expect attenuation of effects with SSRIs or antipsychotics - Monitor cardiovascular and psychological effects --- ## Contraindications / Risks - Potential serotonin toxicity - Altered drug metabolism - Unpredictable pharmacodynamic effects - Limited safety data in polypharmacy --- ## Interaction Relevance - Psychedelics + antidepressants → attenuation or modulation - Psychedelics + antipsychotics → receptor-level antagonism - DMT + MAOI → pharmacokinetic activation - Psychedelics + CYP inhibitors → altered metabolism --- ## Limitations - Limited number of human studies - High heterogeneity - Reliance on case reports - Lack of controlled DDI trials --- ## Notes Critical Tier 4 source for dataset interaction modeling.",
+      "claim_type": "contraindication",
+      "entities": [
+        "halman_et_al_2023_drug_drug_interactions_involving_classic_psychedelics_a_systematic_review",
+        "halman",
+        "et",
+        "al",
+        "2023",
+        "drug",
+        "interactions",
+        "involving",
+        "classic",
+        "psychedelics",
+        "a",
+        "systematic",
+        "review"
+      ],
+      "evidence_strength": "moderate",
+      "confidence": "low",
+      "clinical_actionability": "contraindicated",
+      "review_state": "machine_extracted",
+      "notes": "Extracted from Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review using rule-based keyword matching.",
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "ayahuasca",
+          "lithium"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ]
+      ],
+      "provenance": {
+        "requires_verification": false,
+        "cited_sources": [
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          }
+        ]
+      }
+    },
+    {
+      "claim_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review_12_e33a8ac90c",
+      "source_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review",
+      "claim": "Strong support for pharmacodynamic interaction classes (attenuation, potentiation, neutral).",
+      "claim_type": "interaction",
+      "entities": [
+        "halman_et_al_2023_drug_drug_interactions_involving_classic_psychedelics_a_systematic_review",
+        "halman",
+        "et",
+        "al",
+        "2023",
+        "drug",
+        "interactions",
+        "involving",
+        "classic",
+        "psychedelics",
+        "a",
+        "systematic",
+        "review"
+      ],
+      "evidence_strength": "weak",
+      "confidence": "low",
+      "clinical_actionability": "none",
+      "review_state": "machine_extracted",
+      "notes": "Extracted from Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review using rule-based keyword matching.",
+      "supports_pairs": [
+        [
+          "ayahuasca",
+          "maoi_pharma"
+        ],
+        [
+          "ayahuasca",
+          "ssri"
+        ],
+        [
+          "ayahuasca",
+          "snri"
+        ],
+        [
+          "ayahuasca",
+          "tricyclic_ad"
+        ],
+        [
+          "ayahuasca",
+          "serotonergic_opioids"
+        ],
+        [
+          "antipsychotics",
+          "ayahuasca"
+        ],
+        [
+          "ayahuasca",
+          "ketamine"
+        ],
+        [
+          "ayahuasca",
+          "lamotrigine"
+        ],
+        [
+          "ayahuasca",
+          "lithium"
+        ],
+        [
+          "ayahuasca",
+          "clonidine_guanfacine"
+        ]
+      ],
+      "provenance": {
+        "requires_verification": false,
+        "cited_sources": [
+          {
+            "title": "Drug-drug interactions involving classic psychedelics: A systematic review",
+            "url": "https://journals.sagepub.com/doi/10.1177/02698811231211219",
+            "doi": "10.1177/02698811231211219",
+            "authors": "Halman A, Kong G, Sarris J, Perkins D",
+            "year": 2024,
+            "citation_text": "Halman A, Kong G, Sarris J, Perkins D. Drug-drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology. 2024. doi:10.1177/02698811231211219."
+          }
+        ]
+      }
+    }
+  ]
+}

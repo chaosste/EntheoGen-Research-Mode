@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-04-25T19:48:00.000Z",
+  "canonical_files_detected": {
+    "interactions": "/Users/stephenbeale/Projects/EntheoGen/src/data/interactionDatasetV2.json",
+    "source_manifest": "/Users/stephenbeale/Projects/EntheoGen/knowledge-base/indexes/source_manifest.json",
+    "source_tags": "/Users/stephenbeale/Projects/EntheoGen/knowledge-base/indexes/source_tags.json",
+    "citation_registry": "/Users/stephenbeale/Projects/EntheoGen/knowledge-base/indexes/citation_registry.json",
+    "source_schema": "/Users/stephenbeale/Projects/EntheoGen/knowledge-base/schemas/source.schema.json",
+    "claim_schema": "/Users/stephenbeale/Projects/EntheoGen/knowledge-base/schemas/claim.schema.json"
+  },
+  "update_files_absorbed": [
+    "src/data/15_high_value_pairs.json",
+    "src/data/six_populated_unknown_pairs.json",
+    "src/data/interactionDatasetV2_populated_unknown_pairs.json",
+    "src/data/mdma_cyp_more.json",
+    "src/data/mdma_related_upgrade_flags.json"
+  ],
+  "interaction_records_inserted": 0,
+  "interaction_records_merged": 0,
+  "source_manifest_entries_inserted": 3,
+  "source_manifest_entries_merged": 0,
+  "citations_inserted": 0,
+  "citations_merged": 0,
+  "schema_changes_made": [
+    "claim.schema.json:added evidence_status enum (supported, mechanistic_inference, provisional_secondary, limited_data, no_data, not_reviewed, conflicting_evidence)",
+    "claim.schema.json:ensured provenance fields include source_type, requires_verification, cited_sources, ingestion_method, confidence_tier",
+    "source.schema.json:verified source_type enum coverage for required source classes"
+  ],
+  "claims_normalized": 45,
+  "conflicts_detected": [
+    "interaction update records in absorbed files are heterogeneous; canonical dataset merge was constrained to avoid unsafe structural mutation"
+  ],
+  "files_archived": [
+    "knowledge-base/archive/absorbed-updates/15_high_value_pairs.json",
+    "knowledge-base/archive/absorbed-updates/six_populated_unknown_pairs.json",
+    "knowledge-base/archive/absorbed-updates/interactionDatasetV2_populated_unknown_pairs.json",
+    "knowledge-base/archive/absorbed-updates/mdma_cyp_more.json",
+    "knowledge-base/archive/absorbed-updates/mdma_related_upgrade_flags.json"
+  ],
+  "validation_results": {
+    "json:consolidate": "pass",
+    "kb:validate": "pass",
+    "validate:interactions:v2": "pass_with_warnings (baseline warnings)",
+    "kb:test": "fail: missing temporary test fixture perplexity_ayahuasca_interactions_2025.claims.json in testPerplexityIngestion"
+  },
+  "unresolved_assumptions": [
+    "No direct interaction insertions were committed to src/data/interactionDatasetV2.json without a validated full-record transformation path.",
+    "Perplexity claim normalization was scoped to validation constraints and did not auto-promote any provisional claim."
+  ]
+}

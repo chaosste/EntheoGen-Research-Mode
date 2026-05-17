@@ -1,0 +1,16 @@
+{
+  "pair": ["ketamine", "serotonergic_opioids"],
+  "classification.code": "CAUTION",
+  "classification.confidence": "medium",
+  "mechanism.primary_category": "cns_depression",
+  "mechanism.categories": [
+    "cns_depression",
+    "respiratory_depression",
+    "serotonergic_toxicity",
+    "glutamatergic_dissociation",
+    "operational_or_behavioral_risk"
+  ],
+  "evidence.tier": "observational_report",
+  "status": "proposed",
+  "source_ref_fallback": "source_gap"
+}

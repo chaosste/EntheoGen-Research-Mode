@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://entheogen.local/knowledge-base/source.schema.json",
+  "title": "Knowledge Base Source Entry",
+  "type": "object",
+  "required": [
+    "source_id",
+    "title",
+    "source_type",
+    "authority_level",
+    "evidence_domain",
+    "url_or_path",
+    "review_state"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "academic_paper",
+        "clinical_guideline",
+        "expert_guideline",
+        "expert_dataset",
+        "ai_synthesis",
+        "traditional_context",
+        "pharmacology_reference",
+        "legal_policy"
+      ]
+    },
+    "authority_level": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "contextual",
+        "low"
+      ]
+    },
+    "evidence_domain": {
+      "type": "string",
+      "enum": [
+        "clinical",
+        "pharmacological",
+        "aggregated_clinical",
+        "ceremonial",
+        "harm_reduction",
+        "legal",
+        "cultural"
+      ]
+    },
+    "year": {
+      "type": "integer"
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "citation": {
+      "type": "string"
+    },
+    "url_or_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "file_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "review_state": {
+      "type": "string",
+      "enum": [
+        "unreviewed",
+        "extracted",
+        "validated",
+        "rejected"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EntheoGen | Public Research Page</title>
+    <meta
+      name="description"
+      content="Standalone public EntheoGen page for students and university-affiliated audiences."
+    />
+    <link rel="icon" href="/favicon.png" />
+    <style>
+      :root {
+        --bg: #050706;
+        --bg-soft: rgba(14, 19, 18, 0.88);
+        --panel: rgba(18, 24, 23, 0.84);
+        --panel-strong: rgba(9, 13, 12, 0.92);
+        --line: rgba(255, 255, 255, 0.1);
+        --line-strong: rgba(255, 255, 255, 0.18);
+        --text: #f5f8f6;
+        --muted: rgba(245, 248, 246, 0.72);
+        --soft: rgba(245, 248, 246, 0.5);
+        --emerald: #73f0b1;
+        --emerald-deep: #1f7d58;
+        --cyan: #96f4ff;
+        --rose: #ff8db8;
+        --amber: #ffd582;
+        --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+        --radius-xl: 32px;
+        --radius-lg: 24px;
+        --radius-md: 18px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(18, 109, 77, 0.34), transparent 30%),
+          radial-gradient(circle at top right, rgba(27, 102, 112, 0.2), transparent 24%),
+          linear-gradient(180deg, #050706 0%, #060908 55%, #040505 100%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .page-shell {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .page-shell::before,
+      .page-shell::after {
+        content: "";
+        position: fixed;
+        inset: auto;
+        pointer-events: none;
+        z-index: 0;
+        filter: blur(80px);
+      }
+
+      .page-shell::before {
+        top: -180px;
+        left: -160px;
+        width: 420px;
+        height: 420px;
+        background: rgba(60, 255, 176, 0.1);
+      }
+
+      .page-shell::after {
+        right: -120px;
+        top: 260px;
+        width: 360px;
+        height: 360px;
+        background: rgba(83, 219, 255, 0.08);
+      }
+
+      .container {
+        position: relative;
+        z-index: 1;
+        width: min(1160px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: 48px 0 28px;
+      }
+
+      .hero-panel,
+      .section-panel,
+      .mini-panel {
+        background: linear-gradient(180deg, rgba(20, 27, 25, 0.9), rgba(7, 10, 9, 0.96));
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-panel {
+        border-radius: 40px;
+        padding: 28px;
+      }
+
+      .hero-grid {
+        display: grid;
+        gap: 28px;
+        align-items: center;
+        grid-template-columns: minmax(0, 1.06fr) minmax(320px, 0.94fr);
+      }
+
+      .eyebrows {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .eyebrow {
+        border-radius: 999px;
+        padding: 10px 14px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow.primary {
+        border: 1px solid rgba(115, 240, 177, 0.22);
+        background: rgba(115, 240, 177, 0.08);
+        color: #c9ffe0;
+      }
+
+      .eyebrow.secondary {
+        border: 1px solid rgba(150, 244, 255, 0.2);
+        background: rgba(150, 244, 255, 0.08);
+        color: #d5fbff;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      .hero-title {
+        max-width: 760px;
+        font-size: clamp(3rem, 7.8vw, 5.8rem);
+        line-height: 0.93;
+        letter-spacing: -0.075em;
+        font-weight: 700;
+        background: linear-gradient(90deg, #d7ffe9 0%, #ffffff 52%, #baf4ff 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .hero-subtitle {
+        margin-top: 18px;
+        max-width: 760px;
+        font-size: clamp(1.22rem, 2.3vw, 1.8rem);
+        line-height: 1.3;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.93);
+      }
+
+      .hero-copy {
+        margin-top: 22px;
+        display: grid;
+        gap: 14px;
+        max-width: 720px;
+        font-size: 1.04rem;
+        line-height: 1.9;
+        color: var(--muted);
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .button,
+      .card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        transition:
+          transform 180ms ease,
+          border-color 180ms ease,
+          background 180ms ease,
+          opacity 180ms ease;
+      }
+
+      .button {
+        min-height: 52px;
+        border-radius: 999px;
+        padding: 0 20px;
+        border: 1px solid transparent;
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+
+      .button:hover,
+      .card-link:hover {
+        transform: translateY(-1px);
+      }
+
+      .button.primary {
+        background: linear-gradient(180deg, #8dffbf, #44d08d);
+        color: #04120c;
+      }
+
+      .button.secondary {
+        border-color: rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text);
+      }
+
+      .app-preview {
+        position: relative;
+        border-radius: 32px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background:
+          radial-gradient(circle at top, rgba(46, 199, 129, 0.16), transparent 36%),
+          linear-gradient(180deg, rgba(11, 17, 16, 0.94), rgba(5, 8, 8, 0.98));
+        padding: 14px;
+      }
+
+      .app-preview::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(135deg, rgba(82, 255, 167, 0.07), transparent 36%, rgba(113, 214, 255, 0.05));
+        pointer-events: none;
+      }
+
+      .app-preview-inner {
+        position: relative;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(0, 0, 0, 0.52);
+        overflow: hidden;
+      }
+
+      .app-preview img {
+        width: 100%;
+        height: auto;
+      }
+
+      .app-preview-note {
+        position: relative;
+        margin-top: 14px;
+        border-radius: 20px;
+        border: 1px solid rgba(115, 240, 177, 0.16);
+        background: rgba(115, 240, 177, 0.06);
+        padding: 14px 16px;
+        font-size: 0.94rem;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      section {
+        padding: 18px 0;
+      }
+
+      .section-heading {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      .section-kicker {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: rgba(186, 244, 255, 0.82);
+      }
+
+      .section-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.05;
+        letter-spacing: -0.06em;
+        font-weight: 650;
+      }
+
+      .section-body {
+        max-width: 820px;
+        font-size: 1rem;
+        line-height: 1.85;
+        color: var(--muted);
+      }
+
+      .link-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .link-card {
+        border-radius: 24px;
+        padding: 22px;
+      }
+
+      .link-card h3 {
+        font-size: 1.12rem;
+        line-height: 1.25;
+        font-weight: 650;
+      }
+
+      .link-card p {
+        margin-top: 12px;
+        font-size: 0.96rem;
+        line-height: 1.75;
+        color: var(--soft);
+      }
+
+      .link-card .card-link {
+        margin-top: 16px;
+        color: #ffffff;
+        font-weight: 650;
+      }
+
+      .media-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+        gap: 18px;
+      }
+
+      .media-stack {
+        display: grid;
+        gap: 18px;
+      }
+
+      .media-card,
+      .info-card {
+        border-radius: 28px;
+        padding: 18px;
+      }
+
+      .media-frame {
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(0, 0, 0, 0.42);
+      }
+
+      .media-caption {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 18px 6px 4px;
+      }
+
+      .media-caption h3 {
+        font-size: 1.3rem;
+        line-height: 1.15;
+        letter-spacing: -0.04em;
+      }
+
+      .media-caption p {
+        font-size: 0.96rem;
+        line-height: 1.8;
+        color: var(--muted);
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 26px;
+      }
+
+      .stat-card {
+        border-radius: 22px;
+        padding: 18px;
+        background: rgba(10, 14, 13, 0.88);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .stat-card strong {
+        display: block;
+        font-size: 1.9rem;
+        line-height: 1;
+        letter-spacing: -0.05em;
+      }
+
+      .stat-card span {
+        display: block;
+        margin-top: 8px;
+        font-size: 0.92rem;
+        line-height: 1.55;
+        color: var(--soft);
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 0.86fr);
+        gap: 18px;
+      }
+
+      .contact-card,
+      .qr-card,
+      .neuro-card {
+        border-radius: 28px;
+        padding: 24px;
+      }
+
+      .contact-list,
+      .bullet-list {
+        list-style: none;
+        padding: 0;
+        margin: 18px 0 0;
+      }
+
+      .contact-list li,
+      .bullet-list li {
+        margin: 0;
+      }
+
+      .contact-list a {
+        display: inline-block;
+        margin-top: 10px;
+        color: white;
+        text-decoration-color: rgba(255, 255, 255, 0.3);
+        text-underline-offset: 4px;
+      }
+
+      .bullet-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 12px;
+        margin-top: 18px;
+      }
+
+      .bullet-list li {
+        border-radius: 16px;
+        padding: 12px 14px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .qr-card {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: flex-start;
+      }
+
+      .qr-frame {
+        width: min(100%, 260px);
+        border-radius: 24px;
+        overflow: hidden;
+        background: white;
+        padding: 12px;
+      }
+
+      .mono-link {
+        word-break: break-word;
+        font-family:
+          "SFMono-Regular", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-size: 0.92rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .neuro-card {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 18px;
+        align-items: center;
+      }
+
+      .neuro-card img {
+        width: 82px;
+        height: auto;
+      }
+
+      .fine-print {
+        margin-top: 30px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 141, 184, 0.16);
+        background: linear-gradient(180deg, rgba(190, 24, 93, 0.08), rgba(24, 24, 27, 0.76));
+        padding: 20px 22px;
+      }
+
+      .fine-print h3 {
+        font-size: 0.84rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: #ffd7e6;
+      }
+
+      .fine-print p {
+        margin-top: 12px;
+        font-size: 0.95rem;
+        line-height: 1.8;
+        color: var(--muted);
+      }
+
+      .footer-mark {
+        padding: 26px 0 46px;
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: 0.44em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.28);
+      }
+
+      @media (max-width: 1060px) {
+        .hero-grid,
+        .media-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .link-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .stats-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          padding-top: 22px;
+        }
+
+        .hero-panel,
+        .section-panel,
+        .mini-panel,
+        .media-card,
+        .info-card,
+        .contact-card,
+        .qr-card,
+        .neuro-card {
+          border-radius: 24px;
+        }
+
+        .hero-panel {
+          padding: 20px;
+        }
+
+        .link-grid,
+        .stats-grid,
+        .bullet-list {
+          grid-template-columns: 1fr;
+        }
+
+        .neuro-card {
+          grid-template-columns: 1fr;
+        }
+
+        .button-row {
+          flex-direction: column;
+        }
+
+        .button {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-shell">
+      <main class="container">
+        <section class="hero">
+          <div class="hero-panel">
+            <div class="hero-grid">
+              <div>
+                <div class="eyebrows">
+                  <span class="eyebrow primary">Standalone EntheoGen page</span>
+                  <span class="eyebrow secondary">For students and university collaborators</span>
+                </div>
+                <h1 class="hero-title">EntheoGen</h1>
+                <p class="hero-subtitle">
+                  Plant Medicine Interaction Guide, web app, and abstention-aware dataset.
+                </p>
+                <div class="hero-copy">
+                  <p>
+                    This is a standalone public-facing EntheoGen page designed for students,
+                    university-affiliated researchers, and thoughtful collaborators who want a
+                    clean overview without the wider New Psychonaut site header or footer.
+                  </p>
+                  <p>
+                    EntheoGen is a harm-reduction-oriented interaction guide focused on intentional
+                    psychedelic use. It combines a live web app, a rule-based evidence posture, and
+                    an emerging dataset designed for benchmarking, mechanistic reasoning, and safe
+                    abstention behavior.
+                  </p>
+                </div>
+                <div class="button-row">
+                  <a
+                    class="button primary"
+                    href="https://entheogen.newpsychonaut.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Launch live app
+                  </a>
+                  <a
+                    class="button secondary"
+                    href="https://entheogen.azurewebsites.net"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open beta deployment
+                  </a>
+                  <a
+                    class="button secondary"
+                    href="https://forms.cloud.microsoft/e/P90izC9hUD"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Get involved
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <div class="app-preview">
+                  <div class="app-preview-inner">
+                    <img
+                      src="/entheogen/entheogen-asset-beta-0.1.gif"
+                      alt="Animated preview of the EntheoGen beta interface"
+                    />
+                  </div>
+                  <div class="app-preview-note">
+                    Browser-side favourites can stay local. Hosting and CDN providers may still
+                    process ordinary network logs. EntheoGen is educational harm-reduction
+                    guidance, not clinical advice.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <p class="section-kicker">Research and open source</p>
+            <h2 class="section-title">Key links for teaching, testing, and collaboration</h2>
+            <p class="section-body">
+              These links are the fastest way into the EntheoGen ecosystem: the GitHub repo, the
+              project wiki, the dataset-oriented release notes, and the discussions area for
+              feedback.
+            </p>
+          </div>
+
+          <div class="link-grid">
+            <article class="link-card section-panel">
+              <h3>EntheoGen GitHub Wiki with lots more details</h3>
+              <p>
+                Reference notes, project pages, and longer-form documentation for people who want
+                the background story and implementation context.
+              </p>
+              <a
+                class="card-link"
+                href="https://github.com/chaosste/EntheoGen/wiki"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open GitHub Wiki
+              </a>
+            </article>
+
+            <article class="link-card section-panel">
+              <h3>EntheoGen GitHub</h3>
+              <p>
+                The main repository for the app, rules, exports, and development work around the
+                interaction engine.
+              </p>
+              <a
+                class="card-link"
+                href="https://github.com/chaosste/EntheoGen"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Visit the GitHub repo
+              </a>
+            </article>
+
+            <article class="link-card section-panel">
+              <h3>EntheoGen dataset on GitHub</h3>
+              <p>
+                Version 2.0 dataset notes covering provenance-aware interaction labels, export
+                outputs, evaluation harnesses, and reproducible release framing.
+              </p>
+              <a
+                class="card-link"
+                href="https://github.com/chaosste/EntheoGen/wiki/Spring-2026-dataset-improvements-update"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open dataset release notes
+              </a>
+            </article>
+
+            <article class="link-card section-panel">
+              <h3>GitHub Discussions section for feedback</h3>
+              <p>
+                Share ideas, bug reports, beta reactions, and feature requests in the project
+                discussion space.
+              </p>
+              <a
+                class="card-link"
+                href="https://github.com/chaosste/EntheoGen/discussions"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open GitHub Discussions
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <p class="section-kicker">Showcase media</p>
+            <h2 class="section-title">Contribute to EntheoGen</h2>
+            <p class="section-body">
+              See the downloadable guides to using the app and getting involved below.
+            </p>
+          </div>
+
+          <div class="media-grid">
+            <article class="media-card section-panel">
+              <div class="media-frame">
+                <img src="/entheogen/entheogen-flyer-guide.jpg" alt="EntheoGen guide flyer" />
+              </div>
+              <div class="media-caption">
+                <h3>EntheoGen guide flyer</h3>
+                <p>
+                  A compact introduction to the app flow, the interaction logic, and the design
+                  philosophy behind the evidence snapshot.
+                </p>
+                <div class="button-row">
+                  <a
+                    class="button secondary"
+                    href="/entheogen/entheogen-flyer-guide.jpg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open guide JPG
+                  </a>
+                  <a class="button secondary" href="/entheogen/entheogen-flyer-guide.pdf" download>
+                    Download guide PDF
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <div class="media-stack">
+              <article class="media-card section-panel">
+                <div class="media-frame">
+                  <img
+                    src="/entheogen/entheogen-help.jpg"
+                    alt="EntheoGen participation and volunteer flyer"
+                  />
+                </div>
+                <div class="media-caption">
+                  <h3>Participation and volunteer flyer</h3>
+                  <p>
+                    The visual CTA for feedback, open-source collaboration, and project involvement,
+                    styled to sit naturally beside the guide flyer.
+                  </p>
+                  <div class="button-row">
+                    <a
+                      class="button secondary"
+                      href="/entheogen/entheogen-help.jpg"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Enlarge image
+                    </a>
+                    <a
+                      class="button secondary"
+                      href="/entheogen/entheogen-help.pdf"
+                      download
+                    >
+                      Download CTA PDF
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="info-card section-panel">
+                <div class="section-heading" style="margin-bottom: 16px">
+                  <p class="section-kicker" style="color: rgba(255, 213, 130, 0.82)">
+                    Dataset at a glance
+                  </p>
+                  <h2 class="section-title" style="font-size: clamp(1.7rem, 3vw, 2.3rem)">
+                    Version 2.0 framing
+                  </h2>
+                </div>
+                <p class="section-body" style="max-width: none">
+                  EntheoGen is moving beyond a useful ruleset into a structured benchmarking
+                  dataset with abstention-aware unknowns, mechanism taxonomy, and deterministic
+                  export pathways.
+                </p>
+                <div class="stats-grid">
+                  <div class="stat-card">
+                    <strong>33</strong>
+                    <span>substances</span>
+                  </div>
+                  <div class="stat-card">
+                    <strong>561</strong>
+                    <span>interaction pairs</span>
+                  </div>
+                  <div class="stat-card">
+                    <strong>37</strong>
+                    <span>explicit rules</span>
+                  </div>
+                  <div class="stat-card">
+                    <strong>33</strong>
+                    <span>fallback rules</span>
+                  </div>
+                  <div class="stat-card">
+                    <strong>458</strong>
+                    <span>unknown classifications</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="contact-grid">
+            <article class="contact-card section-panel">
+              <div class="section-heading" style="margin-bottom: 16px">
+                <p class="section-kicker">Get in touch</p>
+                <h2 class="section-title" style="font-size: clamp(1.9rem, 3.2vw, 2.8rem)">
+                  Contact, forms, and volunteer routes
+                </h2>
+                <p class="section-body" style="max-width: none">
+                  EntheoGen is open to educational feedback, research collaborations, open-source
+                  development, and careful project support.
+                </p>
+              </div>
+
+              <ul class="contact-list">
+                <li><a href="mailto:entheogen@fastmail.com">entheogen@fastmail.com</a></li>
+                <li><a href="mailto:steve@newpsychonaut.com">steve@newpsychonaut.com</a></li>
+                <li><a href="mailto:sb1397@exeter.ac.uk">sb1397@exeter.ac.uk</a></li>
+              </ul>
+
+              <ul class="bullet-list">
+                <li>Database architecture</li>
+                <li>AI ethics</li>
+                <li>Deep learning</li>
+                <li>Community building</li>
+                <li>Cloud deployment</li>
+                <li>Project development</li>
+                <li>User experience</li>
+                <li>Entheogenic knowledge</li>
+                <li>Open source coding</li>
+                <li>Epistemic justice</li>
+              </ul>
+
+              <div class="button-row">
+                <a
+                  class="button primary"
+                  href="https://forms.cloud.microsoft/e/P90izC9hUD"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open Microsoft Form
+                </a>
+                <a class="button secondary" href="mailto:entheogen@fastmail.com">
+                  Email EntheoGen
+                </a>
+              </div>
+            </article>
+
+            <div class="media-stack">
+              <article class="qr-card section-panel">
+                <div class="section-heading" style="margin-bottom: 0">
+                  <p class="section-kicker" style="color: rgba(115, 240, 177, 0.84)">
+                    Microsoft Forms
+                  </p>
+                  <h2 class="section-title" style="font-size: clamp(1.6rem, 2.6vw, 2.15rem)">
+                    Scan or open the interest form
+                  </h2>
+                </div>
+                <p class="section-body" style="max-width: none">
+                  Use the QR code in print settings, or open the form directly for beta interest,
+                  volunteer notes, or university collaboration enquiries.
+                </p>
+                <div class="qr-frame">
+                  <img
+                    src="/entheogen/EntheoGen-volunteer-QR-code.jpg"
+                    alt="QR code for the EntheoGen Microsoft Form"
+                  />
+                </div>
+                <a
+                  class="mono-link"
+                  href="https://forms.cloud.microsoft/e/P90izC9hUD"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  https://forms.cloud.microsoft/e/P90izC9hUD
+                </a>
+              </article>
+
+              <article class="neuro-card section-panel">
+                <img src="/neurophenom-ai/logo-neurophenom-ai.png" alt="NeuroPhenomAI logo" />
+                <div>
+                  <div class="section-heading" style="margin-bottom: 0">
+                    <p class="section-kicker" style="color: rgba(186, 244, 255, 0.82)">
+                      NeuroPhenomAI
+                    </p>
+                    <h2 class="section-title" style="font-size: clamp(1.6rem, 2.5vw, 2.2rem)">
+                      Mapping pre-reflective subjective experience through granular interview
+                      techniques
+                    </h2>
+                  </div>
+                  <div class="button-row">
+                    <a
+                      class="button secondary"
+                      href="https://github.com/chaosste/NeuroPhenom-AI"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      NeuroPhenomAI on GitHub
+                    </a>
+                    <a
+                      class="button secondary"
+                      href="https://newpsychonaut.com/ai-tools/neurophenom-ai"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Try NeuroPhenomAI on my website
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="fine-print">
+            <h3>Safety posture</h3>
+            <p>
+              EntheoGen provides educational harm-reduction guidance only. It does not replace
+              medical, psychiatric, or therapeutic advice. When evidence is limited, the system is
+              intended to abstain rather than generate false certainty. In any urgent clinical
+              situation, seek professional medical help.
+            </p>
+          </div>
+        </section>
+
+        <div class="footer-mark">entheogen</div>
+      </main>
+    </div>
+  </body>
+</html>
