@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const port = Number(process.env.PORT || 8080);
-const defaultRoot = existsSync(join(__dirname, 'dist')) ? join(__dirname, 'dist') : __dirname;
+const defaultRoot = existsSync(join(__dirname, 'index.html')) ? __dirname : join(__dirname, 'dist');
 const root = resolve(process.env.STATIC_DIR || defaultRoot);
 const indexPath = join(root, 'index.html');
 
