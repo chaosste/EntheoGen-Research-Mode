@@ -14,11 +14,25 @@ Core behavior changes
 Main files
 ----------
 - /src/App.tsx
-  UI branding, privacy text, evidence snapshot rendering, links to newpsychonaut breadcrumbs.
+  UI branding, privacy text, /docs public documentation route, evidence snapshot rendering, links to NewPsychonaut breadcrumbs.
 - /src/data/drugData.ts
   Ceremonial entities, risk legend, and pairwise evidence rules.
-- /src/services/geminiService.ts
-  Replaced model calls with rule-based markdown generation.
+- /src/services/ruleBasedReadoutService.ts
+  Rule-based markdown generation for interaction and substance summaries.
+- /docs/DEPLOYMENT.md
+  Canonical repository, Azure deployment model, fork cleanup status, and safe-change boundaries.
+- /docs/public-documentation.md
+  Public-facing documentation rendered by the Vite app at /docs.
+
+Deployment position
+-------------------
+- Canonical repo: https://github.com/EntheoGen-Development-Hub/EntheoGen-Research-Mode
+- Development hub: https://github.com/EntheoGen-Development-Hub
+- The same GitHub Actions package deploys to both Azure Web Apps:
+  - https://entheogen-research-mode-gpfuhxfae9f8hcgd.swedencentral-01.azurewebsites.net/
+  - https://entheogen.azurewebsites.net/
+- The old fork deploy path is cleaned up. Do not reconnect fork workflows, secrets, or Azure Deployment Center unless explicitly asked.
+- Both Azure apps use node server.js.
 
 Privacy position
 ----------------
