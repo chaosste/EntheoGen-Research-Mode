@@ -9,7 +9,7 @@ import { extractPerplexityClaimsDetailed, extractPerplexityCitations } from './p
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
-const perplexitySourceId = 'perplexity_ayahuasca_interactions_synthesis_2026';
+const perplexitySourceId = 'entheogen_2026';
 
 const runScript = (script: string, env: Record<string, string>) => {
   const result = spawnSync(process.execPath, [path.join(root, 'node_modules/.bin/tsx'), script], {

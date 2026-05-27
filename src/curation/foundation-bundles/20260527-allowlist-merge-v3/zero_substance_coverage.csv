@@ -1,0 +1,5 @@
+substance_id,substance_name,substance_class,deprecated,superseded_by,substance_chunk_count,substance_source_count,interaction_pair_count,interaction_pairs_with_chunks,interaction_pairs_without_chunks,direct_alias_chunk_count,direct_alias_chunk_ids,notes
+ghb_gamma_hydroxybutyrate,GHB,Pharmaceutical Or Recreational,false,NULL,0,0,0,0,0,0,,DrugBank DB01440 and DB09072; recreational GHB and prescription sodium oxybate share this substance_id.
+mdma_2cx_dox_nbome,MDMA / 2C-x / DOx / NBOMe,Recreational Serotonergic,true,mdma,0,0,0,0,0,0,,"Contraindication cluster with ayahuasca in source slides. Deprecated after entactogen split into mdma, two_c_x, dox, nbome_series."
+mephedrone,Mephedrone,Recreational Stimulant,false,NULL,0,0,0,0,0,0,,DrugBank DB13108; cathinone stimulant with serotonergic activity in DrugBank export.
+yopo,Yopo,Ceremonial Psychedelic,false,NULL,0,0,41,0,41,0,,Source notes caution due active constituents.

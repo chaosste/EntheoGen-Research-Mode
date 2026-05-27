@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 export interface CanonicalDatasetPaths {
-  interactionDatasetV2: string;
+  interactionPairs: string;
   sourceManifest: string;
   sourceTags: string;
   citationRegistry: string;
@@ -15,7 +15,7 @@ export interface CanonicalDatasetPaths {
 }
 
 export interface CanonicalDatasetSourcePaths {
-  interactionDatasetV2: string;
+  interactionPairs: string;
   sourceManifest: string;
   sourceTags: string;
   citationRegistry: string;
@@ -49,7 +49,7 @@ export const defaultBetaCsvFilenames = {
 
 export function getCanonicalDatasetSourcePaths(root = repoRoot): CanonicalDatasetSourcePaths {
   return {
-    interactionDatasetV2: path.join(root, 'src', 'data', 'interactionDatasetV2.json'),
+    interactionPairs: path.join(root, 'src', 'data', 'interaction_pairs.json'),
     sourceManifest: path.join(root, 'knowledge-base', 'indexes', 'source_manifest.json'),
     sourceTags: path.join(root, 'knowledge-base', 'indexes', 'source_tags.json'),
     citationRegistry: path.join(root, 'knowledge-base', 'indexes', 'citation_registry.json'),

@@ -5,7 +5,7 @@ import type { InteractionDatasetV2, InteractionPairV2 } from '../src/data/intera
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
-const datasetPath = path.join(root, 'src/data/interactionDatasetV2.json');
+const datasetPath = path.join(root, 'src/data/interaction_pairs.json');
 
 const escapeCsv = (value: unknown): string => {
   const text = String(value ?? '');

@@ -103,7 +103,7 @@ const root = path.resolve(__dirname, '..');
 
 const canonicalPaths = getCanonicalDatasetPaths(root);
 const canonical = {
-  interactions: canonicalPaths.interactionDatasetV2,
+  interactions: canonicalPaths.interactionPairs,
   sourceManifest: canonicalPaths.sourceManifest,
   sourceTags: canonicalPaths.sourceTags,
   citationRegistry: canonicalPaths.citationRegistry,
@@ -114,7 +114,7 @@ const canonical = {
 const updateCandidates = [
   'src/data/15_high_value_pairs.json',
   'src/data/six_populated_unknown_pairs.json',
-  'src/data/interactionDatasetV2_populated_unknown_pairs.json',
+  'src/data/interactionPairs_populated_unknown_pairs.json',
   'src/data/mdma_cyp_more.json',
   'src/data/mdma_related_upgrade_flags.json',
   'knowledge-base/reports/provisional_interactions_insert_report.json',
@@ -445,20 +445,20 @@ const run = async (): Promise<void> => {
   }
 
   const requiredSources = [
-    'ruffell_ayahuasca_interactions_2020',
-    'halman_psychedelic_ddi_2023',
-    'malcolm_ayahuasca_drug_interactions_2023',
-    'alma_ayahuasca_interactions_dataset',
-    'perplexity_ayahuasca_interactions_synthesis_2026',
-    'gillman_2005_maoi_opioid_serotonin_toxicity',
-    'schmid_2015_bupropion_mdma_interactions'
+    'ruffell_2023',
+    'halman_2024',
+    'malcolm_2023',
+    'alma_2026',
+    'entheogen_2026',
+    'Gilman_2023',
+    'schmid_2025'
   ];
 
   const bySourceId = new Map(manifest.sources.map((s) => [String(s.source_id), s]));
   const sourceAliases: Record<string, string> = {
-    ruffell_ayahuasca_interactions_2020: 'Ruffell-et-al-2020-The Pharmacological-interaction-of-compounds-in-ayahuasca-a-systemic-review',
-    halman_psychedelic_ddi_2023: 'Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review',
-    malcolm_ayahuasca_drug_interactions_2023: 'Benjamin-Malcolm-PharmD-MPH-2023-Ayahuasca-and-Drug-Interaction'
+    ruffell_2023: 'ruffell_2023',
+    halman_2024: 'halman_2024',
+    malcolm_2023: 'malcolm_2023'
   };
 
   for (const required of requiredSources) {
@@ -615,7 +615,7 @@ const run = async (): Promise<void> => {
           }
         }
 
-        if (sourceId === 'alma_ayahuasca_interactions_dataset') {
+        if (sourceId === 'alma_2026') {
           const sourceSpecific = (claim.source_specific && typeof claim.source_specific === 'object'
             ? claim.source_specific
             : {}) as Record<string, unknown>;
@@ -654,7 +654,7 @@ const run = async (): Promise<void> => {
     try {
       await rename(sourcePath, targetPath);
       report.files_archived.push(path.relative(root, targetPath));
-      archiveRows.push(`| \`${absorbedRel}\` | \`src/data/interactionDatasetV2.json\`, \`knowledge-base/indexes/*\`, \`knowledge-base/schemas/*\` | ${new Date().toISOString().slice(0, 10)} | Absorbed by consolidateJsonUpdates.ts |`);
+      archiveRows.push(`| \`${absorbedRel}\` | \`src/data/interaction_pairs.json\`, \`knowledge-base/indexes/*\`, \`knowledge-base/schemas/*\` | ${new Date().toISOString().slice(0, 10)} | Absorbed by consolidateJsonUpdates.ts |`);
     } catch (error) {
       recordConflict(report, `archive_failed:${absorbedRel}:${String(error)}`, {
         category: 'archive_failure',

@@ -6,12 +6,12 @@ const markdown = buildMarkdownChangelog({
   headRef: 'def456',
   prRef: 'PR #999',
   canonicalFiles: [
-    'src/data/interactionDatasetV2.json',
+    'src/data/interaction_pairs.json',
     'knowledge-base/indexes/source_manifest.json'
   ],
   changedFiles: [
     {
-      file: 'src/data/interactionDatasetV2.json',
+      file: 'src/data/interaction_pairs.json',
       added: 12,
       removed: 3
     }
@@ -26,8 +26,8 @@ const markdown = buildMarkdownChangelog({
 
 assert.match(markdown, /# Dataset Changelog Draft/, 'expected title');
 assert.match(markdown, /PR reference: PR #999/, 'expected PR reference section');
-assert.match(markdown, /`src\/data\/interactionDatasetV2\.json`/, 'expected canonical dataset file listing');
-assert.match(markdown, /\| `src\/data\/interactionDatasetV2\.json` \| 12 \| 3 \|/, 'expected review table row');
+assert.match(markdown, /`src\/data\/interaction_pairs\.json`/, 'expected canonical dataset file listing');
+assert.match(markdown, /\| `src\/data\/interaction_pairs\.json` \| 12 \| 3 \|/, 'expected review table row');
 assert.match(markdown, /`abc1234` Update canonical interaction pair confidence/, 'expected commit summary entry');
 assert.match(markdown, /## Review Checklist/, 'expected reviewer checklist section');
 
