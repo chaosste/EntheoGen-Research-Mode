@@ -2,6 +2,8 @@ import type { MechanismCategory } from '../data/drugData';
 
 type EvidenceContext = {
   riskScale?: number;
+  confidence?: string;
+  evidenceTier?: string | null;
   mechanism?: string;
   mechanismCategory?: MechanismCategory;
   practicalGuidance?: string;
@@ -10,6 +12,9 @@ type EvidenceContext = {
   fieldNotes?: string;
   isEvidenceBacked?: boolean;
   citationLabels?: string[];
+  sourceIds?: string[];
+  sourceTitles?: string[];
+  chunkRefs?: string[];
 };
 
 const RISK_ACTIONS: Record<number, string> = {
@@ -34,6 +39,20 @@ const SPECIAL_PAIR_NOTES: Record<string, string> = {
 };
 
 const pairLabel = (a: string, b: string) => [a, b].sort().join("|");
+
+const normalizeConfidence = (value?: string): string | null => {
+  const normalized = value?.trim();
+  if (!normalized) return null;
+  return normalized.charAt(0).toUpperCase() + normalized.slice(1);
+};
+
+const nonBlank = (value?: string | null): string | null => {
+  const normalized = value?.trim();
+  return normalized ? normalized : null;
+};
+
+const nonEmptyList = (values?: string[]): string[] =>
+  Array.isArray(values) ? values.map((value) => value.trim()).filter(Boolean) : [];
 
 const MECHANISM_FAMILY_TEXT: Partial<Record<MechanismCategory, string>> = {
   serotonergic: 'serotonergic interaction pattern',
@@ -66,11 +85,24 @@ export async function getInteractionExplanation(
   const action = RISK_ACTIONS[riskScale] ?? RISK_ACTIONS[0];
   const special = SPECIAL_PAIR_NOTES[pairLabel(drug1, drug2)];
   const mechanism = context?.mechanism;
+  const confidence = normalizeConfidence(context?.confidence);
+  const evidenceTier = nonBlank(context?.evidenceTier ?? undefined);
   const practicalGuidance = context?.practicalGuidance;
   const timing = context?.timing;
   const evidenceGaps = context?.evidenceGaps;
   const fieldNotes = context?.fieldNotes;
   const citationText = context?.citationLabels?.join('; ');
+  const sourceIds = nonEmptyList(context?.sourceIds);
+  const sourceTitles = nonEmptyList(context?.sourceTitles);
+  const chunkRefs = nonEmptyList(context?.chunkRefs);
+  const chunkSample = chunkRefs.slice(0, 3).join('; ');
+  const hasEvidenceDetail = !!(
+    confidence ||
+    evidenceTier ||
+    sourceIds.length ||
+    sourceTitles.length ||
+    chunkRefs.length
+  );
   const mechanismFamily = context?.mechanismCategory
     ? MECHANISM_FAMILY_TEXT[context.mechanismCategory]
     : undefined;
@@ -86,7 +118,17 @@ export async function getInteractionExplanation(
     context?.isEvidenceBacked && citationText
       ? `**Source status:** Evidence-backed ${citationText}`
       : `**Source status:** Source gap`,
+    confidence ? `**Confidence tag:** ${confidence}` : "",
     mechanismFamily ? `**Mechanism family:** ${mechanismFamily}.` : "",
+    hasEvidenceDetail
+      ? [
+        `#### Dataset evidence detail`,
+        evidenceTier ? `Tier: ${evidenceTier}` : "",
+        sourceIds.length ? `Source IDs (${sourceIds.length}): ${sourceIds.join('; ')}` : "",
+        sourceTitles.length ? `Source titles: ${sourceTitles.join('; ')}` : "",
+        chunkRefs.length ? `Linked chunks: ${chunkRefs.length}${chunkSample ? ` (sample: ${chunkSample})` : ""}` : ""
+      ].filter(Boolean).join('\n')
+      : "",
     mechanism ? `#### Mechanism of concern\n${mechanism}` : "",
     practicalGuidance ? `#### Practical guidance\n${practicalGuidance}` : "",
     timing ? `#### Timing / spacing\n${timing}` : "",

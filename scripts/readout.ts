@@ -393,6 +393,18 @@ function sourceIdsForPair(row: InteractionPair | undefined): string {
   return sourceRefs.length > 0 ? sourceRefs.join('; ') : 'unknown';
 }
 
+function sourceIdsListForPair(row: InteractionPair | undefined): string[] {
+  return row?.source_refs?.filter((sourceRef) => sourceRef.trim().length > 0) ?? [];
+}
+
+function sourceTitlesForPair(row: InteractionPair | undefined): string[] {
+  return row?.source_titles?.filter((title) => title.trim().length > 0) ?? [];
+}
+
+function chunkRefsForPair(row: InteractionPair | undefined): string[] {
+  return row?.chunk_refs?.filter((chunkRef) => chunkRef.trim().length > 0) ?? [];
+}
+
 export async function renderPairReadout(
   context: ReadoutContext,
   substanceAInput: string,
@@ -416,9 +428,14 @@ export async function renderPairReadout(
         : interaction.mechanismCategory as MechanismCategory,
       timing: row?.timing ?? undefined,
       evidenceGaps: row?.evidence_gaps ?? undefined,
+      confidence: row?.confidence ?? undefined,
+      evidenceTier: row?.evidence_tier ?? null,
       fieldNotes: row?.field_notes ?? undefined,
       isEvidenceBacked: interaction.isEvidenceBacked,
-      citationLabels: interaction.citationLabels
+      citationLabels: interaction.citationLabels,
+      sourceIds: sourceIdsListForPair(row),
+      sourceTitles: sourceTitlesForPair(row),
+      chunkRefs: chunkRefsForPair(row)
     }
   );
 

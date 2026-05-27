@@ -40,11 +40,13 @@ export interface BetaCsvPaths {
   dataDir: string;
   substancesCsv: string;
   interactionsCsv: string;
+  pairCoverageCsv: string;
 }
 
 export const defaultBetaCsvFilenames = {
   substances: 'substances.csv',
-  interactions: 'interactions.csv'
+  interactions: 'interactions.csv',
+  pairCoverage: 'pair_coverage.csv'
 } as const;
 
 export function getCanonicalDatasetSourcePaths(root = repoRoot): CanonicalDatasetSourcePaths {
@@ -90,6 +92,7 @@ export function getBetaCsvPaths(dataDir: string): BetaCsvPaths {
   return {
     dataDir,
     substancesCsv: path.join(dataDir, defaultBetaCsvFilenames.substances),
-    interactionsCsv: path.join(dataDir, defaultBetaCsvFilenames.interactions)
+    interactionsCsv: path.join(dataDir, defaultBetaCsvFilenames.interactions),
+    pairCoverageCsv: path.join(dataDir, defaultBetaCsvFilenames.pairCoverage)
   };
 }

@@ -30,5 +30,7 @@ export interface InteractionPair {
   field_notes: string | null;
   sources: string;
   source_refs: string[];
+  source_titles?: string[];
+  chunk_refs?: string[];
   source_fingerprint: string;
 }

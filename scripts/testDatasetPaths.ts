@@ -55,6 +55,7 @@ assert.ok(
 const betaDir = getDefaultBetaDataDir(root);
 const betaCsv = getBetaCsvPaths(betaDir);
 assert.strictEqual(betaCsv.substancesCsv, path.join(betaDir, 'substances.csv'));
+assert.strictEqual(betaCsv.pairCoverageCsv, path.join(betaDir, 'pair_coverage.csv'));
 const publicBundle = getPublicDatasetBundlePaths(root);
 assert.ok(
   publicBundle.manifest.endsWith(path.join('public', 'dataset', 'manifest.json')),
