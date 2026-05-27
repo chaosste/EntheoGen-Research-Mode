@@ -13,12 +13,14 @@ type PairCommand = {
   mode: 'pair';
   substanceA: string;
   substanceB: string;
+  includeSources?: boolean;
   outputPath?: string;
 };
 
 type CsvCommand = {
   mode: 'csv';
   target: string;
+  includeSources?: boolean;
   outputPath?: string;
 };
 
@@ -116,27 +118,33 @@ function stripPromptPunctuation(value: string): string {
 function cleanNaturalTarget(value: string): string {
   return stripPromptPunctuation(value)
     .replace(/^(?:the|a|an)\s+/i, '')
+    .replace(/\s+(?:with|including|include)\s+(?:source[_\s-]?ids?|sources?)$/i, '')
     .replace(/\s+(?:combinations?|pairs?|readouts?|table)$/i, '')
     .trim();
 }
 
-function parseNaturalPrompt(prompt: string, outputPath?: string): ReadoutCommand {
+function parseNaturalPrompt(prompt: string, outputPath?: string, forceIncludeSources = false): ReadoutCommand {
   const cleaned = stripPromptPunctuation(prompt).replace(/\s+/g, ' ');
+  const includeSources = forceIncludeSources || /\b(?:three-column|source[_\s-]?ids?|sources?)\b/i.test(cleaned);
+  const promptWithoutSourceSuffix = cleaned
+    .replace(/\s+(?:with|including|include)\s+(?:source[_\s-]?ids?|sources?)$/i, '')
+    .trim();
   const asksForCsv = /\b(?:csv|table|all combinations|all the readouts|all readouts)\b/i.test(cleaned);
 
   if (asksForCsv) {
-    const targetMatch = cleaned.match(/\b(?:for|of)\s+(.+?)(?:\s+combinations?|\s+pairs?|\s+readouts?)?$/i);
+    const targetMatch = promptWithoutSourceSuffix.match(/\b(?:for|of)\s+(.+?)(?:\s+combinations?|\s+pairs?|\s+readouts?)?$/i);
     if (!targetMatch?.[1]) {
       throw new ReadoutCliError('Could not find the CSV target in the prompt. Try: npm run readout -- --csv ayahuasca');
     }
     return {
       mode: 'csv',
       target: cleanNaturalTarget(targetMatch[1]),
+      includeSources,
       outputPath
     };
   }
 
-  const pairMatch = cleaned.match(/\bfor\s+(.+?)\s+(?:and|with|plus|\+|&)\s+(.+)$/i);
+  const pairMatch = promptWithoutSourceSuffix.match(/\bfor\s+(.+?)\s+(?:and|with|plus|\+|&)\s+(.+)$/i);
   if (!pairMatch?.[1] || !pairMatch?.[2]) {
     throw new ReadoutCliError('Could not find a pair in the prompt. Try: npm run readout -- --pair ayahuasca ketamine');
   }
@@ -145,7 +153,16 @@ function parseNaturalPrompt(prompt: string, outputPath?: string): ReadoutCommand
     mode: 'pair',
     substanceA: cleanNaturalTarget(pairMatch[1]),
     substanceB: cleanNaturalTarget(pairMatch[2]),
+    includeSources,
     outputPath
+  };
+}
+
+function takeFlag(args: string[], names: string[]): { enabled: boolean; args: string[] } {
+  const nextArgs = args.filter((arg) => !names.includes(arg));
+  return {
+    enabled: nextArgs.length !== args.length,
+    args: nextArgs
   };
 }
 
@@ -173,16 +190,20 @@ function takeOptionValue(args: string[], names: string[]): { value?: string; arg
 
 export function parseReadoutArgs(argv: string[]): ReadoutCommand {
   const output = takeOptionValue(argv, ['-o', '--output']);
-  const args = output.args.filter((arg) => arg.trim().length > 0);
+  const sources = takeFlag(output.args, ['--sources', '--with-sources', '--source-ids', '--source_id', '--source-refs']);
+  const args = sources.args.filter((arg) => arg.trim().length > 0);
   const outputPath = output.value;
+  const includeSources = sources.enabled;
 
   if (args.length === 0 || args.includes('--help') || args.includes('-h')) {
     throw new ReadoutCliError(
       [
         'Usage:',
         '  npm run readout -- "What is the readout for ayahuasca and ketamine?"',
+        '  npm run readout -- "Produce a three-column .csv table showing all the readouts for Antipsychotics combinations with sources."',
         '  npm run readout -- --pair ayahuasca ketamine',
-        '  npm run readout -- --csv ayahuasca -o ayahuasca-readouts.csv'
+        '  npm run readout -- --csv ayahuasca -o ayahuasca-readouts.csv',
+        '  npm run readout -- --csv antipsychotics --sources -o antipsychotics-readouts.csv'
       ].join('\n')
     );
   }
@@ -195,6 +216,7 @@ export function parseReadoutArgs(argv: string[]): ReadoutCommand {
       mode: 'pair',
       substanceA: args[1],
       substanceB: args[2],
+      includeSources,
       outputPath
     };
   }
@@ -204,7 +226,7 @@ export function parseReadoutArgs(argv: string[]): ReadoutCommand {
     if (!substanceA || !substanceB) {
       throw new ReadoutCliError('Expected --pair=substance_a,substance_b.');
     }
-    return { mode: 'pair', substanceA, substanceB, outputPath };
+    return { mode: 'pair', substanceA, substanceB, includeSources, outputPath };
   }
 
   if (args[0] === '--csv') {
@@ -214,6 +236,7 @@ export function parseReadoutArgs(argv: string[]): ReadoutCommand {
     return {
       mode: 'csv',
       target: args[1],
+      includeSources,
       outputPath
     };
   }
@@ -223,10 +246,10 @@ export function parseReadoutArgs(argv: string[]): ReadoutCommand {
     if (!target) {
       throw new ReadoutCliError('Expected --csv=substance_or_class.');
     }
-    return { mode: 'csv', target, outputPath };
+    return { mode: 'csv', target, includeSources, outputPath };
   }
 
-  return parseNaturalPrompt(args.join(' '), outputPath);
+  return parseNaturalPrompt(args.join(' '), outputPath, includeSources);
 }
 
 export function createReadoutContext(root = defaultRoot): ReadoutContext {
@@ -336,10 +359,18 @@ function normalizeInline(value: string): string {
   return value.replace(/\s+/g, ' ').trim();
 }
 
+function confidenceForPair(row: InteractionPair | undefined): string {
+  const normalized = row?.confidence?.trim().toLowerCase();
+  if (!normalized || normalized === 'n/a' || normalized === 'unknown' || normalized === 'not_applicable') {
+    return 'Unknown';
+  }
+  return normalized.charAt(0).toUpperCase() + normalized.slice(1);
+}
+
 function compactReadout(interaction: UIInteraction, row: InteractionPair | undefined): string {
   const parts = [
     `Risk: ${interaction.riskDisplayLabel}`,
-    `Confidence: ${interaction.confidenceLabel}`,
+    `Confidence: ${confidenceForPair(row)}`,
     `Mechanism: ${interaction.mechanismDisplayLabel}`,
     `Readout: ${interaction.headline}`,
     row?.timing ? `Timing: ${normalizeInline(row.timing)}` : '',
@@ -357,7 +388,17 @@ function csvEscape(value: string): string {
   return `"${value.replace(/"/g, '""')}"`;
 }
 
-export async function renderPairReadout(context: ReadoutContext, substanceAInput: string, substanceBInput: string): Promise<string> {
+function sourceIdsForPair(row: InteractionPair | undefined): string {
+  const sourceRefs = row?.source_refs?.filter((sourceRef) => sourceRef.trim().length > 0) ?? [];
+  return sourceRefs.length > 0 ? sourceRefs.join('; ') : 'unknown';
+}
+
+export async function renderPairReadout(
+  context: ReadoutContext,
+  substanceAInput: string,
+  substanceBInput: string,
+  includeSources = false
+): Promise<string> {
   const substanceA = resolveSubstance(context, substanceAInput);
   const substanceB = resolveSubstance(context, substanceBInput);
   const interaction = getUIInteraction(substanceA.id, substanceB.id);
@@ -368,7 +409,6 @@ export async function renderPairReadout(context: ReadoutContext, substanceAInput
     interaction.riskDisplayLabel,
     interaction.headline,
     {
-      confidence: interaction.confidenceLabel,
       riskScale: riskScaleForInteraction(row, interaction),
       mechanism: row?.mechanism ?? undefined,
       mechanismCategory: interaction.mechanismCategory === 'unknown'
@@ -376,15 +416,17 @@ export async function renderPairReadout(context: ReadoutContext, substanceAInput
         : interaction.mechanismCategory as MechanismCategory,
       timing: row?.timing ?? undefined,
       evidenceGaps: row?.evidence_gaps ?? undefined,
-      evidenceTier: row?.evidence_tier ?? undefined,
-      fieldNotes: row?.field_notes ?? undefined
+      fieldNotes: row?.field_notes ?? undefined,
+      isEvidenceBacked: interaction.isEvidenceBacked,
+      citationLabels: interaction.citationLabels
     }
   );
 
-  return [`Pair: ${substanceA.name} + ${substanceB.name}`, '', readout].join('\n');
+  const sourceLine = includeSources ? [`Source IDs: ${sourceIdsForPair(row)}`] : [];
+  return [`Pair: ${substanceA.name} + ${substanceB.name}`, ...sourceLine, '', readout].join('\n');
 }
 
-export function buildCsvReadouts(context: ReadoutContext, subject: CsvSubject): string {
+export function buildCsvReadouts(context: ReadoutContext, subject: CsvSubject, includeSources = false): string {
   const subjectIds = new Set(subject.ids);
   const rows = context.pairs
     .filter((pair) => {
@@ -404,14 +446,19 @@ export function buildCsvReadouts(context: ReadoutContext, subject: CsvSubject): 
       const interaction = getUIInteraction(first.id, second.id);
       return {
         pair: `${first.name} + ${second.name}`,
-        readout: compactReadout(interaction, pair)
+        readout: compactReadout(interaction, pair),
+        sourceId: sourceIdsForPair(pair)
       };
     })
     .sort((left, right) => left.pair.localeCompare(right.pair));
 
+  const header = includeSources ? ['pair', 'readout', 'source_id'] : ['pair', 'readout'];
   const lines = [
-    ['pair', 'readout'].map(csvEscape).join(','),
-    ...rows.map((row) => [row.pair, row.readout].map(csvEscape).join(','))
+    header.map(csvEscape).join(','),
+    ...rows.map((row) => {
+      const values = includeSources ? [row.pair, row.readout, row.sourceId] : [row.pair, row.readout];
+      return values.map(csvEscape).join(',');
+    })
   ];
   return `${lines.join('\n')}\n`;
 }
@@ -425,8 +472,8 @@ export async function runReadoutCli(argv: string[], options: RunOptions = {}): P
     const command = parseReadoutArgs(argv);
     const context = createReadoutContext(defaultRoot);
     const content = command.mode === 'pair'
-      ? `${await renderPairReadout(context, command.substanceA, command.substanceB)}\n`
-      : buildCsvReadouts(context, resolveCsvSubject(context, command.target));
+      ? `${await renderPairReadout(context, command.substanceA, command.substanceB, command.includeSources)}\n`
+      : buildCsvReadouts(context, resolveCsvSubject(context, command.target), command.includeSources);
 
     if (command.outputPath) {
       const outputPath = path.resolve(cwd, command.outputPath);

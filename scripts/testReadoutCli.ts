@@ -22,6 +22,7 @@ assert.deepStrictEqual(naturalPair, {
   mode: 'pair',
   substanceA: 'Alcohol',
   substanceB: 'amphetamines',
+  includeSources: false,
   outputPath: undefined
 });
 
@@ -30,6 +31,7 @@ assert.deepStrictEqual(explicitPair, {
   mode: 'pair',
   substanceA: 'ayahuasca',
   substanceB: 'ketamine',
+  includeSources: false,
   outputPath: undefined
 });
 
@@ -37,6 +39,25 @@ const naturalCsv = parseReadoutArgs(['Produce a two-column .csv table showing al
 assert.deepStrictEqual(naturalCsv, {
   mode: 'csv',
   target: 'Antipsychotics',
+  includeSources: false,
+  outputPath: undefined
+});
+
+const naturalCsvWithSources = parseReadoutArgs([
+  'Produce a three-column .csv table showing all the readouts for Antipsychotics combinations with sources.'
+]);
+assert.deepStrictEqual(naturalCsvWithSources, {
+  mode: 'csv',
+  target: 'Antipsychotics',
+  includeSources: true,
+  outputPath: undefined
+});
+
+const flaggedCsvWithSources = parseReadoutArgs(['--csv', 'antipsychotics', '--sources']);
+assert.deepStrictEqual(flaggedCsvWithSources, {
+  mode: 'csv',
+  target: 'antipsychotics',
+  includeSources: true,
   outputPath: undefined
 });
 
@@ -53,6 +74,12 @@ assert.ok(csv.startsWith('pair,readout\n'), 'CSV should use pair,readout header'
 assert.match(csv, /Antipsychotics \+ Ayahuasca/);
 assert.match(csv, /psychiatric/i);
 
+const csvWithSources = buildCsvReadouts(context, resolveCsvSubject(context, 'Antipsychotics'), true);
+assert.ok(csvWithSources.startsWith('pair,readout,source_id\n'), 'source CSV should use three-column header');
+assert.match(csvWithSources, /Antipsychotics \+ Ayahuasca/);
+assert.match(csvWithSources, /beta_dataset/);
+assert.doesNotMatch(csvWithSources, /undefined/);
+
 const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'entheogen-readout-'));
 const outputFile = path.join(tempDir, 'ayahuasca-readouts.csv');
 const runResult = await runReadoutCli(['--csv', 'ayahuasca', '-o', outputFile], {
@@ -63,6 +90,18 @@ const runResult = await runReadoutCli(['--csv', 'ayahuasca', '-o', outputFile], 
 assert.strictEqual(runResult.exitCode, 0);
 assert.ok(fs.existsSync(outputFile), 'CLI should write requested CSV output file');
 assert.match(fs.readFileSync(outputFile, 'utf8'), /Ayahuasca \+ Ketamine/);
+
+const outputFileWithSources = path.join(tempDir, 'ayahuasca-readouts-with-sources.csv');
+const sourceRunResult = await runReadoutCli(['--csv', 'ayahuasca', '--sources', '-o', outputFileWithSources], {
+  cwd: root,
+  stdout: () => undefined,
+  stderr: () => undefined
+});
+assert.strictEqual(sourceRunResult.exitCode, 0);
+assert.ok(fs.existsSync(outputFileWithSources), 'CLI should write requested source CSV output file');
+assert.match(fs.readFileSync(outputFileWithSources, 'utf8'), /^pair,readout,source_id/m);
+assert.match(fs.readFileSync(outputFileWithSources, 'utf8'), /beta_dataset/);
+assert.doesNotMatch(fs.readFileSync(outputFileWithSources, 'utf8'), /undefined/);
 fs.rmSync(tempDir, { recursive: true, force: true });
 
 console.log('readout CLI checks passed');
