@@ -44,7 +44,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 
 type CsvRow = Record<string, string>;
-type PairCoverageByKey = Map<string, { sourceRefs: string[]; chunkRefs: string[] }>;
+type PairCoverageByKey = Map<string, { sourceRefs: string[]; sourceTitles: string[]; chunkRefs: string[] }>;
 
 function cleanCsvValue(value?: string | null): string {
   const trimmed = value?.trim() ?? '';
@@ -79,6 +79,7 @@ function buildPairCoverageIndex(rows: CsvRow[]): PairCoverageByKey {
     if (!pairKey) continue;
     byKey.set(pairKey, {
       sourceRefs: splitDelimitedRefs(row.source_ids),
+      sourceTitles: splitDelimitedRefs(row.source_titles),
       chunkRefs: splitDelimitedRefs(row.all_chunk_ids)
     });
   }
@@ -146,6 +147,7 @@ function buildInteractions(rows: CsvRow[], pairCoverageByKey: PairCoverageByKey,
     const sourceRefs = pairCoverage?.sourceRefs.length
       ? pairCoverage.sourceRefs
       : (hasPairCoverage ? [] : ['beta_dataset']);
+    const sourceTitles = pairCoverage?.sourceTitles ?? [];
     const chunkRefs = pairCoverage?.chunkRefs ?? [];
 
     return {
@@ -166,6 +168,7 @@ function buildInteractions(rows: CsvRow[], pairCoverageByKey: PairCoverageByKey,
       field_notes: cleanCsvValue(row.field_notes) || null,
       sources: 'beta-0-1-snapshot',
       source_refs: sourceRefs,
+      source_titles: sourceTitles,
       chunk_refs: chunkRefs,
       source_fingerprint: fingerprintPair(row)
     };

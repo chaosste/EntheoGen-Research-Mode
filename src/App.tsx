@@ -427,6 +427,21 @@ export default function App() {
     const d2Obj = getDRUGS().find(d => d.id === selectedDrug2);
     const d1Name = d1Obj?.name || selectedDrug1;
     const d2Name = d2Obj?.name || selectedDrug2;
+    const rawSourceIds = Array.isArray(localResolvedInteraction?.raw?.source_refs)
+      ? localResolvedInteraction.raw.source_refs.filter((value): value is string => typeof value === 'string')
+      : [];
+    const rawSourceTitles = Array.isArray(localResolvedInteraction?.raw?.source_titles)
+      ? localResolvedInteraction.raw.source_titles.filter((value): value is string => typeof value === 'string')
+      : [];
+    const rawChunkRefs = Array.isArray(localResolvedInteraction?.raw?.chunk_refs)
+      ? localResolvedInteraction.raw.chunk_refs.filter((value): value is string => typeof value === 'string')
+      : [];
+    const rawConfidence = typeof localResolvedInteraction?.raw?.confidence === 'string'
+      ? localResolvedInteraction.raw.confidence
+      : undefined;
+    const rawEvidenceTier = typeof localResolvedInteraction?.raw?.evidence_tier === 'string'
+      ? localResolvedInteraction.raw.evidence_tier
+      : null;
 
     try {
       // Evidence-grounded interaction explanation for paired selections.
@@ -441,7 +456,12 @@ export default function App() {
             mechanismCategory: localMechanismCategory as MechanismCategory | undefined,
             fieldNotes: localResolvedInteraction.notes,
             isEvidenceBacked: localResolvedInteraction.isEvidenceBacked,
-            citationLabels: localResolvedInteraction.citationLabels
+            citationLabels: localResolvedInteraction.citationLabels,
+            confidence: rawConfidence,
+            evidenceTier: rawEvidenceTier,
+            sourceIds: rawSourceIds,
+            sourceTitles: rawSourceTitles,
+            chunkRefs: rawChunkRefs
           }
         );
         setExplanation(interactionReadout);

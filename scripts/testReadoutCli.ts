@@ -69,6 +69,11 @@ assert.match(pairReadout, /Pair: Ayahuasca \+ Ketamine/);
 assert.match(pairReadout, /Caution \/ moderate risk/i);
 assert.match(pairReadout, /MAOI potentiation/i);
 
+const sourcedPairReadout = await renderPairReadout(context, 'alcohol', 'amphetamines', true);
+assert.match(sourcedPairReadout, /Source IDs: /);
+assert.match(sourcedPairReadout, /Dataset evidence detail/);
+assert.match(sourcedPairReadout, /Linked chunks:/);
+
 const csv = buildCsvReadouts(context, resolveCsvSubject(context, 'Antipsychotics'));
 assert.ok(csv.startsWith('pair,readout\n'), 'CSV should use pair,readout header');
 assert.match(csv, /Antipsychotics \+ Ayahuasca/);
