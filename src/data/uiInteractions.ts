@@ -1,6 +1,7 @@
 import type { InteractionPair } from './interactionDataset';
 import { getAppDatasetRegistry } from './datasetRegistry';
 import type { MechanismCategory } from './drugData';
+import { formatInlineCitations, normalizeSourceIds } from './sourceCitations';
 
 export interface UIInteraction {
   /** Stable UI id for this pair (canonical pair key). */
@@ -28,11 +29,12 @@ export interface UIInteraction {
    * Prefer this for rendering; do not render raw mechanismCategory directly.
    */
   mechanismDisplayLabel: string;
-  /**
-   * Human-facing confidence text (e.g. High/Medium/Low/Unknown).
-   * Already normalized for display.
-   */
-  confidenceLabel: string;
+  /** Stable source identifiers attached to this row, excluding placeholders/source gaps. */
+  sourceIds: string[];
+  /** APA-style inline citation labels derived from stable source ids. */
+  citationLabels: string[];
+  /** True when the row has at least one stable source_id attached. */
+  isEvidenceBacked: boolean;
   /** True when A and B are the same substance (non-interaction row). */
   isSelfPair: boolean;
   /** Secondary note text for UI readouts; falls back to headline when missing. */
@@ -107,14 +109,6 @@ const asNonBlank = (value?: string | null, fallback = UNKNOWN_DISPLAY): string =
   return value!.trim();
 };
 
-const toConfidenceLabel = (value?: string | null): string => {
-  const normalized = value?.trim().toLowerCase();
-  if (!normalized || normalized === 'n/a' || normalized === 'unknown' || normalized === 'not_applicable') {
-    return UNKNOWN_DISPLAY;
-  }
-  return normalized.charAt(0).toUpperCase() + normalized.slice(1);
-};
-
 const toMechanismCategory = (value?: string | null): MechanismCategory | 'unknown' => {
   const cleaned = asNonBlank(value, 'unknown').toLowerCase();
   return (cleaned as MechanismCategory | 'unknown');
@@ -138,6 +132,10 @@ type NewShapeRow = {
     headline?: string | null;
     field_notes?: string | null;
   };
+  evidence?: {
+    source_refs?: unknown;
+  };
+  source_refs?: unknown;
 };
 
 type NormalizableRow = Partial<InteractionPair> & NewShapeRow;
@@ -185,7 +183,6 @@ const warnIfBlankDisplayContract = (interaction: UIInteraction) => {
     'substanceB',
     'riskDisplayLabel',
     'mechanismDisplayLabel',
-    'confidenceLabel',
     'headline',
     'notes'
   ];
@@ -234,6 +231,8 @@ export function normalizeInteraction(row: NormalizableRow): UIInteraction {
     ? SELF_DISPLAY
     : asNonBlank((row.summary as string | undefined) ?? row.clinical_summary?.headline, UNKNOWN_DISPLAY);
   const notes = asNonBlank((row.field_notes as string | undefined) ?? row.clinical_summary?.field_notes, headline);
+  const sourceIds = normalizeSourceIds(row.source_refs ?? row.evidence?.source_refs);
+  const citationLabels = formatInlineCitations(sourceIds);
 
   const normalized: UIInteraction = {
     id: coercePairKey(row, substanceAId, substanceBId),
@@ -244,9 +243,9 @@ export function normalizeInteraction(row: NormalizableRow): UIInteraction {
     riskDisplayLabel,
     mechanismCategory,
     mechanismDisplayLabel,
-    confidenceLabel: isSelfPair
-      ? UNKNOWN_DISPLAY
-      : toConfidenceLabel((row.confidence as string | undefined) ?? row.classification?.confidence),
+    sourceIds,
+    citationLabels,
+    isEvidenceBacked: sourceIds.length > 0,
     isSelfPair,
     notes,
     headline,
@@ -275,7 +274,9 @@ export function getUIInteraction(substanceAId: string, substanceBId: string): UI
       riskDisplayLabel: SELF_DISPLAY,
       mechanismCategory: 'unknown',
       mechanismDisplayLabel: SELF_DISPLAY,
-      confidenceLabel: UNKNOWN_DISPLAY,
+      sourceIds: [],
+      citationLabels: [],
+      isEvidenceBacked: false,
       isSelfPair: true,
       notes: SELF_DISPLAY,
       headline: SELF_DISPLAY,
@@ -292,7 +293,9 @@ export function getUIInteraction(substanceAId: string, substanceBId: string): UI
     riskDisplayLabel: RISK_DISPLAY_LABELS.UNK,
     mechanismCategory: 'unknown',
     mechanismDisplayLabel: UNKNOWN_DISPLAY,
-    confidenceLabel: UNKNOWN_DISPLAY,
+    sourceIds: [],
+    citationLabels: [],
+    isEvidenceBacked: false,
     isSelfPair: false,
     notes: UNKNOWN_DISPLAY,
     headline: UNKNOWN_DISPLAY,

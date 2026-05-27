@@ -305,9 +305,9 @@ export default function App() {
   const [showReferences, setShowReferences] = useState(false);
   const [lastSynthPairKey, setLastSynthPairKey] = useState<string>('');
   const [researchFilters, setResearchFilters] = useState<ResearchModeFilters>({
-    showLowConfidence: false,
+    showSourceGaps: false,
     showInferredOrTheoretical: false,
-    showEvidenceGaps: false
+    showSourceLinked: false
   });
   const favoritesStorageKey = 'entheogen_favorites';
   const currentPairKey = useMemo(() => [drug1 || '', drug2 || ''].sort().join('|'), [drug1, drug2]);
@@ -437,10 +437,11 @@ export default function App() {
           localResolvedInteraction.riskDisplayLabel,
           localResolvedInteraction.headline,
           {
-            confidence: localResolvedInteraction.confidenceLabel,
             riskScale: localInteraction.riskScale,
             mechanismCategory: localMechanismCategory as MechanismCategory | undefined,
-            fieldNotes: localResolvedInteraction.notes
+            fieldNotes: localResolvedInteraction.notes,
+            isEvidenceBacked: localResolvedInteraction.isEvidenceBacked,
+            citationLabels: localResolvedInteraction.citationLabels
           }
         );
         setExplanation(interactionReadout);
@@ -451,10 +452,11 @@ export default function App() {
       const targetDrug1 = selectedDrug1 ? d1Name : d2Name;
       const targetDrug2 = (selectedDrug1 && selectedDrug2) ? d2Name : undefined;
       const profile = await getDrugSummary(targetDrug1, targetDrug2, {
-        confidence: localResolvedInteraction?.confidenceLabel,
         riskScale: localInteraction?.riskScale,
         mechanismCategory: localMechanismCategory as MechanismCategory | undefined,
-        fieldNotes: localResolvedInteraction?.notes
+        fieldNotes: localResolvedInteraction?.notes,
+        isEvidenceBacked: localResolvedInteraction?.isEvidenceBacked,
+        citationLabels: localResolvedInteraction?.citationLabels
       });
       setSummary(profile);
     } catch (err) {
@@ -761,10 +763,12 @@ export default function App() {
                   </div>
 
                   <div className="relative z-10 mb-6 flex flex-wrap gap-2">
-                    {resolvedInteraction?.confidenceLabel && (
+                    {resolvedInteraction && (
                       <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--text-muted)]">
                         <ShieldAlert className="w-3.5 h-3.5 text-indigo-300" />
-                        Confidence: {resolvedInteraction.confidenceLabel.toUpperCase()}
+                        {resolvedInteraction.isEvidenceBacked
+                          ? `Evidence-backed ${resolvedInteraction.citationLabels.join('; ')}`
+                          : 'Source gap'}
                       </span>
                     )}
                     {mechanismFamilyLabel && (
@@ -867,7 +871,7 @@ export default function App() {
                       {item.substanceA} + {item.substanceB}
                     </div>
                     <div className="mt-1 text-xs text-[var(--text-muted)]">
-                      Risk: {item.riskDisplayLabel} | Mechanism: {item.mechanismDisplayLabel} | Confidence: {item.confidenceLabel}
+                      Risk: {item.riskDisplayLabel} | Mechanism: {item.mechanismDisplayLabel} | {item.isEvidenceBacked ? `Source: ${item.citationLabels.join('; ')}` : 'Source gap'}
                     </div>
                   </article>
                 ))}
@@ -1013,8 +1017,8 @@ export default function App() {
                   </div>
                   <div className="space-y-4 text-[var(--text-muted)] text-sm leading-relaxed">
                     <p className="font-semibold text-[var(--text-primary)]">This app provides educational harm-reduction guidance, not medical advice.</p>
-                    <p>Interaction ratings are derived from a curated, evidence-gated dataset with explicit uncertainty and known gaps.</p>
-                    <p>All claims are traceable to source material. See References for full citations.</p>
+                    <p>Interaction ratings are derived from curated rows that either carry stable source IDs or explicitly remain source gaps.</p>
+                    <p>Source-linked readouts show inline citations and the References section lists the full citations.</p>
                     <p className="italic text-red-300/80">If you suspect toxicity, serotonin syndrome, or hypertensive crisis, seek urgent medical help.</p>
                   </div>
                 </section>

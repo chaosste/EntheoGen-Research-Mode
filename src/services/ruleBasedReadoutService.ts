@@ -1,15 +1,15 @@
 import type { MechanismCategory } from '../data/drugData';
 
 type EvidenceContext = {
-  confidence?: string;
   riskScale?: number;
   mechanism?: string;
   mechanismCategory?: MechanismCategory;
   practicalGuidance?: string;
   timing?: string;
   evidenceGaps?: string;
-  evidenceTier?: string;
   fieldNotes?: string;
+  isEvidenceBacked?: boolean;
+  citationLabels?: string[];
 };
 
 const RISK_ACTIONS: Record<number, string> = {
@@ -63,34 +63,34 @@ export async function getInteractionExplanation(
   context?: EvidenceContext
 ) {
   const riskScale = context?.riskScale ?? 0;
-  const confidence = context?.confidence ?? "low";
   const action = RISK_ACTIONS[riskScale] ?? RISK_ACTIONS[0];
   const special = SPECIAL_PAIR_NOTES[pairLabel(drug1, drug2)];
   const mechanism = context?.mechanism;
   const practicalGuidance = context?.practicalGuidance;
   const timing = context?.timing;
   const evidenceGaps = context?.evidenceGaps;
-  const evidenceTier = context?.evidenceTier;
   const fieldNotes = context?.fieldNotes;
+  const citationText = context?.citationLabels?.join('; ');
   const mechanismFamily = context?.mechanismCategory
     ? MECHANISM_FAMILY_TEXT[context.mechanismCategory]
     : undefined;
 
   const lines = [
-    `### Evidence-based interaction readout`,
+    `### Source-linked interaction readout`,
     `**Classification:** ${interactionLabel}`,
     `**Core interpretation:** ${interactionDescription}`,
     ``,
     `**Action posture:** ${action}`,
     special ? `**Specific consensus note:** ${special}` : "",
     ``,
-    `**Evidence confidence:** ${confidence.toUpperCase()}`,
-    evidenceTier ? `**Evidence tier:** ${evidenceTier}` : "",
+    context?.isEvidenceBacked && citationText
+      ? `**Source status:** Evidence-backed ${citationText}`
+      : `**Source status:** Source gap`,
     mechanismFamily ? `**Mechanism family:** ${mechanismFamily}.` : "",
     mechanism ? `#### Mechanism of concern\n${mechanism}` : "",
     practicalGuidance ? `#### Practical guidance\n${practicalGuidance}` : "",
     timing ? `#### Timing / spacing\n${timing}` : "",
-    fieldNotes ? `#### Lower-evidence field notes\n${fieldNotes}` : "",
+    fieldNotes ? `#### Field notes\n${fieldNotes}` : "",
     evidenceGaps ? `#### Remaining uncertainty\n${evidenceGaps}` : ""
   ].filter(Boolean);
 
@@ -110,7 +110,7 @@ export async function getDrugSummary(
     const timing = context?.timing;
     const fieldNotes = context?.fieldNotes;
     const evidenceGaps = context?.evidenceGaps;
-    const evidenceTier = context?.evidenceTier;
+    const citationText = context?.citationLabels?.join('; ');
     const mechanismFamily = context?.mechanismCategory
       ? MECHANISM_FAMILY_TEXT[context.mechanismCategory]
       : undefined;
@@ -122,7 +122,9 @@ export async function getDrugSummary(
       `**Pair:** ${drug1Name} + ${drug2Name}`,
       `**Risk posture:** ${action}`,
       special ? `**Consensus note:** ${special}` : "",
-      evidenceTier ? `**Evidence tier:** ${evidenceTier}` : "",
+      context?.isEvidenceBacked && citationText
+        ? `**Source status:** Evidence-backed ${citationText}`
+        : `**Source status:** Source gap`,
       mechanismFamily ? `**Mechanism family:** ${mechanismFamily}.` : "",
       ``,
       practicalGuidance ? `### Operational guidance\n${practicalGuidance}` : "",

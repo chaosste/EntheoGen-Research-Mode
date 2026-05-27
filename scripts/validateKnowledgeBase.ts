@@ -33,7 +33,7 @@ const fileExists = async (filePath: string): Promise<boolean> => {
 
 const validateClaim = (claim: ClaimRecord, claimSchema: Record<string, unknown>): string[] => {
   const issues = validateSchemaSubset(claimSchema, claim, `$.claim`);
-  if (claim.source_id === 'alma_ayahuasca_interactions_dataset') {
+  if (claim.source_id === 'alma_2026') {
     if (!claim.source_specific?.derivation) {
       issues.push({ path: '$.claim.source_specific.derivation', message: 'Alma claims must include source_specific.derivation' });
     }

@@ -1,8 +1,8 @@
 {
-  "source_id": "alma_ayahuasca_interactions_dataset",
-  "source_path": "sources/expert-guidelines/alma_ayahuasca_interactions_dataset.md",
+  "source_id": "alma_2026",
+  "source_path": "sources/expert-guidelines/alma_2026.md",
   "source_metadata": {
-    "source_id": "alma_ayahuasca_interactions_dataset",
+    "source_id": "alma_2026",
     "title": "Alma Healing Center Ayahuasca and Medication Interactions",
     "source_type": "expert_dataset",
     "authority_level": "low",
@@ -19,12 +19,12 @@
   },
   "claims": [
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_1_5a105347c5",
-      "source_id": "alma_ayahuasca_interactions_dataset",
+      "claim_id": "alma_2026_1_5a105347c5",
+      "source_id": "alma_2026",
       "claim": "Secondary compiled interaction table.",
       "claim_type": "interaction",
       "entities": [
-        "alma_ayahuasca_interactions_dataset",
+        "alma_2026",
         "alma",
         "healing",
         "center",
@@ -45,7 +45,7 @@
       "confidence": "low",
       "clinical_actionability": "none",
       "review_state": "machine_extracted",
-      "notes": "Extracted from alma_ayahuasca_interactions_dataset using rule-based keyword matching.",
+      "notes": "Extracted from alma_2026 using rule-based keyword matching.",
       "source_specific": {
         "derivation": "alma_dataset_extraction"
       },

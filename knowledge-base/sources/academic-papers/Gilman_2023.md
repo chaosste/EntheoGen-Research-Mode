@@ -1,7 +1,7 @@
 # Monoamine Oxidase Inhibitors, Opioid Analgesics and Serotonin Toxicity (Gillman 2005)
 
 ## Metadata
-- source_id: gillman_2005_maoi_opioid_serotonin_toxicity
+- source_id: Gilman_2023
 - source_type: academic_paper
 - authority_level: high
 - evidence_domain: clinical_pharmacology_review

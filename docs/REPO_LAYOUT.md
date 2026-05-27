@@ -57,7 +57,7 @@ EntheoGen/
 |   |   |-- evidenceEpistemics.ts
 |   |   |-- formal_interaction_rule_layer.json
 |   |   |-- interactionDataset.ts
-|   |   |-- interactionDatasetV2.json
+|   |   |-- interaction_pairs.json
 |   |   |-- interactionSchemaV2.ts
 |   |   |-- priorityInteractionOverrides.ts
 |   |   |-- researchMode.ts
@@ -195,7 +195,7 @@ knowledge-base/sources/
   -> knowledge-base/extracted/
   -> knowledge-base/indexes/
   -> scripts/buildAppDatasetFromBeta.ts or migration/validation scripts
-  -> src/data/interactionDatasetV2.json and src/exports/interaction_pairs.json
+  -> src/data/interaction_pairs.json and src/exports/interaction_pairs.json
   -> scripts/syncPublicDatasetBundle.ts
   -> public/dataset/manifest.json + JSON bundle
   -> src/data/uiInteractions.ts

@@ -1,7 +1,7 @@
 # Ayahuasca Drug Interaction Research (Perplexity Synthesis)
 
 ## Metadata
-- source_id: perplexity_ayahuasca_interactions_synthesis_2026
+- source_id: entheogen_2026
 - source_type: ai_synthesis
 - authority_level: low
 - evidence_domain: aggregated_clinical

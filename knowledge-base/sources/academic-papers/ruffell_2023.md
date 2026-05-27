@@ -1,7 +1,7 @@
 # The pharmacological interaction of compounds in ayahuasca: a systematic review
 
 ## Metadata
-- source_id: ruffell_ayahuasca_interactions_2020
+- source_id: ruffell_2023
 - source_type: academic_paper
 - authority_level: high
 - evidence_domain: pharmacological

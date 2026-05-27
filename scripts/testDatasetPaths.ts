@@ -20,8 +20,8 @@ const appExports = getAppDatasetExportPaths(root);
 assert.deepStrictEqual(canonical, { ...canonicalSources, ...appExports }, 'canonical path helper should compose source + export paths');
 
 assert.ok(
-  canonical.interactionDatasetV2.endsWith(path.join('src', 'data', 'interactionDatasetV2.json')),
-  'interactionDatasetV2 path should resolve to canonical v2 dataset file'
+  canonical.interactionPairs.endsWith(path.join('src', 'data', 'interaction_pairs.json')),
+  'interactionPairs path should resolve to canonical v2 dataset file'
 );
 assert.ok(
   canonical.interactionPairsExport.endsWith(path.join('src', 'exports', 'interaction_pairs.json')),

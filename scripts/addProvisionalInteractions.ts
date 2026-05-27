@@ -24,7 +24,7 @@ type DatasetShape = {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
-const defaultDatasetPath = path.join(root, 'src/data/interactionDatasetV2.json');
+const defaultDatasetPath = path.join(root, 'src/data/interaction_pairs.json');
 const defaultSpecPath = path.join(root, 'src/data/15_high_value_pairs.json');
 const defaultReportPath = path.join(root, 'knowledge-base/reports/provisional_interactions_insert_report.json');
 

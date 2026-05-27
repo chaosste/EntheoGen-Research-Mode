@@ -1,7 +1,7 @@
 # Ayahuasca and Drug Interaction: The Good, the Bad, and the Soul
 
 ## Metadata
-- source_id: malcolm_ayahuasca_drug_interactions_2023
+- source_id: malcolm_2023
 - source_type: expert_guideline
 - authority_level: medium
 - evidence_domain: clinical

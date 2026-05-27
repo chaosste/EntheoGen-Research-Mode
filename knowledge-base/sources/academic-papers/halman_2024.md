@@ -1,7 +1,7 @@
 # Drug–drug interactions involving classic psychedelics: A systematic review
 
 ## Metadata
-- source_id: halman_psychedelic_ddi_2023
+- source_id: halman_2024
 - source_type: academic_paper
 - authority_level: high
 - evidence_domain: clinical

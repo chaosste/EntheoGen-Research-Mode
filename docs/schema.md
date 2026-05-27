@@ -11,7 +11,7 @@ This schema reference is intentionally scoped to concrete in-repo surfaces:
 - Runtime TypeScript schema contract:
   `src/data/interactionSchemaV2.ts`
 - Canonical interaction dataset artifact:
-  `src/data/interactionDatasetV2.json`
+  `src/data/interaction_pairs.json`
 - App source snapshot artifacts used to build the deployed bundle:
   `src/exports/interaction_pairs.json` and
   `src/data/substances_snapshot.json`
@@ -48,7 +48,7 @@ Out of scope:
 | Surface | Role | Enforcement |
 | --- | --- | --- |
 | `src/data/interactionSchemaV2.ts` | Primary typed contract for interaction dataset V2 structures and enums | TypeScript compile-time checks plus script-level runtime validation |
-| `src/data/interactionDatasetV2.json` | Canonical interaction dataset artifact used in repo workflows | `scripts/validateInteractionsV2.ts` |
+| `src/data/interaction_pairs.json` | Canonical interaction dataset artifact used in repo workflows | `scripts/validateInteractionsV2.ts` |
 | `knowledge-base/schemas/source.schema.json` | JSON Schema for source manifest entries | `scripts/validateKnowledgeBase.ts` |
 | `knowledge-base/schemas/claim.schema.json` | JSON Schema for extracted claims | `scripts/validateKnowledgeBase.ts` |
 | `src/exports/interaction_pairs.json` and `src/data/substances_snapshot.json` | Source snapshot artifacts for local scripts and public-bundle sync | Generated via `scripts/buildAppDatasetFromBeta.ts`; typed through runtime readers |
@@ -62,7 +62,7 @@ lookups.
 
 ## Current Artifact Roles
 
-- Canonical interaction source: `src/data/interactionDatasetV2.json`.
+- Canonical interaction source: `src/data/interaction_pairs.json`.
 - App interaction source snapshot: `src/exports/interaction_pairs.json`.
 - App substance source snapshot: `src/data/substances_snapshot.json`.
 - Browser runtime bundle:
@@ -91,7 +91,7 @@ validator surface.
 
 ## Canonical Dataset V2 Shape
 
-Top-level object (`src/data/interactionDatasetV2.json`):
+Top-level object (`src/data/interaction_pairs.json`):
 
 - `schema_version`: currently `v2`
 - `generated_at`: ISO timestamp string

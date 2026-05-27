@@ -17,7 +17,7 @@
         "clinical_actionability": "avoid",
         "evidence_status": "supported"
       },
-      "source_refs": ["gillman_2005_maoi_opioid_serotonin_toxicity"]
+      "source_refs": ["Gilman_2023"]
     },
     {
       "rule_id": "maoi_non_serotonergic_opioid_low_risk_v1",
@@ -32,7 +32,7 @@
         "risk_level": "low",
         "clinical_actionability": "monitor"
       },
-      "source_refs": ["gillman_2005_maoi_opioid_serotonin_toxicity"]
+      "source_refs": ["Gilman_2023"]
     },
     {
       "rule_id": "mdma_cyp2d6_inhibitor_exposure_v1",
@@ -47,7 +47,7 @@
         "clinical_actionability": "caution",
         "evidence_status": "supported"
       },
-      "source_refs": ["schmid_2015_bupropion_mdma_interactions"]
+      "source_refs": ["schmid_2025"]
     },
     {
       "rule_id": "mdma_net_modulation_cardiovascular_v1",
@@ -62,7 +62,7 @@
         "clinical_actionability": "monitor",
         "evidence_status": "supported"
       },
-      "source_refs": ["schmid_2015_bupropion_mdma_interactions"]
+      "source_refs": ["schmid_2025"]
     },
     {
       "rule_id": "mdma_bupropion_direct_interaction_v1",
@@ -80,7 +80,7 @@
         "clinical_actionability": "caution",
         "evidence_status": "supported"
       },
-      "source_refs": ["schmid_2015_bupropion_mdma_interactions"]
+      "source_refs": ["schmid_2025"]
     }
   ]
 }

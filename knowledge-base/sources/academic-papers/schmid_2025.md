@@ -1,7 +1,7 @@
 # Interactions between Bupropion and MDMA (Schmid et al. 2015)
 
 ## Metadata
-- source_id: schmid_2015_bupropion_mdma_interactions
+- source_id: schmid_2025
 - source_type: academic_paper
 - authority_level: high
 - evidence_domain: human_clinical_trial
