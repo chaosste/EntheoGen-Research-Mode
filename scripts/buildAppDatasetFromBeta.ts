@@ -44,6 +44,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 
 type CsvRow = Record<string, string>;
+type PairCoverageByKey = Map<string, { sourceRefs: string[]; chunkRefs: string[] }>;
 
 function cleanCsvValue(value?: string | null): string {
   const trimmed = value?.trim() ?? '';
@@ -61,6 +62,27 @@ with open(sys.argv[1], newline='', encoding='utf-8') as f:
     maxBuffer: 64 * 1024 * 1024
   });
   return JSON.parse(json) as CsvRow[];
+}
+
+function splitDelimitedRefs(value: string | undefined): string[] {
+  if (!value) return [];
+  return value
+    .split(';')
+    .map((entry) => entry.trim())
+    .filter(Boolean);
+}
+
+function buildPairCoverageIndex(rows: CsvRow[]): PairCoverageByKey {
+  const byKey: PairCoverageByKey = new Map();
+  for (const row of rows) {
+    const pairKey = cleanCsvValue(row.pair_key);
+    if (!pairKey) continue;
+    byKey.set(pairKey, {
+      sourceRefs: splitDelimitedRefs(row.source_ids),
+      chunkRefs: splitDelimitedRefs(row.all_chunk_ids)
+    });
+  }
+  return byKey;
 }
 
 function fingerprintPair(row: CsvRow): string {
@@ -112,14 +134,19 @@ function deriveOrigin(row: CsvRow): 'self' | 'explicit' | 'unknown' {
   return 'explicit';
 }
 
-function buildInteractions(rows: CsvRow[]) {
+function buildInteractions(rows: CsvRow[], pairCoverageByKey: PairCoverageByKey, hasPairCoverage: boolean) {
   return rows.map((row) => {
     const interaction_code = mapBetaClassificationToAppCode(row.classification_code) as AppInteractionCode;
+    const pairCoverage = pairCoverageByKey.get(row.pair_key);
 
     const riskNum = parseRiskScore(row.risk_score);
     const risk_scale = Number.isFinite(riskNum) ? riskNum : defaultRiskScale(interaction_code);
 
     const mechanism_category = cleanCsvValue(row.primary_mechanism_category) || 'unknown';
+    const sourceRefs = pairCoverage?.sourceRefs.length
+      ? pairCoverage.sourceRefs
+      : (hasPairCoverage ? [] : ['beta_dataset']);
+    const chunkRefs = pairCoverage?.chunkRefs ?? [];
 
     return {
       substance_a_id: row.substance_a_id,
@@ -138,7 +165,8 @@ function buildInteractions(rows: CsvRow[]) {
       evidence_tier: null,
       field_notes: cleanCsvValue(row.field_notes) || null,
       sources: 'beta-0-1-snapshot',
-      source_refs: ['beta_dataset'],
+      source_refs: sourceRefs,
+      chunk_refs: chunkRefs,
       source_fingerprint: fingerprintPair(row)
     };
   });
@@ -198,9 +226,12 @@ function main() {
 
   const substanceRows = readCsvObjects(betaCsv.substancesCsv);
   const interactionRows = readCsvObjects(betaCsv.interactionsCsv);
+  const hasPairCoverage = fs.existsSync(betaCsv.pairCoverageCsv);
+  const pairCoverageRows = hasPairCoverage ? readCsvObjects(betaCsv.pairCoverageCsv) : [];
+  const pairCoverageByKey = buildPairCoverageIndex(pairCoverageRows);
 
   const substances = buildSubstances(substanceRows);
-  const interactions = buildInteractions(interactionRows);
+  const interactions = buildInteractions(interactionRows, pairCoverageByKey, hasPairCoverage);
 
   const outSubstances = exports.substancesSnapshot;
   const outInteractions = exports.interactionPairsExport;
@@ -227,6 +258,9 @@ function main() {
   );
   console.log(
     `Wrote ${interactions.length} interactions -> ${path.relative(process.cwd(), outInteractions)}`
+  );
+  console.log(
+    `Source refs enriched from pair coverage: ${hasPairCoverage ? 'yes' : 'no (fallback to beta_dataset)'}`
   );
   console.log(
     `Wrote public dataset bundle -> ${path.relative(process.cwd(), publicBundle.dir)}`

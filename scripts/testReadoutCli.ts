@@ -77,7 +77,8 @@ assert.match(csv, /psychiatric/i);
 const csvWithSources = buildCsvReadouts(context, resolveCsvSubject(context, 'Antipsychotics'), true);
 assert.ok(csvWithSources.startsWith('pair,readout,source_id\n'), 'source CSV should use three-column header');
 assert.match(csvWithSources, /Antipsychotics \+ Ayahuasca/);
-assert.match(csvWithSources, /beta_dataset/);
+assert.match(csvWithSources, /\b[a-z][a-z0-9_]*_\d{4}\b/);
+assert.doesNotMatch(csvWithSources, /\bbeta_dataset\b/);
 assert.doesNotMatch(csvWithSources, /undefined/);
 
 const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'entheogen-readout-'));
@@ -100,7 +101,8 @@ const sourceRunResult = await runReadoutCli(['--csv', 'ayahuasca', '--sources', 
 assert.strictEqual(sourceRunResult.exitCode, 0);
 assert.ok(fs.existsSync(outputFileWithSources), 'CLI should write requested source CSV output file');
 assert.match(fs.readFileSync(outputFileWithSources, 'utf8'), /^pair,readout,source_id/m);
-assert.match(fs.readFileSync(outputFileWithSources, 'utf8'), /beta_dataset/);
+assert.match(fs.readFileSync(outputFileWithSources, 'utf8'), /\b[a-z][a-z0-9_]*_\d{4}\b/);
+assert.doesNotMatch(fs.readFileSync(outputFileWithSources, 'utf8'), /\bbeta_dataset\b/);
 assert.doesNotMatch(fs.readFileSync(outputFileWithSources, 'utf8'), /undefined/);
 fs.rmSync(tempDir, { recursive: true, force: true });
 
