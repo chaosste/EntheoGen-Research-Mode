@@ -62,7 +62,7 @@ interface DrugRow {
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const pairsV1Path = path.join(root, 'src/exports/interaction_pairs.json');
-const outputPath = path.join(root, 'src/data/interactionDatasetV2.json');
+const outputPath = path.join(root, 'src/data/interaction_pairs.json');
 
 const codeMap: Record<string, InteractionCodeV2> = {
   SELF: 'SELF',
@@ -182,7 +182,7 @@ const stimulantPartnerIds = new Set([
 
 const seededSourceIds = [
   'alcohol_org_mushrooms_alcohol',
-  'alma_ayahuasca_medication_interactions_2025',
+  'alma_2026',
   'avenues_shrooms_alcohol_risks',
   'ayahuasca_pharmacological_interaction_pmc',
   'beta_blockers_statpearls',
@@ -192,10 +192,10 @@ const seededSourceIds = [
   'cannabis_psychedelic_experience_pubmed',
   'cardiovascular_safety_psychedelic_medicine_2023',
   'choosingtherapy_psilocybin_alcohol',
-  'classic_psychedelic_ddi_review_2024',
+  'halman_2024',
   'classic_psychedelics_aud_systematic_review_pmc',
   'classic_psychedelics_aud_systematic_review_pubmed',
-  'entheogen_interactions_research_update',
+  'entheogen_2026',
   'frontiers_low_dose_psilocybin_ketamine_motivation',
   'healthline_mushrooms_cannabis_interaction',
   'human_heart_hallucinogenic_drugs_2024',
@@ -207,7 +207,7 @@ const seededSourceIds = [
   'ketamine_serotonergic_psychedelics_common_mechanisms_pmc',
   'leafwell_lsd_weed',
   'lucy_in_the_sky_with_ketamine_pmc',
-  'malcolm_ayahuasca_drug_interaction_2022',
+  'malcolm_2023',
   'muse_lsd_marijuana_risks',
   'not_available',
   'overview_psilocybin_lsd_mdma_ketamine_2025',

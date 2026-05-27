@@ -32,12 +32,15 @@ const cases: TestCase[] = [
       summary: 'Moderate risk with overlap.',
       confidence: 'medium',
       mechanism_category: 'serotonergic_toxicity',
-      field_notes: 'Use caution.'
+      field_notes: 'Use caution.',
+      source_refs: ['halman_2024']
     },
     check: (result) => {
       assert(result.riskScore === 3, 'expected numeric riskScore');
       assert(result.riskDisplayLabel.toLowerCase() !== 'unknown', 'riskDisplayLabel should be friendly');
       assert(nonBlank(result.mechanismDisplayLabel), 'mechanismDisplayLabel should not be blank');
+      assert(result.isEvidenceBacked, 'stable source id should mark row evidence-backed');
+      assert(result.citationLabels.includes('(Halman et al., 2024)'), 'stable source id should format inline APA citation');
       assert(result.raw !== null, 'raw row should remain attached');
     }
   },
@@ -94,7 +97,7 @@ const cases: TestCase[] = [
     }
   },
   {
-    name: 'unknown confidence',
+    name: 'placeholder source refs do not mark evidence-backed',
     row: {
       substance_a_id: 'psilocybin',
       substance_b_id: 'ssri',
@@ -104,10 +107,12 @@ const cases: TestCase[] = [
       risk_scale: 2,
       summary: 'May blunt effects.',
       confidence: 'unknown',
-      mechanism_category: 'serotonergic'
+      mechanism_category: 'serotonergic',
+      source_refs: ['beta_dataset', 'source_gap']
     },
     check: (result) => {
-      assert(result.confidenceLabel === 'Unknown', 'unknown confidence should normalize to Unknown');
+      assert(!result.isEvidenceBacked, 'placeholder source refs should not mark row evidence-backed');
+      assert(result.sourceIds.length === 0, 'placeholder source refs should be removed from sourceIds');
     }
   },
   {
@@ -210,7 +215,7 @@ const cases: TestCase[] = [
     }
   },
   {
-    name: 'beta confidence not_applicable string',
+    name: 'object source refs normalize to source ids',
     row: {
       substance_a_id: 'a',
       substance_b_id: 'b',
@@ -220,10 +225,12 @@ const cases: TestCase[] = [
       risk_scale: 3,
       summary: 'Caution row.',
       confidence: 'not_applicable',
-      mechanism_category: 'maoi'
+      mechanism_category: 'maoi',
+      source_refs: [{ source_id: 'Gilman_2023' }]
     },
     check: (result) => {
-      assert(result.confidenceLabel === 'Unknown', 'not_applicable confidence normalizes like n/a');
+      assert(result.sourceIds[0] === 'Gilman_2023', 'object source ref should normalize to source id');
+      assert(result.citationLabels[0] === '(Gillman, 2005)', 'object source ref should format citation label');
     }
   },
   {

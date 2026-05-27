@@ -66,7 +66,7 @@ const incomingDir = path.join(root, 'src/curation/nl-reports/incoming');
 const parsedDir = path.join(root, 'src/curation/nl-reports/parsed');
 const failedDir = path.join(root, 'src/curation/nl-reports/failed');
 const outputJsonl = path.join(root, 'src/curation/interaction-updates.jsonl');
-const datasetPath = getCanonicalDatasetSourcePaths(root).interactionDatasetV2;
+const datasetPath = getCanonicalDatasetSourcePaths(root).interactionPairs;
 
 let substanceIdSet = new Set<string>();
 let substanceAliasMap = new Map<string, string>();

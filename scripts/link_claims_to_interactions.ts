@@ -188,7 +188,7 @@ const run = async (): Promise<void> => {
   const kbRoot = process.env.KB_ROOT ?? path.resolve(path.dirname(new URL(import.meta.url).pathname), '..', 'knowledge-base');
   const reviewedDir = process.env.KB_REVIEWED_DIR ?? path.join(kbRoot, 'extracted', 'claims', 'reviewed');
   const sourceManifestPath = process.env.KB_SOURCE_MANIFEST_PATH ?? path.join(kbRoot, 'indexes', 'source_manifest.json');
-  const datasetPath = process.env.KB_DATASET_PATH ?? path.resolve(kbRoot, '..', 'src', 'data', 'interactionDatasetV2.json');
+  const datasetPath = process.env.KB_DATASET_PATH ?? path.resolve(kbRoot, '..', 'src', 'data', 'interaction_pairs.json');
 
   await ensureDir(reviewedDir);
 

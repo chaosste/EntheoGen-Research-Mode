@@ -187,10 +187,10 @@ const classifyDirectOrClassSource = (sourceId: string, ctx: ReturnType<typeof pa
   if (sourceId === 'alcohol_org_mushrooms_alcohol' && ctx.isPsilocybin && ctx.ids.includes('alcohol')) {
     return 'direct_pair';
   }
-  if (sourceId === 'alma_ayahuasca_medication_interactions_2025' && ctx.isAyahuasca && ctx.isSedativeOrMed) {
+  if (sourceId === 'alma_2026' && ctx.isAyahuasca && ctx.isSedativeOrMed) {
     return 'direct_pair';
   }
-  if (sourceId === 'malcolm_ayahuasca_drug_interaction_2022' && ctx.isAyahuasca) {
+  if (sourceId === 'malcolm_2023' && ctx.isAyahuasca) {
     return 'direct_pair';
   }
   if (sourceId === 'ayahuasca_pharmacological_interaction_pmc' && ctx.isAyahuasca) {
@@ -222,7 +222,7 @@ const classifyDirectOrClassSource = (sourceId: string, ctx: ReturnType<typeof pa
     return 'single_agent';
   }
 
-  if (sourceId === 'classic_psychedelic_ddi_review_2024' && ctx.isClassicPsychedelic) {
+  if (sourceId === 'halman_2024' && ctx.isClassicPsychedelic) {
     return 'drug_class';
   }
   if (
@@ -260,7 +260,7 @@ const classifyDirectOrClassSource = (sourceId: string, ctx: ReturnType<typeof pa
 
   if (
     sourceId === 'overview_psilocybin_lsd_mdma_ketamine_2025' ||
-    sourceId === 'entheogen_interactions_research_update' ||
+    sourceId === 'entheogen_2026' ||
     sourceId === 'psychiatric_times_cannabis_psychedelics_memory' ||
     sourceId === 'blossom_cannabis_psychedelic_survey' ||
     sourceId === 'leafwell_lsd_weed' ||
@@ -276,7 +276,7 @@ const classifyDirectOrClassSource = (sourceId: string, ctx: ReturnType<typeof pa
 const chooseFallbackSource = (ctx: ReturnType<typeof pairContext>): { sourceId: string; matchType: SourceMatchTypeV2 } => {
   if (ctx.isAyahuasca) {
     return {
-      sourceId: ctx.isSedativeOrMed ? 'alma_ayahuasca_medication_interactions_2025' : 'ayahuasca_pharmacological_interaction_pmc',
+      sourceId: ctx.isSedativeOrMed ? 'alma_2026' : 'ayahuasca_pharmacological_interaction_pmc',
       matchType: 'direct_pair'
     };
   }
@@ -287,7 +287,7 @@ const chooseFallbackSource = (ctx: ReturnType<typeof pairContext>): { sourceId: 
     if (ctx.ids.includes('alcohol')) return { sourceId: 'choosingtherapy_psilocybin_alcohol', matchType: 'direct_pair' };
     if (ctx.ids.includes('ketamine')) return { sourceId: 'frontiers_low_dose_psilocybin_ketamine_motivation', matchType: 'adjacent_domain' };
     if (ctx.isSedativeOrMed) return { sourceId: 'psilocybin_clinicians_guide_interactions', matchType: 'single_agent' };
-    return { sourceId: 'classic_psychedelic_ddi_review_2024', matchType: 'drug_class' };
+    return { sourceId: 'halman_2024', matchType: 'drug_class' };
   }
 
   if (ctx.isKetamine) {
@@ -315,11 +315,11 @@ const chooseFallbackSource = (ctx: ReturnType<typeof pairContext>): { sourceId: 
 
   if (ctx.isClassicPsychedelic) {
     if (ctx.ids.includes('alcohol')) return { sourceId: 'classic_psychedelics_aud_systematic_review_pmc', matchType: 'drug_class' };
-    if (ctx.isSedativeOrMed) return { sourceId: 'classic_psychedelic_ddi_review_2024', matchType: 'drug_class' };
+    if (ctx.isSedativeOrMed) return { sourceId: 'halman_2024', matchType: 'drug_class' };
     return { sourceId: 'overview_psilocybin_lsd_mdma_ketamine_2025', matchType: 'adjacent_domain' };
   }
 
-  return { sourceId: 'entheogen_interactions_research_update', matchType: 'adjacent_domain' };
+  return { sourceId: 'entheogen_2026', matchType: 'adjacent_domain' };
 };
 
 const evidenceStatusFromMatch = (

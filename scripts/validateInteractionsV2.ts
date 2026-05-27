@@ -20,7 +20,7 @@ import { groupValidationFlags, VALIDATION_FLAG_SEVERITY } from '../src/data/evid
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
-const datasetPath = process.env.INTERACTION_DATASET_V2_PATH ?? getCanonicalDatasetSourcePaths(root).interactionDatasetV2;
+const datasetPath = process.env.INTERACTION_DATASET_V2_PATH ?? getCanonicalDatasetSourcePaths(root).interactionPairs;
 
 const expectedRiskByCode: Record<string, number | null> = {
   SELF: -1,

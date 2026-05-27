@@ -6,7 +6,7 @@
   "total_claims_rejected": 1,
   "rejected_claim_examples": [
     {
-      "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+      "source_id": "entheogen_2026",
       "section": "Key Claims",
       "reason": "lacks pharmacological claim signal",
       "text": "Ayahuasca exhibits MAO-A inhibitory activity via harmala alkaloids, affecting monoamine metabolism"
@@ -22,13 +22,13 @@
       "pair_key": "ayahuasca|ssris",
       "entries": [
         {
-          "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_001_8661e263",
-          "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+          "claim_id": "entheogen_2026_001_8661e263",
+          "source_id": "entheogen_2026",
           "claim": "Combining ayahuasca with serotonergic agents (SSRIs, SNRIs, TCAs, certain opioids) may increase risk of serotonin syndrome"
         },
         {
-          "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_005_4dd02177",
-          "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+          "claim_id": "entheogen_2026_005_4dd02177",
+          "source_id": "entheogen_2026",
           "claim": "Antipsychotics and certain antidepressants may attenuate psychedelic effects via receptor antagonism or downstream signaling effects"
         }
       ]
@@ -37,8 +37,8 @@
       "pair_key": "ayahuasca|snris",
       "entries": [
         {
-          "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_001_8661e263",
-          "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+          "claim_id": "entheogen_2026_001_8661e263",
+          "source_id": "entheogen_2026",
           "claim": "Combining ayahuasca with serotonergic agents (SSRIs, SNRIs, TCAs, certain opioids) may increase risk of serotonin syndrome"
         }
       ]
@@ -47,8 +47,8 @@
       "pair_key": "ayahuasca|tcas",
       "entries": [
         {
-          "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_001_8661e263",
-          "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+          "claim_id": "entheogen_2026_001_8661e263",
+          "source_id": "entheogen_2026",
           "claim": "Combining ayahuasca with serotonergic agents (SSRIs, SNRIs, TCAs, certain opioids) may increase risk of serotonin syndrome"
         }
       ]
@@ -57,8 +57,8 @@
       "pair_key": "ayahuasca|opioids",
       "entries": [
         {
-          "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_001_8661e263",
-          "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+          "claim_id": "entheogen_2026_001_8661e263",
+          "source_id": "entheogen_2026",
           "claim": "Combining ayahuasca with serotonergic agents (SSRIs, SNRIs, TCAs, certain opioids) may increase risk of serotonin syndrome"
         }
       ]
@@ -67,8 +67,8 @@
       "pair_key": "ayahuasca|stimulants",
       "entries": [
         {
-          "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_002_bfe66c11",
-          "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+          "claim_id": "entheogen_2026_002_bfe66c11",
+          "source_id": "entheogen_2026",
           "claim": "Sympathomimetic agents (e.g. stimulants) combined with ayahuasca may produce hypertensive crisis due to catecholamine accumulation"
         }
       ]
@@ -77,8 +77,8 @@
       "pair_key": "ayahuasca|dissociatives",
       "entries": [
         {
-          "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_003_e9e4310f",
-          "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+          "claim_id": "entheogen_2026_003_e9e4310f",
+          "source_id": "entheogen_2026",
           "claim": "Lamotrigine may interact with ketamine and glutamatergic systems, potentially modulating psychedelic or dissociative effects"
         }
       ]
@@ -87,13 +87,13 @@
       "pair_key": "ayahuasca|psychedelics",
       "entries": [
         {
-          "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_004_58d17567",
-          "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+          "claim_id": "entheogen_2026_004_58d17567",
+          "source_id": "entheogen_2026",
           "claim": "Alpha-2 agonists (e.g. clonidine, guanfacine) may interact with psychedelics through sedation and blood pressure modulation"
         },
         {
-          "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_005_4dd02177",
-          "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+          "claim_id": "entheogen_2026_005_4dd02177",
+          "source_id": "entheogen_2026",
           "claim": "Antipsychotics and certain antidepressants may attenuate psychedelic effects via receptor antagonism or downstream signaling effects"
         }
       ]
@@ -104,8 +104,8 @@
       "pair_key": "ayahuasca|lamotrigine",
       "entries": [
         {
-          "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_003_e9e4310f",
-          "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+          "claim_id": "entheogen_2026_003_e9e4310f",
+          "source_id": "entheogen_2026",
           "claim": "Lamotrigine may interact with ketamine and glutamatergic systems, potentially modulating psychedelic or dissociative effects"
         }
       ]
@@ -114,8 +114,8 @@
       "pair_key": "ayahuasca|ketamine",
       "entries": [
         {
-          "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_003_e9e4310f",
-          "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+          "claim_id": "entheogen_2026_003_e9e4310f",
+          "source_id": "entheogen_2026",
           "claim": "Lamotrigine may interact with ketamine and glutamatergic systems, potentially modulating psychedelic or dissociative effects"
         }
       ]
@@ -124,8 +124,8 @@
       "pair_key": "ayahuasca|clonidine",
       "entries": [
         {
-          "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_004_58d17567",
-          "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+          "claim_id": "entheogen_2026_004_58d17567",
+          "source_id": "entheogen_2026",
           "claim": "Alpha-2 agonists (e.g. clonidine, guanfacine) may interact with psychedelics through sedation and blood pressure modulation"
         }
       ]
@@ -134,8 +134,8 @@
       "pair_key": "ayahuasca|guanfacine",
       "entries": [
         {
-          "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_004_58d17567",
-          "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+          "claim_id": "entheogen_2026_004_58d17567",
+          "source_id": "entheogen_2026",
           "claim": "Alpha-2 agonists (e.g. clonidine, guanfacine) may interact with psychedelics through sedation and blood pressure modulation"
         }
       ]
@@ -144,8 +144,8 @@
       "pair_key": "antihypertensives|ayahuasca",
       "entries": [
         {
-          "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_004_58d17567",
-          "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+          "claim_id": "entheogen_2026_004_58d17567",
+          "source_id": "entheogen_2026",
           "claim": "Alpha-2 agonists (e.g. clonidine, guanfacine) may interact with psychedelics through sedation and blood pressure modulation"
         }
       ]
@@ -154,8 +154,8 @@
       "pair_key": "antipsychotics|ayahuasca",
       "entries": [
         {
-          "claim_id": "perplexity_ayahuasca_interactions_synthesis_2026_005_4dd02177",
-          "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+          "claim_id": "entheogen_2026_005_4dd02177",
+          "source_id": "entheogen_2026",
           "claim": "Antipsychotics and certain antidepressants may attenuate psychedelic effects via receptor antagonism or downstream signaling effects"
         }
       ]
@@ -164,11 +164,11 @@
   "claims_requiring_verification": 5,
   "skipped_files": [
     {
-      "file": "sources/expert-guidelines/Benjamin-Malcolm-PharmD-MPH-2023-Ayahuasca-and-Drug-Interaction.md",
+      "file": "sources/expert-guidelines/malcolm_2023.md",
       "reason": "source_type is not ai_synthesis"
     },
     {
-      "file": "sources/expert-guidelines/alma_ayahuasca_interactions_dataset.md",
+      "file": "sources/expert-guidelines/alma_2026.md",
       "reason": "source_type is not ai_synthesis"
     }
   ],
@@ -180,8 +180,8 @@
   },
   "per_source_summaries": [
     {
-      "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
-      "file": "sources/expert-guidelines/perplexity_ayahuasca_interactions_synthesis_2026.md",
+      "source_id": "entheogen_2026",
+      "file": "sources/expert-guidelines/entheogen_2026.md",
       "processed": true,
       "total_claims": 5,
       "citations_extracted": 0,
