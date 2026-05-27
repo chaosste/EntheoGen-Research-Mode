@@ -96,7 +96,7 @@ export const getKnowledgeBasePaths = (): KnowledgeBasePaths => {
     sourceManifestPath: process.env.KB_SOURCE_MANIFEST_PATH ?? path.join(root, 'indexes', 'source_manifest.json'),
     sourceTagsPath: process.env.KB_SOURCE_TAGS_PATH ?? path.join(root, 'indexes', 'source_tags.json'),
     citationRegistryPath: process.env.KB_CITATION_REGISTRY_PATH ?? path.join(root, 'indexes', 'citation_registry.json'),
-    datasetPath: process.env.KB_DATASET_PATH ?? path.resolve(root, '..', 'src', 'data', 'interactionDatasetV2.json'),
+    datasetPath: process.env.KB_DATASET_PATH ?? path.resolve(root, '..', 'src', 'data', 'interaction_pairs.json'),
     sourceSchemaPath: process.env.KB_SOURCE_SCHEMA_PATH ?? path.join(root, 'schemas', 'source.schema.json'),
     claimSchemaPath: process.env.KB_CLAIM_SCHEMA_PATH ?? path.join(root, 'schemas', 'claim.schema.json')
   };

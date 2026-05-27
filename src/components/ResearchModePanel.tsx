@@ -12,9 +12,9 @@ const TOGGLE_META: Array<{
   help: string;
 }> = [
   {
-    key: 'showLowConfidence',
-    label: 'Show Low Confidence',
-    help: 'Show interactions with low or unknown confidence ratings.'
+    key: 'showSourceGaps',
+    label: 'Show Source Gaps',
+    help: 'Show rows without a stable source ID attached.'
   },
   {
     key: 'showInferredOrTheoretical',
@@ -22,9 +22,9 @@ const TOGGLE_META: Array<{
     help: 'Show interactions driven by class-level inference rather than direct pair evidence.'
   },
   {
-    key: 'showEvidenceGaps',
-    label: 'Show Evidence Gaps',
-    help: 'Show interactions with explicit uncertainty notes, source gaps, or mechanistic-only evidence.'
+    key: 'showSourceLinked',
+    label: 'Show Source-Linked',
+    help: 'Show rows with one or more stable source IDs attached.'
   }
 ];
 
@@ -36,7 +36,7 @@ export default function ResearchModePanel({ filters, onChange }: ResearchModePan
           Research Mode
         </h2>
         <p className="mt-2 text-sm text-[var(--text-muted)]">
-          Highlight relative knowledge gaps: low confidence, inferred classifications, and evidence-gap notes.
+          Highlight source gaps, inferred classifications, and rows with attached source IDs.
         </p>
       </div>
 

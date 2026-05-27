@@ -70,7 +70,7 @@ type IngestionReport = {
   counts_by_severity: Record<string, number>;
 };
 
-const ALMA_SOURCE_ID = 'alma_ayahuasca_interactions_dataset';
+const ALMA_SOURCE_ID = 'alma_2026';
 const severityPatterns: Array<{ raw: RegExp; severity: AlmaSeverity }> = [
   { raw: /inconclusive\s*-\s*likely\s*moderate-?\s*major/i, severity: 'inconclusive' },
   { raw: /moderate\s*[/\-]\s*major/i, severity: 'moderate_major' },
@@ -444,7 +444,7 @@ const conflictSummary = (
 
 const run = async (): Promise<void> => {
   const kbRoot = process.env.KB_ROOT ?? path.resolve(path.dirname(new URL(import.meta.url).pathname), '..', 'knowledge-base');
-  const sourcePath = process.env.KB_ALMA_SOURCE_PATH ?? path.resolve(kbRoot, 'sources', 'expert-guidelines', 'alma_ayahuasca_interactions_dataset.md');
+  const sourcePath = process.env.KB_ALMA_SOURCE_PATH ?? path.resolve(kbRoot, 'sources', 'expert-guidelines', 'alma_2026.md');
   const sourceManifestPath = process.env.KB_SOURCE_MANIFEST_PATH ?? path.join(kbRoot, 'indexes', 'source_manifest.json');
   const sourceTagsPath = process.env.KB_SOURCE_TAGS_PATH ?? path.join(kbRoot, 'indexes', 'source_tags.json');
   const citationRegistryPath = process.env.KB_CITATION_REGISTRY_PATH ?? path.join(kbRoot, 'indexes', 'citation_registry.json');
@@ -452,7 +452,7 @@ const run = async (): Promise<void> => {
   const reportPath = process.env.KB_ALMA_REPORT_PATH ?? path.join(kbRoot, 'reports', 'alma_ingestion_report.json');
   const claimSchemaPath = process.env.KB_CLAIM_SCHEMA_PATH ?? path.join(kbRoot, 'schemas', 'claim.schema.json');
   const sourceSchemaPath = process.env.KB_SOURCE_SCHEMA_PATH ?? path.join(kbRoot, 'schemas', 'source.schema.json');
-  const datasetPath = process.env.KB_DATASET_PATH ?? path.resolve(kbRoot, '..', 'src', 'data', 'interactionDatasetV2.json');
+  const datasetPath = process.env.KB_DATASET_PATH ?? path.resolve(kbRoot, '..', 'src', 'data', 'interaction_pairs.json');
 
   await ensureDir(pendingDir);
   await ensureDir(path.dirname(reportPath));

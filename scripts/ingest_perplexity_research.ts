@@ -171,7 +171,7 @@ const run = async (): Promise<void> => {
   const citationRegistryPath = process.env.KB_CITATION_REGISTRY_PATH ?? path.join(indexesDir, 'citation_registry.json');
   const sourceSchemaPath = process.env.KB_SOURCE_SCHEMA_PATH ?? path.join(kbRoot, 'schemas', 'source.schema.json');
   const claimSchemaPath = process.env.KB_CLAIM_SCHEMA_PATH ?? path.join(kbRoot, 'schemas', 'claim.schema.json');
-  const datasetPath = process.env.KB_DATASET_PATH ?? path.resolve(kbRoot, '..', 'src', 'data', 'interactionDatasetV2.json');
+  const datasetPath = process.env.KB_DATASET_PATH ?? path.resolve(kbRoot, '..', 'src', 'data', 'interaction_pairs.json');
 
   await ensureDir(pendingDir);
   await ensureDir(indexesDir);

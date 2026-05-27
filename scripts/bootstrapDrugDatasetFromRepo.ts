@@ -3,23 +3,20 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import dotenv from 'dotenv';
 
-import { getAppDatasetExportPaths } from './datasetPaths';
-import { registerAppDataset } from '../src/data/datasetRegistry';
-import type { Drug } from '../src/data/drugData';
-import type { InteractionPair } from '../src/data/interactionDataset';
+import { getCanonicalDatasetSourcePaths } from './datasetPaths';
+import { registerRichInteractionDataset, type RichInteractionDataset } from '../src/data/datasetRegistry';
 
 const defaultRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 /**
- * Loads substances + interaction_pairs from `src/` and registers the in-memory
+ * Loads the canonical rich interaction dataset and registers the in-memory
  * dataset used by `drugData` / `uiInteractions` / `sourceLinking`. Call from Node
  * scripts before any resolveInteraction / normalizeInteraction use.
  */
 export function bootstrapDrugDatasetFromRepo(repoRoot = defaultRoot): void {
   dotenv.config({ path: path.join(repoRoot, '.env.local') });
   dotenv.config({ path: path.join(repoRoot, '.env') });
-  const paths = getAppDatasetExportPaths(repoRoot);
-  const drugs = JSON.parse(fs.readFileSync(paths.substancesSnapshot, 'utf8')) as Drug[];
-  const pairs = JSON.parse(fs.readFileSync(paths.interactionPairsExport, 'utf8')) as InteractionPair[];
-  registerAppDataset(drugs, pairs);
+  const paths = getCanonicalDatasetSourcePaths(repoRoot);
+  const dataset = JSON.parse(fs.readFileSync(paths.interactionPairs, 'utf8')) as RichInteractionDataset;
+  registerRichInteractionDataset(dataset);
 }

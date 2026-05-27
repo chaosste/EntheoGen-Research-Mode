@@ -1,6 +1,6 @@
 {
-  "source_id": "alma_ayahuasca_interactions_dataset",
-  "source_file": "sources/expert-guidelines/alma_ayahuasca_interactions_dataset.md",
+  "source_id": "alma_2026",
+  "source_file": "sources/expert-guidelines/alma_2026.md",
   "source_pdf_path": "/Users/stephenbeale/Desktop/Alma-Healing-Centre-Ayahuasca-and-medication-interactions.pdf",
   "total_rows_parsed": 160,
   "total_claims_generated": 160,
@@ -49,47 +49,47 @@
   "entries_with_no_parsed_severity": [],
   "entries_marked_inconclusive": [
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_060",
+      "claim_id": "alma_2026_060",
       "medication": "Flavoxate Hydrochloride (Urispas)",
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_090",
+      "claim_id": "alma_2026_090",
       "medication": "Metaraminol",
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_101",
+      "claim_id": "alma_2026_101",
       "medication": "Nisoxetine",
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_102",
+      "claim_id": "alma_2026_102",
       "medication": "Nomifensine",
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_108",
+      "claim_id": "alma_2026_108",
       "medication": "Pargyline (Eutonyl)",
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_110",
+      "claim_id": "alma_2026_110",
       "medication": "Pemoline (Cylert)",
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_116",
+      "claim_id": "alma_2026_116",
       "medication": "Phenylalanine",
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_142",
+      "claim_id": "alma_2026_142",
       "medication": "Tesofensine",
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_151",
+      "claim_id": "alma_2026_151",
       "medication": "Vanoxerine",
       "severity": "Inconclusive"
     }
@@ -97,7 +97,7 @@
   "entries_conflicting_with_existing_dataset": [],
   "entries_suggesting_new_interaction_pairs": [
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_001",
+      "claim_id": "alma_2026_001",
       "pair_key": "5_hydroxytryptophan|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -106,7 +106,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_002",
+      "claim_id": "alma_2026_002",
       "pair_key": "acetaminophen|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -115,7 +115,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_003",
+      "claim_id": "alma_2026_003",
       "pair_key": "acetaminophen_oxycodone|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -124,7 +124,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_003",
+      "claim_id": "alma_2026_003",
       "pair_key": "ayahuasca|opioids",
       "pair": [
         "ayahuasca",
@@ -133,7 +133,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_004",
+      "claim_id": "alma_2026_004",
       "pair_key": "acorus_calamus_root|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -142,7 +142,7 @@
       "severity": "No interactions"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_005",
+      "claim_id": "alma_2026_005",
       "pair_key": "actifed|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -151,7 +151,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_006",
+      "claim_id": "alma_2026_006",
       "pair_key": "amphetamine|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -160,7 +160,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_006",
+      "claim_id": "alma_2026_006",
       "pair_key": "ayahuasca|stimulants",
       "pair": [
         "ayahuasca",
@@ -169,7 +169,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_007",
+      "claim_id": "alma_2026_007",
       "pair_key": "alaproclate|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -178,7 +178,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_008",
+      "claim_id": "alma_2026_008",
       "pair_key": "albuterol_or|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -187,7 +187,7 @@
       "severity": "Minor"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_009",
+      "claim_id": "alma_2026_009",
       "pair_key": "alimemazine_tartrate|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -196,7 +196,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_009",
+      "claim_id": "alma_2026_009",
       "pair_key": "antihistamines|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -205,7 +205,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_010",
+      "claim_id": "alma_2026_010",
       "pair_key": "almotriptan_malate|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -214,7 +214,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_010",
+      "claim_id": "alma_2026_010",
       "pair_key": "ayahuasca|triptans",
       "pair": [
         "ayahuasca",
@@ -223,7 +223,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_011",
+      "claim_id": "alma_2026_011",
       "pair_key": "amantadine|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -232,7 +232,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_012",
+      "claim_id": "alma_2026_012",
       "pair_key": "amineptine|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -241,7 +241,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_013",
+      "claim_id": "alma_2026_013",
       "pair_key": "amitriptyline|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -250,7 +250,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_013",
+      "claim_id": "alma_2026_013",
       "pair_key": "TCAs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -259,7 +259,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_014",
+      "claim_id": "alma_2026_014",
       "pair_key": "amitriptyline|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -268,7 +268,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_014",
+      "claim_id": "alma_2026_014",
       "pair_key": "TCAs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -277,7 +277,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_015",
+      "claim_id": "alma_2026_015",
       "pair_key": "amoxapine|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -286,7 +286,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_015",
+      "claim_id": "alma_2026_015",
       "pair_key": "TCAs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -295,7 +295,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_016",
+      "claim_id": "alma_2026_016",
       "pair_key": "atomoxedine|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -304,7 +304,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_017",
+      "claim_id": "alma_2026_017",
       "pair_key": "ayahuasca|diphenhydramine",
       "pair": [
         "ayahuasca",
@@ -313,7 +313,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_017",
+      "claim_id": "alma_2026_017",
       "pair_key": "antihistamines|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -322,7 +322,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_018",
+      "claim_id": "alma_2026_018",
       "pair_key": "ayahuasca|benylin",
       "pair": [
         "ayahuasca",
@@ -331,7 +331,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_019",
+      "claim_id": "alma_2026_019",
       "pair_key": "amphetamine|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -340,7 +340,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_019",
+      "claim_id": "alma_2026_019",
       "pair_key": "ayahuasca|stimulants",
       "pair": [
         "ayahuasca",
@@ -349,7 +349,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_020",
+      "claim_id": "alma_2026_020",
       "pair_key": "ayahuasca|benzphetamine",
       "pair": [
         "ayahuasca",
@@ -358,7 +358,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_021",
+      "claim_id": "alma_2026_021",
       "pair_key": "ayahuasca|beclomethasone",
       "pair": [
         "ayahuasca",
@@ -367,7 +367,7 @@
       "severity": "No interaction"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_022",
+      "claim_id": "alma_2026_022",
       "pair_key": "ayahuasca|bicifadine",
       "pair": [
         "ayahuasca",
@@ -376,7 +376,7 @@
       "severity": "Moderate / Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_023",
+      "claim_id": "alma_2026_023",
       "pair_key": "ayahuasca|brasofensine",
       "pair": [
         "ayahuasca",
@@ -385,7 +385,7 @@
       "severity": "Moderate / Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_024",
+      "claim_id": "alma_2026_024",
       "pair_key": "ayahuasca|brofaromine",
       "pair": [
         "ayahuasca",
@@ -394,7 +394,7 @@
       "severity": "Moderate / Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_024",
+      "claim_id": "alma_2026_024",
       "pair_key": "MAOIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -403,7 +403,7 @@
       "severity": "Moderate / Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_025",
+      "claim_id": "alma_2026_025",
       "pair_key": "ayahuasca|brompheniramine_maleate",
       "pair": [
         "ayahuasca",
@@ -412,7 +412,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_026",
+      "claim_id": "alma_2026_026",
       "pair_key": "ayahuasca|bupropion",
       "pair": [
         "ayahuasca",
@@ -421,7 +421,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_027",
+      "claim_id": "alma_2026_027",
       "pair_key": "ayahuasca|buspirone",
       "pair": [
         "ayahuasca",
@@ -430,7 +430,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_028",
+      "claim_id": "alma_2026_028",
       "pair_key": "ayahuasca|carbamazepine",
       "pair": [
         "ayahuasca",
@@ -439,7 +439,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_029",
+      "claim_id": "alma_2026_029",
       "pair_key": "ayahuasca|cetirizine",
       "pair": [
         "ayahuasca",
@@ -448,7 +448,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_029",
+      "claim_id": "alma_2026_029",
       "pair_key": "antihistamines|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -457,7 +457,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_030",
+      "claim_id": "alma_2026_030",
       "pair_key": "ayahuasca|chlorpheniramine_wal_finate_aller",
       "pair": [
         "ayahuasca",
@@ -466,7 +466,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_030",
+      "claim_id": "alma_2026_030",
       "pair_key": "antihistamines|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -475,7 +475,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_031",
+      "claim_id": "alma_2026_031",
       "pair_key": "ayahuasca|chlorpheniramine_chlorphenamine",
       "pair": [
         "ayahuasca",
@@ -484,7 +484,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_031",
+      "claim_id": "alma_2026_031",
       "pair_key": "antihistamines|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -493,7 +493,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_032",
+      "claim_id": "alma_2026_032",
       "pair_key": "ayahuasca|chlorthalidone",
       "pair": [
         "ayahuasca",
@@ -502,7 +502,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_033",
+      "claim_id": "alma_2026_033",
       "pair_key": "ayahuasca|cimetidine",
       "pair": [
         "ayahuasca",
@@ -511,7 +511,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_034",
+      "claim_id": "alma_2026_034",
       "pair_key": "ayahuasca|citalopram",
       "pair": [
         "ayahuasca",
@@ -520,7 +520,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_034",
+      "claim_id": "alma_2026_034",
       "pair_key": "SSRIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -529,7 +529,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_035",
+      "claim_id": "alma_2026_035",
       "pair_key": "ayahuasca|clomipramine",
       "pair": [
         "ayahuasca",
@@ -538,7 +538,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_035",
+      "claim_id": "alma_2026_035",
       "pair_key": "TCAs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -547,7 +547,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_036",
+      "claim_id": "alma_2026_036",
       "pair_key": "ayahuasca|stimulants",
       "pair": [
         "ayahuasca",
@@ -556,7 +556,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_037",
+      "claim_id": "alma_2026_037",
       "pair_key": "ayahuasca|codeine_sulfate",
       "pair": [
         "ayahuasca",
@@ -565,7 +565,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_037",
+      "claim_id": "alma_2026_037",
       "pair_key": "ayahuasca|opioids",
       "pair": [
         "ayahuasca",
@@ -574,7 +574,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_038",
+      "claim_id": "alma_2026_038",
       "pair_key": "ayahuasca|compazine",
       "pair": [
         "ayahuasca",
@@ -583,7 +583,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_039",
+      "claim_id": "alma_2026_039",
       "pair_key": "ayahuasca|cyclizine",
       "pair": [
         "ayahuasca",
@@ -592,7 +592,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_040",
+      "claim_id": "alma_2026_040",
       "pair_key": "ayahuasca|cyclobenzaprine",
       "pair": [
         "ayahuasca",
@@ -601,7 +601,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_041",
+      "claim_id": "alma_2026_041",
       "pair_key": "ayahuasca|dapoxetine",
       "pair": [
         "ayahuasca",
@@ -610,7 +610,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_042",
+      "claim_id": "alma_2026_042",
       "pair_key": "ayahuasca|desipramine",
       "pair": [
         "ayahuasca",
@@ -619,7 +619,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_042",
+      "claim_id": "alma_2026_042",
       "pair_key": "TCAs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -628,7 +628,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_043",
+      "claim_id": "alma_2026_043",
       "pair_key": "ayahuasca|desvenlafaxine",
       "pair": [
         "ayahuasca",
@@ -637,7 +637,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_043",
+      "claim_id": "alma_2026_043",
       "pair_key": "SNRIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -646,7 +646,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_044",
+      "claim_id": "alma_2026_044",
       "pair_key": "ayahuasca|dextroamphetamine",
       "pair": [
         "ayahuasca",
@@ -655,7 +655,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_044",
+      "claim_id": "alma_2026_044",
       "pair_key": "ayahuasca|stimulants",
       "pair": [
         "ayahuasca",
@@ -664,7 +664,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_045",
+      "claim_id": "alma_2026_045",
       "pair_key": "ayahuasca|dextromethorphan",
       "pair": [
         "ayahuasca",
@@ -673,7 +673,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_046",
+      "claim_id": "alma_2026_046",
       "pair_key": "ayahuasca|dibenzazepine",
       "pair": [
         "ayahuasca",
@@ -682,7 +682,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_047",
+      "claim_id": "alma_2026_047",
       "pair_key": "ayahuasca|diethylpropion",
       "pair": [
         "ayahuasca",
@@ -691,7 +691,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_047",
+      "claim_id": "alma_2026_047",
       "pair_key": "ayahuasca|stimulants",
       "pair": [
         "ayahuasca",
@@ -700,7 +700,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_048",
+      "claim_id": "alma_2026_048",
       "pair_key": "ayahuasca|diphenhydramine",
       "pair": [
         "ayahuasca",
@@ -709,7 +709,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_048",
+      "claim_id": "alma_2026_048",
       "pair_key": "antihistamines|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -718,7 +718,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_049",
+      "claim_id": "alma_2026_049",
       "pair_key": "ayahuasca|disopyramide",
       "pair": [
         "ayahuasca",
@@ -727,7 +727,7 @@
       "severity": "Minor"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_050",
+      "claim_id": "alma_2026_050",
       "pair_key": "ayahuasca|dopamine",
       "pair": [
         "ayahuasca",
@@ -736,7 +736,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_051",
+      "claim_id": "alma_2026_051",
       "pair_key": "ayahuasca|dosulepin",
       "pair": [
         "ayahuasca",
@@ -745,7 +745,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_052",
+      "claim_id": "alma_2026_052",
       "pair_key": "ayahuasca|dristan_cold_flu",
       "pair": [
         "ayahuasca",
@@ -754,7 +754,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_053",
+      "claim_id": "alma_2026_053",
       "pair_key": "ayahuasca|duloxetine_irenka",
       "pair": [
         "ayahuasca",
@@ -763,7 +763,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_053",
+      "claim_id": "alma_2026_053",
       "pair_key": "SNRIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -772,7 +772,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_054",
+      "claim_id": "alma_2026_054",
       "pair_key": "ayahuasca|venlafaxine",
       "pair": [
         "ayahuasca",
@@ -781,7 +781,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_054",
+      "claim_id": "alma_2026_054",
       "pair_key": "SNRIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -790,7 +790,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_055",
+      "claim_id": "alma_2026_055",
       "pair_key": "ayahuasca|eletriptan",
       "pair": [
         "ayahuasca",
@@ -799,7 +799,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_055",
+      "claim_id": "alma_2026_055",
       "pair_key": "ayahuasca|triptans",
       "pair": [
         "ayahuasca",
@@ -808,7 +808,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_056",
+      "claim_id": "alma_2026_056",
       "pair_key": "ayahuasca|ephedrine",
       "pair": [
         "ayahuasca",
@@ -817,7 +817,7 @@
       "severity": "Minor"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_056",
+      "claim_id": "alma_2026_056",
       "pair_key": "MAOIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -826,7 +826,7 @@
       "severity": "Minor"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_057",
+      "claim_id": "alma_2026_057",
       "pair_key": "ayahuasca|epinephrine",
       "pair": [
         "ayahuasca",
@@ -835,7 +835,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_058",
+      "claim_id": "alma_2026_058",
       "pair_key": "ayahuasca|escitalopram_oxalate",
       "pair": [
         "ayahuasca",
@@ -844,7 +844,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_058",
+      "claim_id": "alma_2026_058",
       "pair_key": "SSRIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -853,7 +853,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_059",
+      "claim_id": "alma_2026_059",
       "pair_key": "ayahuasca|fenfluramine",
       "pair": [
         "ayahuasca",
@@ -862,7 +862,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_060",
+      "claim_id": "alma_2026_060",
       "pair_key": "ayahuasca|flavoxate_hydrochloride",
       "pair": [
         "ayahuasca",
@@ -871,7 +871,7 @@
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_061",
+      "claim_id": "alma_2026_061",
       "pair_key": "ayahuasca|fluoxetine",
       "pair": [
         "ayahuasca",
@@ -880,7 +880,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_061",
+      "claim_id": "alma_2026_061",
       "pair_key": "SSRIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -889,7 +889,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_062",
+      "claim_id": "alma_2026_062",
       "pair_key": "ayahuasca|flupentixol",
       "pair": [
         "ayahuasca",
@@ -898,7 +898,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_063",
+      "claim_id": "alma_2026_063",
       "pair_key": "ayahuasca|fluvoxamine",
       "pair": [
         "ayahuasca",
@@ -907,7 +907,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_063",
+      "claim_id": "alma_2026_063",
       "pair_key": "SSRIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -916,7 +916,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_064",
+      "claim_id": "alma_2026_064",
       "pair_key": "ayahuasca|frovatriptan_succinate",
       "pair": [
         "ayahuasca",
@@ -925,7 +925,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_064",
+      "claim_id": "alma_2026_064",
       "pair_key": "ayahuasca|triptans",
       "pair": [
         "ayahuasca",
@@ -934,7 +934,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_065",
+      "claim_id": "alma_2026_065",
       "pair_key": "ayahuasca|furoxone",
       "pair": [
         "ayahuasca",
@@ -943,7 +943,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_066",
+      "claim_id": "alma_2026_066",
       "pair_key": "ayahuasca|gabapentin_enacarbil",
       "pair": [
         "ayahuasca",
@@ -952,7 +952,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_067",
+      "claim_id": "alma_2026_067",
       "pair_key": "ayahuasca|guanadrel",
       "pair": [
         "ayahuasca",
@@ -961,7 +961,7 @@
       "severity": "Moderate-Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_068",
+      "claim_id": "alma_2026_068",
       "pair_key": "ayahuasca|guanethidine",
       "pair": [
         "ayahuasca",
@@ -970,7 +970,7 @@
       "severity": "Moderate-Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_069",
+      "claim_id": "alma_2026_069",
       "pair_key": "ayahuasca|hydroxyzine",
       "pair": [
         "ayahuasca",
@@ -979,7 +979,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_069",
+      "claim_id": "alma_2026_069",
       "pair_key": "antihistamines|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -988,7 +988,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_070",
+      "claim_id": "alma_2026_070",
       "pair_key": "ayahuasca|hydralazine",
       "pair": [
         "ayahuasca",
@@ -997,7 +997,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_071",
+      "claim_id": "alma_2026_071",
       "pair_key": "ayahuasca|imipramine",
       "pair": [
         "ayahuasca",
@@ -1006,7 +1006,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_071",
+      "claim_id": "alma_2026_071",
       "pair_key": "TCAs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1015,7 +1015,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_072",
+      "claim_id": "alma_2026_072",
       "pair_key": "ayahuasca|imipramine",
       "pair": [
         "ayahuasca",
@@ -1024,7 +1024,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_072",
+      "claim_id": "alma_2026_072",
       "pair_key": "TCAs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1033,7 +1033,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_073",
+      "claim_id": "alma_2026_073",
       "pair_key": "ayahuasca|iprindole_prondol",
       "pair": [
         "ayahuasca",
@@ -1042,7 +1042,7 @@
       "severity": "Moderate-Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_074",
+      "claim_id": "alma_2026_074",
       "pair_key": "ayahuasca|iproclozide_sursum",
       "pair": [
         "ayahuasca",
@@ -1051,7 +1051,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_075",
+      "claim_id": "alma_2026_075",
       "pair_key": "ayahuasca|iproniazid_marsilid",
       "pair": [
         "ayahuasca",
@@ -1060,7 +1060,7 @@
       "severity": "Moderate-Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_075",
+      "claim_id": "alma_2026_075",
       "pair_key": "MAOIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1069,7 +1069,7 @@
       "severity": "Moderate-Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_076",
+      "claim_id": "alma_2026_076",
       "pair_key": "ayahuasca|isocarboxazid",
       "pair": [
         "ayahuasca",
@@ -1078,7 +1078,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_076",
+      "claim_id": "alma_2026_076",
       "pair_key": "MAOIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1087,7 +1087,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_077",
+      "claim_id": "alma_2026_077",
       "pair_key": "ayahuasca|isoniazid_isotamine",
       "pair": [
         "ayahuasca",
@@ -1096,7 +1096,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_078",
+      "claim_id": "alma_2026_078",
       "pair_key": "ayahuasca|isoprenaline",
       "pair": [
         "ayahuasca",
@@ -1105,7 +1105,7 @@
       "severity": "Minor"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_079",
+      "claim_id": "alma_2026_079",
       "pair_key": "ayahuasca|linezolid_zyvox",
       "pair": [
         "ayahuasca",
@@ -1114,7 +1114,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_079",
+      "claim_id": "alma_2026_079",
       "pair_key": "MAOIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1123,7 +1123,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_080",
+      "claim_id": "alma_2026_080",
       "pair_key": "ayahuasca|lithium_carbonate",
       "pair": [
         "ayahuasca",
@@ -1132,7 +1132,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_081",
+      "claim_id": "alma_2026_081",
       "pair_key": "ayahuasca|lofepramine",
       "pair": [
         "ayahuasca",
@@ -1141,7 +1141,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_082",
+      "claim_id": "alma_2026_082",
       "pair_key": "ayahuasca|loratadine",
       "pair": [
         "ayahuasca",
@@ -1150,7 +1150,7 @@
       "severity": "No interaction"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_082",
+      "claim_id": "alma_2026_082",
       "pair_key": "antihistamines|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1159,7 +1159,7 @@
       "severity": "No interaction"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_083",
+      "claim_id": "alma_2026_083",
       "pair_key": "ayahuasca|macromerine",
       "pair": [
         "ayahuasca",
@@ -1168,7 +1168,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_084",
+      "claim_id": "alma_2026_084",
       "pair_key": "ayahuasca|maprotiline",
       "pair": [
         "ayahuasca",
@@ -1177,7 +1177,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_085",
+      "claim_id": "alma_2026_085",
       "pair_key": "ayahuasca|mdma",
       "pair": [
         "ayahuasca",
@@ -1186,7 +1186,7 @@
       "severity": "Moderate - Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_086",
+      "claim_id": "alma_2026_086",
       "pair_key": "ayahuasca|melitracen",
       "pair": [
         "ayahuasca",
@@ -1195,7 +1195,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_087",
+      "claim_id": "alma_2026_087",
       "pair_key": "ayahuasca|meperidine",
       "pair": [
         "ayahuasca",
@@ -1204,7 +1204,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_087",
+      "claim_id": "alma_2026_087",
       "pair_key": "ayahuasca|opioids",
       "pair": [
         "ayahuasca",
@@ -1213,7 +1213,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_088",
+      "claim_id": "alma_2026_088",
       "pair_key": "ayahuasca|metamfetamine",
       "pair": [
         "ayahuasca",
@@ -1222,7 +1222,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_089",
+      "claim_id": "alma_2026_089",
       "pair_key": "ayahuasca|metaproterenol",
       "pair": [
         "ayahuasca",
@@ -1231,7 +1231,7 @@
       "severity": "Minor"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_090",
+      "claim_id": "alma_2026_090",
       "pair_key": "ayahuasca|metaraminol",
       "pair": [
         "ayahuasca",
@@ -1240,7 +1240,7 @@
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_091",
+      "claim_id": "alma_2026_091",
       "pair_key": "ayahuasca|stimulants",
       "pair": [
         "ayahuasca",
@@ -1249,7 +1249,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_092",
+      "claim_id": "alma_2026_092",
       "pair_key": "ayahuasca|mianserin",
       "pair": [
         "ayahuasca",
@@ -1258,7 +1258,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_093",
+      "claim_id": "alma_2026_093",
       "pair_key": "ayahuasca|milnacipran",
       "pair": [
         "ayahuasca",
@@ -1267,7 +1267,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_093",
+      "claim_id": "alma_2026_093",
       "pair_key": "SNRIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1276,7 +1276,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_094",
+      "claim_id": "alma_2026_094",
       "pair_key": "ayahuasca|minaprine_brantur",
       "pair": [
         "ayahuasca",
@@ -1285,7 +1285,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_095",
+      "claim_id": "alma_2026_095",
       "pair_key": "ayahuasca|moclobemide",
       "pair": [
         "ayahuasca",
@@ -1294,7 +1294,7 @@
       "severity": "Moderate-Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_095",
+      "claim_id": "alma_2026_095",
       "pair_key": "MAOIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1303,7 +1303,7 @@
       "severity": "Moderate-Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_096",
+      "claim_id": "alma_2026_096",
       "pair_key": "ayahuasca|modafinil",
       "pair": [
         "ayahuasca",
@@ -1312,7 +1312,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_096",
+      "claim_id": "alma_2026_096",
       "pair_key": "ayahuasca|stimulants",
       "pair": [
         "ayahuasca",
@@ -1321,7 +1321,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_097",
+      "claim_id": "alma_2026_097",
       "pair_key": "ayahuasca|montelukast",
       "pair": [
         "ayahuasca",
@@ -1330,7 +1330,7 @@
       "severity": "No interaction"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_098",
+      "claim_id": "alma_2026_098",
       "pair_key": "ayahuasca|naratriptan",
       "pair": [
         "ayahuasca",
@@ -1339,7 +1339,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_098",
+      "claim_id": "alma_2026_098",
       "pair_key": "ayahuasca|triptans",
       "pair": [
         "ayahuasca",
@@ -1348,7 +1348,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_099",
+      "claim_id": "alma_2026_099",
       "pair_key": "ayahuasca|nefazodone",
       "pair": [
         "ayahuasca",
@@ -1357,7 +1357,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_100",
+      "claim_id": "alma_2026_100",
       "pair_key": "ayahuasca|nialamide_niamid",
       "pair": [
         "ayahuasca",
@@ -1366,7 +1366,7 @@
       "severity": "Moderate-Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_100",
+      "claim_id": "alma_2026_100",
       "pair_key": "MAOIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1375,7 +1375,7 @@
       "severity": "Moderate-Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_101",
+      "claim_id": "alma_2026_101",
       "pair_key": "ayahuasca|nisoxetine",
       "pair": [
         "ayahuasca",
@@ -1384,7 +1384,7 @@
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_102",
+      "claim_id": "alma_2026_102",
       "pair_key": "ayahuasca|nomifensine",
       "pair": [
         "ayahuasca",
@@ -1393,7 +1393,7 @@
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_103",
+      "claim_id": "alma_2026_103",
       "pair_key": "ayahuasca|norepinephrine",
       "pair": [
         "ayahuasca",
@@ -1402,7 +1402,7 @@
       "severity": "Minor"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_104",
+      "claim_id": "alma_2026_104",
       "pair_key": "ayahuasca|nortriptyline",
       "pair": [
         "ayahuasca",
@@ -1411,7 +1411,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_104",
+      "claim_id": "alma_2026_104",
       "pair_key": "TCAs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1420,7 +1420,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_105",
+      "claim_id": "alma_2026_105",
       "pair_key": "ayahuasca|orphenadrine_citrate",
       "pair": [
         "ayahuasca",
@@ -1429,7 +1429,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_106",
+      "claim_id": "alma_2026_106",
       "pair_key": "ayahuasca|oxybutynin_chloride",
       "pair": [
         "ayahuasca",
@@ -1438,7 +1438,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_107",
+      "claim_id": "alma_2026_107",
       "pair_key": "ayahuasca|oxymetazoline",
       "pair": [
         "ayahuasca",
@@ -1447,7 +1447,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_108",
+      "claim_id": "alma_2026_108",
       "pair_key": "ayahuasca|pargyline",
       "pair": [
         "ayahuasca",
@@ -1456,7 +1456,7 @@
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_108",
+      "claim_id": "alma_2026_108",
       "pair_key": "MAOIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1465,7 +1465,7 @@
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_109",
+      "claim_id": "alma_2026_109",
       "pair_key": "ayahuasca|paroxetine",
       "pair": [
         "ayahuasca",
@@ -1474,7 +1474,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_109",
+      "claim_id": "alma_2026_109",
       "pair_key": "SSRIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1483,7 +1483,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_110",
+      "claim_id": "alma_2026_110",
       "pair_key": "ayahuasca|pemoline",
       "pair": [
         "ayahuasca",
@@ -1492,7 +1492,7 @@
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_110",
+      "claim_id": "alma_2026_110",
       "pair_key": "ayahuasca|stimulants",
       "pair": [
         "ayahuasca",
@@ -1501,7 +1501,7 @@
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_111",
+      "claim_id": "alma_2026_111",
       "pair_key": "ayahuasca|phendimetrazine",
       "pair": [
         "ayahuasca",
@@ -1510,7 +1510,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_111",
+      "claim_id": "alma_2026_111",
       "pair_key": "ayahuasca|stimulants",
       "pair": [
         "ayahuasca",
@@ -1519,7 +1519,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_112",
+      "claim_id": "alma_2026_112",
       "pair_key": "ayahuasca|phenelzine",
       "pair": [
         "ayahuasca",
@@ -1528,7 +1528,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_112",
+      "claim_id": "alma_2026_112",
       "pair_key": "MAOIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1537,7 +1537,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_113",
+      "claim_id": "alma_2026_113",
       "pair_key": "ayahuasca|promethazine",
       "pair": [
         "ayahuasca",
@@ -1546,7 +1546,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_113",
+      "claim_id": "alma_2026_113",
       "pair_key": "antihistamines|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1555,7 +1555,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_114",
+      "claim_id": "alma_2026_114",
       "pair_key": "ayahuasca|phenmetrazine",
       "pair": [
         "ayahuasca",
@@ -1564,7 +1564,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_114",
+      "claim_id": "alma_2026_114",
       "pair_key": "ayahuasca|stimulants",
       "pair": [
         "ayahuasca",
@@ -1573,7 +1573,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_115",
+      "claim_id": "alma_2026_115",
       "pair_key": "ayahuasca|phentermine",
       "pair": [
         "ayahuasca",
@@ -1582,7 +1582,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_115",
+      "claim_id": "alma_2026_115",
       "pair_key": "ayahuasca|stimulants",
       "pair": [
         "ayahuasca",
@@ -1591,7 +1591,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_116",
+      "claim_id": "alma_2026_116",
       "pair_key": "ayahuasca|phenylalanine",
       "pair": [
         "ayahuasca",
@@ -1600,7 +1600,7 @@
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_117",
+      "claim_id": "alma_2026_117",
       "pair_key": "ayahuasca|phenylephrine",
       "pair": [
         "ayahuasca",
@@ -1609,7 +1609,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_118",
+      "claim_id": "alma_2026_118",
       "pair_key": "ayahuasca|phenylpropanolamine",
       "pair": [
         "ayahuasca",
@@ -1618,7 +1618,7 @@
       "severity": "Minor"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_119",
+      "claim_id": "alma_2026_119",
       "pair_key": "ayahuasca|procainamide",
       "pair": [
         "ayahuasca",
@@ -1627,7 +1627,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_120",
+      "claim_id": "alma_2026_120",
       "pair_key": "ayahuasca|procarbazine",
       "pair": [
         "ayahuasca",
@@ -1636,7 +1636,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_120",
+      "claim_id": "alma_2026_120",
       "pair_key": "MAOIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1645,7 +1645,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_121",
+      "claim_id": "alma_2026_121",
       "pair_key": "ayahuasca|promethazine",
       "pair": [
         "ayahuasca",
@@ -1654,7 +1654,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_121",
+      "claim_id": "alma_2026_121",
       "pair_key": "antihistamines|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1663,7 +1663,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_122",
+      "claim_id": "alma_2026_122",
       "pair_key": "ayahuasca|protriptyline",
       "pair": [
         "ayahuasca",
@@ -1672,7 +1672,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_123",
+      "claim_id": "alma_2026_123",
       "pair_key": "ayahuasca|fluoxetine",
       "pair": [
         "ayahuasca",
@@ -1681,7 +1681,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_123",
+      "claim_id": "alma_2026_123",
       "pair_key": "SSRIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1690,7 +1690,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_124",
+      "claim_id": "alma_2026_124",
       "pair_key": "ayahuasca|pseudoephedrine",
       "pair": [
         "ayahuasca",
@@ -1699,7 +1699,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_124",
+      "claim_id": "alma_2026_124",
       "pair_key": "ayahuasca|stimulants",
       "pair": [
         "ayahuasca",
@@ -1708,7 +1708,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_125",
+      "claim_id": "alma_2026_125",
       "pair_key": "ayahuasca|quetiapine_fumarate",
       "pair": [
         "ayahuasca",
@@ -1717,7 +1717,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_126",
+      "claim_id": "alma_2026_126",
       "pair_key": "ayahuasca|quinidine_sulfate",
       "pair": [
         "ayahuasca",
@@ -1726,7 +1726,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_127",
+      "claim_id": "alma_2026_127",
       "pair_key": "ayahuasca|rabies_vaccine",
       "pair": [
         "ayahuasca",
@@ -1735,7 +1735,7 @@
       "severity": "No interaction"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_128",
+      "claim_id": "alma_2026_128",
       "pair_key": "ayahuasca|rasagiline_mesylate",
       "pair": [
         "ayahuasca",
@@ -1744,7 +1744,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_128",
+      "claim_id": "alma_2026_128",
       "pair_key": "MAOIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1753,7 +1753,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_129",
+      "claim_id": "alma_2026_129",
       "pair_key": "ayahuasca|reboxetine_mesilate",
       "pair": [
         "ayahuasca",
@@ -1762,7 +1762,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_130",
+      "claim_id": "alma_2026_130",
       "pair_key": "ayahuasca|reserpine_renese_r",
       "pair": [
         "ayahuasca",
@@ -1771,7 +1771,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_131",
+      "claim_id": "alma_2026_131",
       "pair_key": "ayahuasca|risperidone_tartrate",
       "pair": [
         "ayahuasca",
@@ -1780,7 +1780,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_132",
+      "claim_id": "alma_2026_132",
       "pair_key": "ayahuasca|rizatriptan_benzoate",
       "pair": [
         "ayahuasca",
@@ -1789,7 +1789,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_132",
+      "claim_id": "alma_2026_132",
       "pair_key": "ayahuasca|triptans",
       "pair": [
         "ayahuasca",
@@ -1798,7 +1798,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_133",
+      "claim_id": "alma_2026_133",
       "pair_key": "ayahuasca|robitussin_dm",
       "pair": [
         "ayahuasca",
@@ -1807,7 +1807,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_134",
+      "claim_id": "alma_2026_134",
       "pair_key": "ayahuasca|salmeterol_xinafoate",
       "pair": [
         "ayahuasca",
@@ -1816,7 +1816,7 @@
       "severity": "Minor"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_135",
+      "claim_id": "alma_2026_135",
       "pair_key": "ayahuasca|selegiline",
       "pair": [
         "ayahuasca",
@@ -1825,7 +1825,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_135",
+      "claim_id": "alma_2026_135",
       "pair_key": "MAOIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1834,7 +1834,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_136",
+      "claim_id": "alma_2026_136",
       "pair_key": "ayahuasca|selegiline",
       "pair": [
         "ayahuasca",
@@ -1843,7 +1843,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_136",
+      "claim_id": "alma_2026_136",
       "pair_key": "MAOIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1852,7 +1852,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_137",
+      "claim_id": "alma_2026_137",
       "pair_key": "ayahuasca|sertraline",
       "pair": [
         "ayahuasca",
@@ -1861,7 +1861,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_137",
+      "claim_id": "alma_2026_137",
       "pair_key": "SSRIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1870,7 +1870,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_138",
+      "claim_id": "alma_2026_138",
       "pair_key": "ayahuasca|st_john_s_wort",
       "pair": [
         "ayahuasca",
@@ -1879,7 +1879,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_139",
+      "claim_id": "alma_2026_139",
       "pair_key": "ayahuasca|sumatriptan",
       "pair": [
         "ayahuasca",
@@ -1888,7 +1888,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_139",
+      "claim_id": "alma_2026_139",
       "pair_key": "ayahuasca|triptans",
       "pair": [
         "ayahuasca",
@@ -1897,7 +1897,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_140",
+      "claim_id": "alma_2026_140",
       "pair_key": "ayahuasca|sumatriptan",
       "pair": [
         "ayahuasca",
@@ -1906,7 +1906,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_140",
+      "claim_id": "alma_2026_140",
       "pair_key": "ayahuasca|triptans",
       "pair": [
         "ayahuasca",
@@ -1915,7 +1915,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_141",
+      "claim_id": "alma_2026_141",
       "pair_key": "ayahuasca|terfenadine",
       "pair": [
         "ayahuasca",
@@ -1924,7 +1924,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_142",
+      "claim_id": "alma_2026_142",
       "pair_key": "ayahuasca|tesofensine",
       "pair": [
         "ayahuasca",
@@ -1933,7 +1933,7 @@
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_143",
+      "claim_id": "alma_2026_143",
       "pair_key": "ayahuasca|theophylline",
       "pair": [
         "ayahuasca",
@@ -1942,7 +1942,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_144",
+      "claim_id": "alma_2026_144",
       "pair_key": "ayahuasca|tianeptine_sodium",
       "pair": [
         "ayahuasca",
@@ -1951,7 +1951,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_145",
+      "claim_id": "alma_2026_145",
       "pair_key": "ayahuasca|tramadol_ultram",
       "pair": [
         "ayahuasca",
@@ -1960,7 +1960,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_145",
+      "claim_id": "alma_2026_145",
       "pair_key": "ayahuasca|opioids",
       "pair": [
         "ayahuasca",
@@ -1969,7 +1969,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_146",
+      "claim_id": "alma_2026_146",
       "pair_key": "ayahuasca|tranylcypromine",
       "pair": [
         "ayahuasca",
@@ -1978,7 +1978,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_146",
+      "claim_id": "alma_2026_146",
       "pair_key": "MAOIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -1987,7 +1987,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_147",
+      "claim_id": "alma_2026_147",
       "pair_key": "ayahuasca|trazodone",
       "pair": [
         "ayahuasca",
@@ -1996,7 +1996,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_148",
+      "claim_id": "alma_2026_148",
       "pair_key": "ayahuasca|trimipramine",
       "pair": [
         "ayahuasca",
@@ -2005,7 +2005,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_148",
+      "claim_id": "alma_2026_148",
       "pair_key": "TCAs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -2014,7 +2014,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_149",
+      "claim_id": "alma_2026_149",
       "pair_key": "ayahuasca|tryptophan",
       "pair": [
         "ayahuasca",
@@ -2023,7 +2023,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_149",
+      "claim_id": "alma_2026_149",
       "pair_key": "MAOIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -2032,7 +2032,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_150",
+      "claim_id": "alma_2026_150",
       "pair_key": "ayahuasca|tyrosine",
       "pair": [
         "ayahuasca",
@@ -2041,7 +2041,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_151",
+      "claim_id": "alma_2026_151",
       "pair_key": "ayahuasca|vanoxerine",
       "pair": [
         "ayahuasca",
@@ -2050,7 +2050,7 @@
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_151",
+      "claim_id": "alma_2026_151",
       "pair_key": "ayahuasca|stimulants",
       "pair": [
         "ayahuasca",
@@ -2059,7 +2059,7 @@
       "severity": "Inconclusive"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_152",
+      "claim_id": "alma_2026_152",
       "pair_key": "ayahuasca|venlafaxine",
       "pair": [
         "ayahuasca",
@@ -2068,7 +2068,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_152",
+      "claim_id": "alma_2026_152",
       "pair_key": "SNRIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -2077,7 +2077,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_153",
+      "claim_id": "alma_2026_153",
       "pair_key": "ayahuasca|vicks_formula_44_d",
       "pair": [
         "ayahuasca",
@@ -2086,7 +2086,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_154",
+      "claim_id": "alma_2026_154",
       "pair_key": "ayahuasca|viloxazine_qelbree",
       "pair": [
         "ayahuasca",
@@ -2095,7 +2095,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_155",
+      "claim_id": "alma_2026_155",
       "pair_key": "ayahuasca|yohimbine",
       "pair": [
         "ayahuasca",
@@ -2104,7 +2104,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_156",
+      "claim_id": "alma_2026_156",
       "pair_key": "ayahuasca|zimelidine",
       "pair": [
         "ayahuasca",
@@ -2113,7 +2113,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_156",
+      "claim_id": "alma_2026_156",
       "pair_key": "SSRIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -2122,7 +2122,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_157",
+      "claim_id": "alma_2026_157",
       "pair_key": "ayahuasca|ziprasidone",
       "pair": [
         "ayahuasca",
@@ -2131,7 +2131,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_158",
+      "claim_id": "alma_2026_158",
       "pair_key": "ayahuasca|zolmitriptan",
       "pair": [
         "ayahuasca",
@@ -2140,7 +2140,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_158",
+      "claim_id": "alma_2026_158",
       "pair_key": "ayahuasca|triptans",
       "pair": [
         "ayahuasca",
@@ -2149,7 +2149,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_159",
+      "claim_id": "alma_2026_159",
       "pair_key": "ayahuasca|sertraline",
       "pair": [
         "ayahuasca",
@@ -2158,7 +2158,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_159",
+      "claim_id": "alma_2026_159",
       "pair_key": "SSRIs|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -2167,7 +2167,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_160",
+      "claim_id": "alma_2026_160",
       "pair_key": "ayahuasca|zolpidem_tartrate",
       "pair": [
         "ayahuasca",
@@ -2178,7 +2178,7 @@
   ],
   "entries_matching_existing_pairs": [
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_032",
+      "claim_id": "alma_2026_032",
       "pair_key": "antihypertensives|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -2187,7 +2187,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_036",
+      "claim_id": "alma_2026_036",
       "pair_key": "ayahuasca|cocaine",
       "pair": [
         "ayahuasca",
@@ -2196,7 +2196,7 @@
       "severity": "Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_067",
+      "claim_id": "alma_2026_067",
       "pair_key": "antihypertensives|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -2205,7 +2205,7 @@
       "severity": "Moderate-Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_068",
+      "claim_id": "alma_2026_068",
       "pair_key": "antihypertensives|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -2214,7 +2214,7 @@
       "severity": "Moderate-Major"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_070",
+      "claim_id": "alma_2026_070",
       "pair_key": "antihypertensives|ayahuasca",
       "pair": [
         "ayahuasca",
@@ -2223,7 +2223,7 @@
       "severity": "Moderate"
     },
     {
-      "claim_id": "alma_ayahuasca_interactions_dataset_091",
+      "claim_id": "alma_2026_091",
       "pair_key": "ayahuasca|methylphenidate",
       "pair": [
         "ayahuasca",

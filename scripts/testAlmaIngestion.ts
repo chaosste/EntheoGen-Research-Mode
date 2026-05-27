@@ -41,7 +41,7 @@ const datasetPath = path.join(tempRoot, 'dataset.json');
 const manifestPath = path.join(kbIndexesDir, 'source_manifest.json');
 const tagsPath = path.join(kbIndexesDir, 'source_tags.json');
 const citationPath = path.join(kbIndexesDir, 'citation_registry.json');
-const almaSourcePath = path.join(kbSourcesDir, 'alma_ayahuasca_interactions_dataset.md');
+const almaSourcePath = path.join(kbSourcesDir, 'alma_2026.md');
 
 mkdirSync(kbSourcesDir, { recursive: true });
 mkdirSync(pendingDir, { recursive: true });
@@ -51,7 +51,7 @@ mkdirSync(reportDir, { recursive: true });
 stage('fixture setup');
 
 const sourceBody = `---
-source_id: alma_ayahuasca_interactions_dataset
+source_id: alma_2026
 title: Alma Healing Center Ayahuasca and Medication Interactions
 source_type: expert_dataset
 authority_level: low
@@ -125,7 +125,7 @@ runScript('scripts/ingest_alma_interactions.ts', {
 });
 stage('ingest ok');
 
-const pendingPackage = await readJson<{ claims: ClaimRecord[] }>(path.join(pendingDir, 'alma_ayahuasca_interactions_dataset.claims.json'));
+const pendingPackage = await readJson<{ claims: ClaimRecord[] }>(path.join(pendingDir, 'alma_2026.claims.json'));
 assert.ok(pendingPackage.claims.length >= 4, 'expected Alma ingestion to generate multiple claims');
 stage('pending package ok');
 
@@ -190,7 +190,7 @@ const linkedDataset = await readJson<any>(datasetPath);
 const linkedPair = linkedDataset.pairs.find((pair: any) => pair.key === 'ayahuasca|sertraline');
 assert.ok(linkedPair, 'seeded pair should exist');
 assert.strictEqual(linkedPair.classification.code, 'DETERMINISTIC', 'Alma evidence must not downgrade or reclassify the pair');
-assert.ok(linkedPair.evidence.source_refs.some((ref: any) => ref.source_id === 'alma_ayahuasca_interactions_dataset'), 'reviewed Alma claim should link as a source ref');
+assert.ok(linkedPair.evidence.source_refs.some((ref: any) => ref.source_id === 'alma_2026'), 'reviewed Alma claim should link as a source ref');
 
 stage('complete');
 console.log('Alma ingestion checks passed');

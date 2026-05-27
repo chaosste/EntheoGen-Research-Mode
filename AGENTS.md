@@ -82,18 +82,25 @@ or ordinary verification.
 
 ## Learned User Preferences
 
-- **Local first:** Align with Codex “local first” — default to local edits and
-  narrow verification for small changes; avoid wide repo scans and long
-  multi-turn agent threads when a few file touches suffice (saves time and
-  metered usage).
+- **Local first / microscopic scope:** Default to local edits and narrow
+  verification; for interaction or evidence work use one file, one pair, or one
+  explicit diff—no “while I’m here” refactors, parallel repos, or export steps
+  the user did not ask for.
+- **Stop when told:** If the user says STOP (or clearly halts work), stop
+  immediately—no further tools, rebuilds, syncs, or follow-up “help.”
+- **No life advice:** Never offer personal, career, financial, mental-health, or
+  coping guidance, and do not suggest helplines, charities, or similar resources,
+  unless the user explicitly asks for that kind of help.
+- **Do not tell the user to stop working:** Never suggest stepping away from the
+  project, taking a break, or pausing work unless they explicitly ask for that.
+- **Follow-up passes break dataset work:** After the first successful task in a
+  session, avoid extra agent passes that add scripts, docs, layers, or
+  regenerate exports—the user reports follow-ups often break the project.
 - **EntheoGen → deployment:** Always update local `main` from remote before
   pushing work that will feed remote deploys, so deploys are based on current
   upstream, not a stale branch tip.
-- Prefer minimal, isolated patches over broad refactors.
 - Keep auth systems untouched during interaction UI/data-layer work unless
   explicitly requested.
-- Remove dead code only when TypeScript explicitly confirms it is unused.
-- Keep new filtering logic centralized in a single composable helper.
 - Use normalized `UIInteraction` fields for UI behavior and rendering instead of
   raw dataset fields.
 - Keep retained memory artifacts and Slack channel record artifacts local-only
@@ -112,11 +119,9 @@ or ordinary verification.
   bulk rows through the Supabase SQL Editor only (no local `psql`), prefer a
   staging table plus `INSERT … SELECT` matched to the live table’s exact column
   list over ad hoc or CLI-only import paths.
-- Remove throwaway one-off CSV or dataset patch scripts after a successful run
-  instead of leaving them in the repo.
-- When the user attaches an implementation plan with todos already created, do
-  not edit the plan file itself; mark existing todos in progress instead of
-  recreating them.
+- **Do not re-wire Foundry citation chunks:** Do not recommend porting rollback
+  `chunk_refs`, `pair_chunk_sources.json`, or `foundry-upload-current` linkage
+  into Research-Mode—the user abandoned that path after repeated failure.
 - Metabase / Phase 1 dashboards: exclude **self-pairs** from analysis by default
   (**`is_comparable_pair = true`** on `interactions_enriched`; self rows remain
   in the model); use
@@ -135,37 +140,32 @@ or ordinary verification.
 
 - The UI interaction adapter is centered in `src/data/uiInteractions.ts`.
 - Research Mode filtering is centralized in `src/data/researchMode.ts`.
-- A dev regression assertion script exists at
-  `scripts/testUIInteractionsAdapter.ts`.
-- Continual-learning state is tracked locally via
-  `.cursor/hooks/state/continual-learning-index.json`.
+- **App runtime dataset truth** is `public/dataset/interaction_pairs.json`,
+  registered via `registerAppDataset` in `main.tsx`—not raw
+  `interactions.csv`, `src/data/interactionDatasetV2.json`, or KB claim files.
+- Research-Mode `scripts/buildAppDatasetFromBeta.ts` hardcodes
+  `source_refs: ['beta_dataset']` and does **not** emit `chunk_refs` (EntheoGen-rollback’s
+  builder may differ when `pair_chunk_sources.json` is present).
+- **`npm run audit:dataset`** runs `scripts/localDatasetAudit.ts`—a deterministic,
+  no-LLM reader over `public/dataset/interaction_pairs.json` (optional
+  `foundry-upload-current/*` only if present on disk).
+- Interaction evidence can be entered in CSV, KB, rollback/Foundry, or Supabase,
+  but without an explicit single shipped-truth lock the app export often stays
+  `source_refs: ["beta_dataset"]` only—user input does not reliably reach the
+  public bundle.
 - Supabase Phase 1 exposes `interactions` and `substances` base tables; canonical
   pair analytics SQL is **`public.interactions_enriched`** (see
   `docs/metabase/interactions_enriched.sql` and
-  `supabase/migrations/*_public_interactions_enriched_view.sql`). Some environments
-  may still use `public.analytics_interactions_v2` until Phase 2 migrations add
-  `interaction_pairs_v2` and related normalized tables.
+  `supabase/migrations/*_public_interactions_enriched_view.sql`).
 - Multi-mechanism Metabase questions should explode `mechanism_categories` with
-  `jsonb_array_elements_text` in native SQL.
-- Dataset Beta Docker Compose runs Metabase as `metabase_local` with Postgres
-  `metabase_metadata_db`; use `docker compose -f` pointed at that repo when not
-  in its working directory. If `docker compose up` fails because the metadata
-  container name is already in use, remove or rename the conflicting container
-  before starting the stack again. In EntheoGen, `docs/metabase` is model SQL
-  and README only (no Compose stack there); live analytics use a Metabase
-  database connection to Supabase Phase 1, and local `interactions.csv` truth
-  reaches Metabase through the Phase 1 CSV pipeline, not by dropping CSVs into
-  `docs/metabase`. When replacing **`public.interactions_enriched`** in Postgres,
-  **`CREATE OR REPLACE VIEW`** cannot change existing column names or order
-  (**`42P16`**); use **`DROP VIEW … CASCADE`** then **`CREATE VIEW`** (as in the
-  repo migration) or keep the prior signature identical.
+  `jsonb_array_elements_text` in native SQL. When replacing
+  **`public.interactions_enriched`**, **`CREATE OR REPLACE VIEW`** cannot change
+  column names or order (**`42P16`**); use **`DROP VIEW … CASCADE`** then
+  **`CREATE VIEW`**.
 - `npm run dataset:build-beta -- .` reads workspace-root **`interactions.csv`**
-  and **`substances.csv`** (not the Supabase default export names
-  `interactions_rows.csv` / `substances_rows.csv` unless renamed or copied) and
-  rebuilds `src/data/substances_snapshot.json` and
-  `src/exports/interaction_pairs.json`; the export’s per-pair mechanism field
-  reflects **`primary_mechanism_category`**, while CSV **`mechanism_categories`**
-  arrays can be richer for downstream and Metabase until exports mirror them.
+  and **`substances.csv`** and rebuilds `src/data/substances_snapshot.json`,
+  `src/exports/interaction_pairs.json`, and the public dataset bundle; mechanism
+  on the export reflects **`primary_mechanism_category`**.
 - Legacy aggregate substance id `mdma_2cx_dox_nbome` decomposes to `mdma`,
   `two_c_x`, `dox`, and `nbome_series` in aggregate decomposition maps.
 - Phase 1 `public.interactions`: `classification_confidence` is **text** tiers
@@ -173,12 +173,6 @@ or ordinary verification.
   **1–5** plus null/`is_self_pair` quirks), not 0–1 probabilities—for ad hoc SQL
   and Metabase, bucket and cast accordingly; joined substance labels must attach
   to **`LEAST`/`GREATEST`**-sorted IDs when canonicalizing `(a,b)` order.
-- `npm run test:suite:alignment` includes `npm run test:ui-adapter` as part of
-  the alignment suite; Cursor Cloud Agent base images for this repo are defined
-  under `.cursor/` (`environment.json` and `Dockerfile`).
-- Remote `npm ci` / `npm install` on hosts without an SSH agent will fail on
-  **`git+ssh://`** GitHub deps such as unused private
-  GitHub package pins (`Permission denied (publickey)`). Remove unused git
-  dependencies where possible; otherwise prefer public **`git+https://github.com/...#commit`**
-  specs, committed package artifacts, or HTTPS + token / deploy key access for
-  private repos.
+- `npm run test:suite:alignment` includes `npm run test:ui-adapter`; remote
+  `npm ci` on hosts without an SSH agent fails on unused **`git+ssh://`** GitHub
+  deps—prefer HTTPS pins or remove unused private git dependencies.

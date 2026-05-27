@@ -418,6 +418,28 @@
     "source_fingerprint": "23cddb4d2b96f8af0d8284fc8714105d3529b987e4ddcda16be11c8cdbd88861"
   },
   {
+    "substance_a_id": "alcohol",
+    "substance_b_id": "iboga",
+    "pair_key": "alcohol|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "77c0f13c9081c29216c861780d07865bc1628b870cbee7949152902dd0d4b1ef"
+  },
+  {
     "substance_a_id": "kambo",
     "substance_b_id": "alcohol",
     "pair_key": "alcohol|kambo",
@@ -1276,6 +1298,28 @@
     "source_fingerprint": "36d2199c27dbda982dd40c42a45a796d710051f519651d1c922ce8ba5f1d5ed0"
   },
   {
+    "substance_a_id": "amphetamine_stims",
+    "substance_b_id": "iboga",
+    "pair_key": "amphetamine_stims|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "8b0cc57c783b0eb19b5de306f3a89eca95c67971e97a57cbac49ca761d5fcc67"
+  },
+  {
     "substance_a_id": "kambo",
     "substance_b_id": "amphetamine_stims",
     "pair_key": "amphetamine_stims|kambo",
@@ -2112,6 +2156,28 @@
     "source_fingerprint": "77afae5a0851091fc4c8565ec1d89bdbc1487b37f781da0540563706b828a545"
   },
   {
+    "substance_a_id": "antihypertensives",
+    "substance_b_id": "iboga",
+    "pair_key": "antihypertensives|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "d32b0b644dc8434e9958b79eff1b7bd815db45eb166c7c429addb013708504a7"
+  },
+  {
     "substance_a_id": "kambo",
     "substance_b_id": "antihypertensives",
     "pair_key": "antihypertensives|kambo",
@@ -2926,6 +2992,28 @@
     "source_fingerprint": "6aa64860811c9419f0f3d89bd7d027e02a6d0b1188f51f0fd5f1806d8867a9ea"
   },
   {
+    "substance_a_id": "antipsychotics",
+    "substance_b_id": "iboga",
+    "pair_key": "antipsychotics|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "7ad16c9032504f84da22a1d07257f8d79405cdd32e46ed31e89e61c826a99400"
+  },
+  {
     "substance_a_id": "kambo",
     "substance_b_id": "antipsychotics",
     "pair_key": "antipsychotics|kambo",
@@ -3718,6 +3806,28 @@
     "source_fingerprint": "b95df1518688794343b6161e826bc3526f22d3a5379cd620e0f50d8efe346ed4"
   },
   {
+    "substance_a_id": "atypical_ad",
+    "substance_b_id": "iboga",
+    "pair_key": "atypical_ad|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "3adfab15d0a85694ba3198e2b117ea7d6ea1cb5fe78e26f74087c396e70d53fc"
+  },
+  {
     "substance_a_id": "kambo",
     "substance_b_id": "atypical_ad",
     "pair_key": "atypical_ad|kambo",
@@ -4489,6 +4599,28 @@
   },
   {
     "substance_a_id": "ayahuasca",
+    "substance_b_id": "iboga",
+    "pair_key": "ayahuasca|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "090b42751d47e87eca92740811694b0015580946fdb95912a685c2aaaeb51a9e"
+  },
+  {
+    "substance_a_id": "ayahuasca",
     "substance_b_id": "kambo",
     "pair_key": "ayahuasca|kambo",
     "origin": "explicit",
@@ -5237,6 +5369,28 @@
   },
   {
     "substance_a_id": "belladonna",
+    "substance_b_id": "iboga",
+    "pair_key": "belladonna|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "e91087b18ecabc09fa2508e9a95983fa45de7663a6bed49fb9097ed8150358ea"
+  },
+  {
+    "substance_a_id": "belladonna",
     "substance_b_id": "kambo",
     "pair_key": "belladonna|kambo",
     "origin": "unknown",
@@ -5962,6 +6116,28 @@
     "source_fingerprint": "6cc1967e07a236eb23e7d6552182c9ce194fe83240f32629ec6b4a8c9160668b"
   },
   {
+    "substance_a_id": "benzodiazepines",
+    "substance_b_id": "iboga",
+    "pair_key": "benzodiazepines|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "c3a5149bc29f83c0e9f1e85bea50bf8a786e9c2a11997917ace36ea455e55e19"
+  },
+  {
     "substance_a_id": "kambo",
     "substance_b_id": "benzodiazepines",
     "pair_key": "benzodiazepines|kambo",
@@ -6578,6 +6754,28 @@
     "source_fingerprint": "e6f64e74e8020a13058eeaace207bf6b4a6fa0760b6d8e004974408be6272bbd"
   },
   {
+    "substance_a_id": "beta_blockers_ccb",
+    "substance_b_id": "iboga",
+    "pair_key": "beta_blockers_ccb|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "b89fc240dbe5abece9b0f96cf7ffa036d8a335b8306b8aab195b303458056f36"
+  },
+  {
     "substance_a_id": "kambo",
     "substance_b_id": "beta_blockers_ccb",
     "pair_key": "beta_blockers_ccb|kambo",
@@ -7150,6 +7348,28 @@
     "source_fingerprint": "0d5f62efa55f3fdf75ff4f3be3adcb4a67c3a411a3bd2b94174ab313d9598e8f"
   },
   {
+    "substance_a_id": "dox",
+    "substance_b_id": "beta_blockers",
+    "pair_key": "beta_blockers|dox",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "A cardiovascularly active agent with a classic psychedelic or stimulant suggests a provisional hemodynamic interaction.",
+    "confidence": "low",
+    "mechanism": "Both drugs can shape blood pressure or pulse, so the main issue is compensatory load rather than a unique toxidrome.",
+    "mechanism_category": "hemodynamic_interaction",
+    "timing": null,
+    "evidence_gaps": "- Watch for dizziness, palpitations, syncope, or sustained tachycardia. - Hydration and dose caution matter more than exact label matching here.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "8787632bc29c01cef4674d9987ec0da71c21393110363e9d366ed7e8969afb93"
+  },
+  {
     "substance_a_id": "five_meo_dmt",
     "substance_b_id": "beta_blockers",
     "pair_key": "beta_blockers|five_meo_dmt",
@@ -7192,6 +7412,28 @@
       "beta_dataset"
     ],
     "source_fingerprint": "da2a1ef8a0b0bb444666d8617c315202e9a36d9a01db6b5f684333d105e7de3e"
+  },
+  {
+    "substance_a_id": "beta_blockers",
+    "substance_b_id": "iboga",
+    "pair_key": "beta_blockers|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "560fc0940510d2f6663f486502a8fc6cc311d36654a5a6a534fecfcbdb7a7868"
   },
   {
     "substance_a_id": "kambo",
@@ -7326,6 +7568,28 @@
     "source_fingerprint": "ee953b3ef7926c02b6308f03e3081ddb7cd4f7f034c85484aea54ba468533d71"
   },
   {
+    "substance_a_id": "mdma",
+    "substance_b_id": "beta_blockers",
+    "pair_key": "beta_blockers|mdma",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "A cardiovascularly active agent with a classic psychedelic or stimulant suggests a provisional hemodynamic interaction.",
+    "confidence": "low",
+    "mechanism": "Both drugs can shape blood pressure or pulse, so the main issue is compensatory load rather than a unique toxidrome.",
+    "mechanism_category": "hemodynamic_interaction",
+    "timing": null,
+    "evidence_gaps": "- Watch for dizziness, palpitations, syncope, or sustained tachycardia. - Hydration and dose caution matter more than exact label matching here.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "a6ff66942fde001c9ce6f6388645a4e54297782045a500a23da5496f1c5a88e0"
+  },
+  {
     "substance_a_id": "mescaline_peyote",
     "substance_b_id": "beta_blockers",
     "pair_key": "beta_blockers|mescaline_peyote",
@@ -7368,6 +7632,28 @@
       "beta_dataset"
     ],
     "source_fingerprint": "1f7d34f8142d24ac94cab4462200e7a52763cda37019b739452575e377851980"
+  },
+  {
+    "substance_a_id": "nbome_series",
+    "substance_b_id": "beta_blockers",
+    "pair_key": "beta_blockers|nbome_series",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "A cardiovascularly active agent with a classic psychedelic or stimulant suggests a provisional hemodynamic interaction.",
+    "confidence": "low",
+    "mechanism": "Both drugs can shape blood pressure or pulse, so the main issue is compensatory load rather than a unique toxidrome.",
+    "mechanism_category": "hemodynamic_interaction",
+    "timing": null,
+    "evidence_gaps": "- Watch for dizziness, palpitations, syncope, or sustained tachycardia. - Hydration and dose caution matter more than exact label matching here.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "b3743792e32a45bd24e4c3aebc65c997062cf41a1f87539418a6444b84ce547e"
   },
   {
     "substance_a_id": "ndri_bupropion",
@@ -7566,6 +7852,28 @@
       "beta_dataset"
     ],
     "source_fingerprint": "a0ccf169a433b65e220a2bde653a64c97f6b6f941818fd02740ba62d3bb8991e"
+  },
+  {
+    "substance_a_id": "two_c_x",
+    "substance_b_id": "beta_blockers",
+    "pair_key": "beta_blockers|two_c_x",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "A cardiovascularly active agent with a classic psychedelic or stimulant suggests a provisional hemodynamic interaction.",
+    "confidence": "low",
+    "mechanism": "Both drugs can shape blood pressure or pulse, so the main issue is compensatory load rather than a unique toxidrome.",
+    "mechanism_category": "hemodynamic_interaction",
+    "timing": null,
+    "evidence_gaps": "- Watch for dizziness, palpitations, syncope, or sustained tachycardia. - Hydration and dose caution matter more than exact label matching here.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "5b7da2ffbc7cf2eb72609eae540b88b07488ac229f1aa55406dd1ee97e95b7dd"
   },
   {
     "substance_a_id": "yopo",
@@ -7786,6 +8094,28 @@
       "beta_dataset"
     ],
     "source_fingerprint": "3c0e3e9c5678846dfe3817f91d656859673defcdf58a70ea945fdb8410424dc9"
+  },
+  {
+    "substance_a_id": "brugmansia",
+    "substance_b_id": "iboga",
+    "pair_key": "brugmansia|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "e6a458623e005cc69d286f651544eebdee1fbf98049b971a950012c9a72da22e"
   },
   {
     "substance_a_id": "brugmansia",
@@ -8338,6 +8668,28 @@
     "source_fingerprint": "57b635875ca4bb906ef556afe4818561254c7acf5e7aeb2d418f9ebfa2f813eb"
   },
   {
+    "substance_a_id": "dox",
+    "substance_b_id": "calcium_channel_blockers",
+    "pair_key": "calcium_channel_blockers|dox",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "A cardiovascularly active agent with a classic psychedelic or stimulant suggests a provisional hemodynamic interaction.",
+    "confidence": "low",
+    "mechanism": "Both drugs can shape blood pressure or pulse, so the main issue is compensatory load rather than a unique toxidrome.",
+    "mechanism_category": "hemodynamic_interaction",
+    "timing": null,
+    "evidence_gaps": "- Watch for dizziness, palpitations, syncope, or sustained tachycardia. - Hydration and dose caution matter more than exact label matching here.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "fa63cbd278925652eab920cc3750df2e5d766718574f7b2a480654e2a3cb1c54"
+  },
+  {
     "substance_a_id": "five_meo_dmt",
     "substance_b_id": "calcium_channel_blockers",
     "pair_key": "calcium_channel_blockers|five_meo_dmt",
@@ -8380,6 +8732,28 @@
       "beta_dataset"
     ],
     "source_fingerprint": "9185ddac9f2ea1c42ce3966c163b196c0d107fbc0fc4bbc3002784dbfdc52629"
+  },
+  {
+    "substance_a_id": "calcium_channel_blockers",
+    "substance_b_id": "iboga",
+    "pair_key": "calcium_channel_blockers|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "8cfce68b11fe3474a27de4e4482c998c0aa8b08ba0e96f3427aa24b999e95e17"
   },
   {
     "substance_a_id": "kambo",
@@ -8514,6 +8888,28 @@
     "source_fingerprint": "58813d3e201ac140e98162c81265250f5ffc60c41693ad576af36e967bf7ade5"
   },
   {
+    "substance_a_id": "mdma",
+    "substance_b_id": "calcium_channel_blockers",
+    "pair_key": "calcium_channel_blockers|mdma",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "A cardiovascularly active agent with a classic psychedelic or stimulant suggests a provisional hemodynamic interaction.",
+    "confidence": "low",
+    "mechanism": "Both drugs can shape blood pressure or pulse, so the main issue is compensatory load rather than a unique toxidrome.",
+    "mechanism_category": "hemodynamic_interaction",
+    "timing": null,
+    "evidence_gaps": "- Watch for dizziness, palpitations, syncope, or sustained tachycardia. - Hydration and dose caution matter more than exact label matching here.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "e9a8e8ba58db91758637a07d9eac3ec011b0a8d805f6c83d8604c381fce0f112"
+  },
+  {
     "substance_a_id": "mescaline_peyote",
     "substance_b_id": "calcium_channel_blockers",
     "pair_key": "calcium_channel_blockers|mescaline_peyote",
@@ -8556,6 +8952,28 @@
       "beta_dataset"
     ],
     "source_fingerprint": "85ead02e7b972269677df4cde100f8b8669684bc4ebe18f3db1fdde8e9e5b226"
+  },
+  {
+    "substance_a_id": "nbome_series",
+    "substance_b_id": "calcium_channel_blockers",
+    "pair_key": "calcium_channel_blockers|nbome_series",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "A cardiovascularly active agent with a classic psychedelic or stimulant suggests a provisional hemodynamic interaction.",
+    "confidence": "low",
+    "mechanism": "Both drugs can shape blood pressure or pulse, so the main issue is compensatory load rather than a unique toxidrome.",
+    "mechanism_category": "hemodynamic_interaction",
+    "timing": null,
+    "evidence_gaps": "- Watch for dizziness, palpitations, syncope, or sustained tachycardia. - Hydration and dose caution matter more than exact label matching here.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "ceee25b0b14f110ac532901b350cecf90943db8c46133303a75c57ea9314e99b"
   },
   {
     "substance_a_id": "ndri_bupropion",
@@ -8756,6 +9174,28 @@
     "source_fingerprint": "d074ebdcf0f448158c515accdd26b64708a928548341efcc0e8d937065fc2f13"
   },
   {
+    "substance_a_id": "two_c_x",
+    "substance_b_id": "calcium_channel_blockers",
+    "pair_key": "calcium_channel_blockers|two_c_x",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "A cardiovascularly active agent with a classic psychedelic or stimulant suggests a provisional hemodynamic interaction.",
+    "confidence": "low",
+    "mechanism": "Both drugs can shape blood pressure or pulse, so the main issue is compensatory load rather than a unique toxidrome.",
+    "mechanism_category": "hemodynamic_interaction",
+    "timing": null,
+    "evidence_gaps": "- Watch for dizziness, palpitations, syncope, or sustained tachycardia. - Hydration and dose caution matter more than exact label matching here.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "26d846fddd53bf574a0412bfc19836e87ddcc3409430d25b4d0f5a75a04e8730"
+  },
+  {
     "substance_a_id": "yopo",
     "substance_b_id": "calcium_channel_blockers",
     "pair_key": "calcium_channel_blockers|yopo",
@@ -8930,6 +9370,28 @@
       "beta_dataset"
     ],
     "source_fingerprint": "678601d0c475d072726c6c5813997fe6ebfc624ebc952d595b6f8a664569a306"
+  },
+  {
+    "substance_a_id": "cannabis",
+    "substance_b_id": "iboga",
+    "pair_key": "cannabis|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "312705dc680254c8cf4f973e80c4f2e6f183a1c3a71baa5408d454fba82a8b88"
   },
   {
     "substance_a_id": "kambo",
@@ -9482,6 +9944,28 @@
     "source_fingerprint": "c08d5b4dd2888d5d6676eef0685defecf4476bca1d5ada1af6b2a1eb939f0db0"
   },
   {
+    "substance_a_id": "clonidine_guanfacine",
+    "substance_b_id": "iboga",
+    "pair_key": "clonidine_guanfacine|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "1fed6f1c4aca2562b921debb74f71b46c1f520f4c535d0179fc475a8d51eccb6"
+  },
+  {
     "substance_a_id": "kambo",
     "substance_b_id": "clonidine_guanfacine",
     "pair_key": "clonidine_guanfacine|kambo",
@@ -9988,6 +10472,28 @@
     "source_fingerprint": "ec4dd645586e8786e47c8d4dca772a44802f3afd277eb7d8e946088af509d618"
   },
   {
+    "substance_a_id": "dox",
+    "substance_b_id": "clonidine",
+    "pair_key": "clonidine|dox",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "Alpha-2 agonist exposure with a cardiovascularly active partner points to a provisional noradrenergic suppression / hemodynamic interaction.",
+    "confidence": "medium",
+    "mechanism": "Alpha-2 agonists reduce sympathetic outflow and can lower heart rate and blood pressure, making compensatory responses harder to predict.",
+    "mechanism_category": "noradrenergic_suppression",
+    "timing": null,
+    "evidence_gaps": "- Avoid abrupt clonidine or guanfacine changes. - Monitor for dizziness, bradycardia, hypotension, or unusual sedation.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "0c1d9c41848454089c31ff30ea0a31778735a73426af1ff4a21997ff96c57a91"
+  },
+  {
     "substance_a_id": "five_meo_dmt",
     "substance_b_id": "clonidine",
     "pair_key": "clonidine|five_meo_dmt",
@@ -10008,6 +10514,28 @@
       "beta_dataset"
     ],
     "source_fingerprint": "f13b82feac87b65ddfcf780bfac730afb5bbe2a49b86ac738d21b32fcf61c4e6"
+  },
+  {
+    "substance_a_id": "clonidine",
+    "substance_b_id": "iboga",
+    "pair_key": "clonidine|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "4d5dce8911725ac14198f5ba7aca664004dd7639acdc06329b7009e32fd79885"
   },
   {
     "substance_a_id": "kambo",
@@ -10142,6 +10670,28 @@
     "source_fingerprint": "fd00bd25bf49e28e5968436ac7624a86303c9db5cef84e1e30d992348cbd20d8"
   },
   {
+    "substance_a_id": "mdma",
+    "substance_b_id": "clonidine",
+    "pair_key": "clonidine|mdma",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "Alpha-2 agonist exposure with a cardiovascularly active partner points to a provisional noradrenergic suppression / hemodynamic interaction.",
+    "confidence": "medium",
+    "mechanism": "Alpha-2 agonists reduce sympathetic outflow and can lower heart rate and blood pressure, making compensatory responses harder to predict.",
+    "mechanism_category": "noradrenergic_suppression",
+    "timing": null,
+    "evidence_gaps": "- Avoid abrupt clonidine or guanfacine changes. - Monitor for dizziness, bradycardia, hypotension, or unusual sedation.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "31a39ed756b40cbd478a380839b62c0c8168b8f2323ccbd5233dd1ddeb327467"
+  },
+  {
     "substance_a_id": "mescaline_peyote",
     "substance_b_id": "clonidine",
     "pair_key": "clonidine|mescaline_peyote",
@@ -10184,6 +10734,28 @@
       "beta_dataset"
     ],
     "source_fingerprint": "e6ea9efe59116b48936a97420e78fa327ffd1d0ebfcf77c253e1ee6a390d3f1f"
+  },
+  {
+    "substance_a_id": "nbome_series",
+    "substance_b_id": "clonidine",
+    "pair_key": "clonidine|nbome_series",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "Alpha-2 agonist exposure with a cardiovascularly active partner points to a provisional noradrenergic suppression / hemodynamic interaction.",
+    "confidence": "medium",
+    "mechanism": "Alpha-2 agonists reduce sympathetic outflow and can lower heart rate and blood pressure, making compensatory responses harder to predict.",
+    "mechanism_category": "noradrenergic_suppression",
+    "timing": null,
+    "evidence_gaps": "- Avoid abrupt clonidine or guanfacine changes. - Monitor for dizziness, bradycardia, hypotension, or unusual sedation.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "5a14e5f7fca9ad0f0161b9280d53bb192c7c3687549a33c0bfa55aa33650c2c4"
   },
   {
     "substance_a_id": "ndri_bupropion",
@@ -10384,6 +10956,28 @@
     "source_fingerprint": "ed43c714ea71b429e51a118d8a4a1b00297d17ad5221cd79e7ec326b681a6d95"
   },
   {
+    "substance_a_id": "two_c_x",
+    "substance_b_id": "clonidine",
+    "pair_key": "clonidine|two_c_x",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "Alpha-2 agonist exposure with a cardiovascularly active partner points to a provisional noradrenergic suppression / hemodynamic interaction.",
+    "confidence": "medium",
+    "mechanism": "Alpha-2 agonists reduce sympathetic outflow and can lower heart rate and blood pressure, making compensatory responses harder to predict.",
+    "mechanism_category": "noradrenergic_suppression",
+    "timing": null,
+    "evidence_gaps": "- Avoid abrupt clonidine or guanfacine changes. - Monitor for dizziness, bradycardia, hypotension, or unusual sedation.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "5f97ec227a9cd105c2050a9f9c125098bedeade3a7021602490a7e1a0bc46a26"
+  },
+  {
     "substance_a_id": "yopo",
     "substance_b_id": "clonidine",
     "pair_key": "clonidine|yopo",
@@ -10492,6 +11086,28 @@
       "beta_dataset"
     ],
     "source_fingerprint": "f86fac5a5252828af9d68b87f743b9d4a32bfe3bdc141d758195fca7720d3319"
+  },
+  {
+    "substance_a_id": "cocaine",
+    "substance_b_id": "iboga",
+    "pair_key": "cocaine|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "3db399d39dc5ca8ca9b1d0f8df4d8f555466414d507d2e761ea129c8634f97e5"
   },
   {
     "substance_a_id": "kambo",
@@ -10998,6 +11614,50 @@
       "beta_dataset"
     ],
     "source_fingerprint": "4893ead6478776207c796658be0ff5b9762682ae28c76f441ea0184c7bf206af"
+  },
+  {
+    "substance_a_id": "dox",
+    "substance_b_id": "guanfacine",
+    "pair_key": "dox|guanfacine",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "Alpha-2 agonist exposure with a cardiovascularly active partner points to a provisional noradrenergic suppression / hemodynamic interaction.",
+    "confidence": "medium",
+    "mechanism": "Alpha-2 agonists reduce sympathetic outflow and can lower heart rate and blood pressure, making compensatory responses harder to predict.",
+    "mechanism_category": "noradrenergic_suppression",
+    "timing": null,
+    "evidence_gaps": "- Avoid abrupt clonidine or guanfacine changes. - Monitor for dizziness, bradycardia, hypotension, or unusual sedation.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "7fc4efcd02584a743449893ff164985925667ae51738e71f7b2e80d31d6b5e8c"
+  },
+  {
+    "substance_a_id": "dox",
+    "substance_b_id": "iboga",
+    "pair_key": "dox|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "c345f55cea895ca1d5a4bbfa8d619bb2da2eac08d8615c6b806047ee8579983c"
   },
   {
     "substance_a_id": "kambo",
@@ -11507,6 +12167,28 @@
   },
   {
     "substance_a_id": "five_meo_dmt",
+    "substance_b_id": "iboga",
+    "pair_key": "five_meo_dmt|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "f23664b0b8be7da62bb352ab281d407903eb3df68f9134df88b354a204d58a16"
+  },
+  {
+    "substance_a_id": "five_meo_dmt",
     "substance_b_id": "kambo",
     "pair_key": "five_meo_dmt|kambo",
     "origin": "unknown",
@@ -11990,6 +12672,28 @@
     "source_fingerprint": "e5cf6326aa15d64afd6cd6a5cd8e566f88982207f28bd67ed21038668bb2a4c8"
   },
   {
+    "substance_a_id": "guanfacine",
+    "substance_b_id": "iboga",
+    "pair_key": "guanfacine|iboga",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "9df6c05b25825288ec7b4543a10a2a2fea3b1ad21eac61c72f8d93364b62a7e4"
+  },
+  {
     "substance_a_id": "kambo",
     "substance_b_id": "guanfacine",
     "pair_key": "guanfacine|kambo",
@@ -12122,6 +12826,28 @@
     "source_fingerprint": "d8eb8c1c5d8868461e6746fc29b77780470c1154e3bfe76e3456c7f97f97c377"
   },
   {
+    "substance_a_id": "mdma",
+    "substance_b_id": "guanfacine",
+    "pair_key": "guanfacine|mdma",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "Alpha-2 agonist exposure with a cardiovascularly active partner points to a provisional noradrenergic suppression / hemodynamic interaction.",
+    "confidence": "medium",
+    "mechanism": "Alpha-2 agonists reduce sympathetic outflow and can lower heart rate and blood pressure, making compensatory responses harder to predict.",
+    "mechanism_category": "noradrenergic_suppression",
+    "timing": null,
+    "evidence_gaps": "- Avoid abrupt clonidine or guanfacine changes. - Monitor for dizziness, bradycardia, hypotension, or unusual sedation.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "c5777ade13e4550a2d49cc4768bc7014420af11fec4bf13c7b8b7b00085f33a4"
+  },
+  {
     "substance_a_id": "mescaline_peyote",
     "substance_b_id": "guanfacine",
     "pair_key": "guanfacine|mescaline_peyote",
@@ -12164,6 +12890,28 @@
       "beta_dataset"
     ],
     "source_fingerprint": "47a79d2337f49fdcac0bb1911ec75f72a9211a72a7e74c0a3602fb0de4b5d9a7"
+  },
+  {
+    "substance_a_id": "nbome_series",
+    "substance_b_id": "guanfacine",
+    "pair_key": "guanfacine|nbome_series",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "Alpha-2 agonist exposure with a cardiovascularly active partner points to a provisional noradrenergic suppression / hemodynamic interaction.",
+    "confidence": "medium",
+    "mechanism": "Alpha-2 agonists reduce sympathetic outflow and can lower heart rate and blood pressure, making compensatory responses harder to predict.",
+    "mechanism_category": "noradrenergic_suppression",
+    "timing": null,
+    "evidence_gaps": "- Avoid abrupt clonidine or guanfacine changes. - Monitor for dizziness, bradycardia, hypotension, or unusual sedation.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "66f365cb4ce1ea40abeb2aff6b08d6b2fed54c6c7e25bcb08660a2fbbc8a9112"
   },
   {
     "substance_a_id": "ndri_bupropion",
@@ -12364,6 +13112,28 @@
     "source_fingerprint": "6248fa8bd35af78bffbd49a06e5aca7931c9de9ded6b2b04d5fb3bd231d74127"
   },
   {
+    "substance_a_id": "two_c_x",
+    "substance_b_id": "guanfacine",
+    "pair_key": "guanfacine|two_c_x",
+    "origin": "unknown",
+    "interaction_code": "THEORETICAL",
+    "interaction_label": "Theoretical interaction",
+    "risk_scale": 2,
+    "summary": "Alpha-2 agonist exposure with a cardiovascularly active partner points to a provisional noradrenergic suppression / hemodynamic interaction.",
+    "confidence": "medium",
+    "mechanism": "Alpha-2 agonists reduce sympathetic outflow and can lower heart rate and blood pressure, making compensatory responses harder to predict.",
+    "mechanism_category": "noradrenergic_suppression",
+    "timing": null,
+    "evidence_gaps": "- Avoid abrupt clonidine or guanfacine changes. - Monitor for dizziness, bradycardia, hypotension, or unusual sedation.",
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "456d72cd0ad4b0cc32d5cd89aacbea3c0d028a36aa733fdf007c8cee464a3f20"
+  },
+  {
     "substance_a_id": "yopo",
     "substance_b_id": "guanfacine",
     "pair_key": "guanfacine|yopo",
@@ -12384,6 +13154,490 @@
       "beta_dataset"
     ],
     "source_fingerprint": "3bf15295349b24bfa852e1c056729294697fd8cf623e706b0c1f2c3337b30541"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "iboga",
+    "pair_key": "iboga|iboga",
+    "origin": "self",
+    "interaction_code": "SELF",
+    "interaction_label": "Same Entity / N-A",
+    "risk_scale": -1,
+    "summary": "Same entity selected; this is not an interaction pair.",
+    "confidence": "n/a",
+    "mechanism": null,
+    "mechanism_category": "unknown",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "69c41b9a61bb49d6881fcca67cbdba38f3a02dcf582c9e5063ca72d8f04f0829"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "kambo",
+    "pair_key": "iboga|kambo",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "dd9d1b279da245845875f14209249547f6599fcb6d782943c436e968faf0f406"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "ketamine",
+    "pair_key": "iboga|ketamine",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "23cc643ccfa67ad01ee6255c6a556a7bdc1de5be7ff3196426de55a571606a32"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "lamotrigine",
+    "pair_key": "iboga|lamotrigine",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "b6d01643714dc6847a130e9569fb3e2f99e6384058402e137545b80230ab73e5"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "lithium",
+    "pair_key": "iboga|lithium",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "0071ba3a3dd6359748b76a5e1aef0bafe136790ffb4f5591ddd1d260b2c932fc"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "lsd",
+    "pair_key": "iboga|lsd",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "390a71ae410f0737ccad69f90ebbf17e1d388829a70907bbe636eeb47ff9f79d"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "maoi_pharma",
+    "pair_key": "iboga|maoi_pharma",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "f0dcde12605bac9d5a43cb1ec999ba5bfac225209d007f8682617baf161aa48a"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "mdma",
+    "pair_key": "iboga|mdma",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "3a1947494913c716c66d3d1f034b7f073505975d610b6d1d95093c17db49fd2b"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "mescaline_peyote",
+    "pair_key": "iboga|mescaline_peyote",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "2fd3e3d65e86c7996a095b81583eb48a55ed564e86788e304046c117040d6412"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "methylphenidate",
+    "pair_key": "iboga|methylphenidate",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "d51392319dbfe7e1d1eeff8b82cd464c80b2aa3c8de473892444816ba8dd10d1"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "nbome_series",
+    "pair_key": "iboga|nbome_series",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "8a7f22568f7112a9f5c4a04508474c715e42a21fdc997c601b3e5ee2406f179a"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "ndri_bupropion",
+    "pair_key": "iboga|ndri_bupropion",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "b785fa9354022dd5a0ffef3d0c1e5d1badaf2fe9d0d1656a0d9e282220c87d6f"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "nn_dmt",
+    "pair_key": "iboga|nn_dmt",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "b254b32ebbc8c508d7a14f49fa3a5a1219ed10259f72561f22410c3dcd469890"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "psilocybin",
+    "pair_key": "iboga|psilocybin",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "4665553a2bb29fb07a69aa93e9f004e9eeb85902ba063b96863c73020160db1e"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "salvia",
+    "pair_key": "iboga|salvia",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "3ec66e1dcaebdcdc2ce457d09edb46469b88e023d670dc975ed2512d9d466ee2"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "serotonergic_opioids",
+    "pair_key": "iboga|serotonergic_opioids",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "4fc9d1864ff56861c58a78a9f5cd8ef682bf4322a45a78e94ce32d7d0a3dfade"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "snri",
+    "pair_key": "iboga|snri",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "bfd0f23fcf4167e0ff2bf54b54fb7f1d67ba8e7132b99eb8028e3fd3f18214ad"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "ssri",
+    "pair_key": "iboga|ssri",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "1b36cbfe97a4b4e61369d3c353d0bc4279d7aa4d4dd87d1051018ee6ac7d2853"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "tobacco_rape",
+    "pair_key": "iboga|tobacco_rape",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "bc753af2547287ca44b717aba0b27f7e0ea78d966dfc622c89dd0d5fba94dfd7"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "tricyclic_ad",
+    "pair_key": "iboga|tricyclic_ad",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "35ca3fdeee467d0ce68e554406605d766986165bd7d7d1303e49616cc9be441e"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "two_c_x",
+    "pair_key": "iboga|two_c_x",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "88f5ee16f2a6b2b8c729ecf6fdaeff4cad871c201eb09809bf29b64ee7cef7cb"
+  },
+  {
+    "substance_a_id": "iboga",
+    "substance_b_id": "yopo",
+    "pair_key": "iboga|yopo",
+    "origin": "unknown",
+    "interaction_code": "INFERRED",
+    "interaction_label": "Mechanistic inference",
+    "risk_scale": 2,
+    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
+    "confidence": "low",
+    "mechanism": null,
+    "mechanism_category": "psychiatric_destabilization",
+    "timing": null,
+    "evidence_gaps": null,
+    "evidence_tier": null,
+    "field_notes": null,
+    "sources": "beta-0-1-snapshot",
+    "source_refs": [
+      "beta_dataset"
+    ],
+    "source_fingerprint": "6323370660045495dfd0d7f1624d1e21528be6e23317a9e8e45c735b11c008a2"
   },
   {
     "substance_a_id": "kambo",
@@ -14919,23 +16173,23 @@
     "substance_a_id": "ndri_bupropion",
     "substance_b_id": "mdma",
     "pair_key": "mdma|ndri_bupropion",
-    "origin": "unknown",
-    "interaction_code": "INFERRED",
-    "interaction_label": "Mechanistic inference",
-    "risk_scale": 2,
-    "summary": "No explicit interaction classification is loaded for this pair in the current curated dataset.",
-    "confidence": "low",
-    "mechanism": null,
-    "mechanism_category": "psychiatric_destabilization",
+    "origin": "explicit",
+    "interaction_code": "CAU",
+    "interaction_label": "Caution / Mixed interaction",
+    "risk_scale": 3,
+    "summary": "Controlled human data show bupropion changes MDMA exposure and effects, increasing MDMA plasma concentration and prolonging subjective effects while reducing some norepinephrine and cardiostimulant responses.",
+    "confidence": "medium",
+    "mechanism": "Bupropion alters MDMA pharmacokinetics and pharmacodynamics: curated Schmid 2015 chunks report increased MDMA plasma concentrations/prolonged subjective effects and reduced MDMA-induced norepinephrine elevations.",
+    "mechanism_category": "metabolic_interaction",
     "timing": null,
-    "evidence_gaps": null,
+    "evidence_gaps": "Direct evidence is from a small controlled healthy-volunteer study with single-dose MDMA; do not generalize to unsupervised, repeated, high-dose, or medically complex use without human review.",
     "evidence_tier": null,
     "field_notes": null,
     "sources": "beta-0-1-snapshot",
     "source_refs": [
       "beta_dataset"
     ],
-    "source_fingerprint": "b58bb30257a8cc5f5e355b4d589202c1948d0e49817b14cfc9dc6c9e6e9b253a"
+    "source_fingerprint": "06308917a7d180379b7ee367aab6456a86f7033f79d50e9bcbbfc7ae8bfd17a5"
   },
   {
     "substance_a_id": "nn_dmt",

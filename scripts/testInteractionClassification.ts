@@ -14,7 +14,7 @@ import type { InteractionDatasetV2 } from '../src/data/interactionSchemaV2';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 bootstrapDrugDatasetFromRepo(root);
-const datasetPath = path.join(root, 'src/data/interactionDatasetV2.json');
+const datasetPath = path.join(root, 'src/data/interaction_pairs.json');
 
 const assertDeterministicMatch = (
   drugA: string,

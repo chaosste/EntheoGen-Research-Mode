@@ -2,62 +2,66 @@
   "version": "kb_v1",
   "citations": [
     {
-      "source_id": "alma_ayahuasca_interactions_dataset",
-      "citation": "Alma Healing Center. Ayahuasca and medication interactions.",
-      "title": "Alma Healing Center Ayahuasca and Medication Interactions",
+      "source_id": "alma_2026",
+      "citation": "Ayahuasca and medications interactions database. Alma Healing Centre. https://almahealingcenter.com/",
+      "title": "Ayahuasca and medications interactions database",
       "source_type": "expert_dataset",
-      "year": 2025,
-      "url_or_path": "/Users/stephenbeale/Desktop/Alma-Healing-Centre-Ayahuasca-and-medication-interactions.pdf",
-      "citation_id": "alma_ayahuasca_interactions_dataset"
+      "year": 2026,
+      "url_or_path": "https://almahealingcenter.com/",
+      "citation_id": "alma_2026"
     },
     {
-      "source_id": "Benjamin-Malcolm-PharmD-MPH-2023-Ayahuasca-and-Drug-Interaction",
-      "citation": "Benjamin Malcolm PharmD MPH 2023 Ayahuasca And Drug Interaction (n.d.)",
-      "title": "Benjamin Malcolm PharmD MPH 2023 Ayahuasca And Drug Interaction",
+      "source_id": "malcolm_2023",
+      "citation": "Malcolm, B. (2023). Ayahuasca and Drug Interaction: The Good, the Bad, and the Soul. https://www.pharmacy.uconn.edu/wp-content/uploads/sites/2740/2022/01/HO-2-slides-per-page-Ayahuosca-1.pdf",
+      "title": "Ayahuasca and Drug Interaction: The Good, the Bad, and the Soul",
       "source_type": "expert_guideline",
-      "url_or_path": "sources/expert-guidelines/Benjamin-Malcolm-PharmD-MPH-2023-Ayahuasca-and-Drug-Interaction.md",
-      "citation_id": "benjamin_malcolm_pharmd_mph_2023_ayahuasca_and_drug_interaction"
+      "year": 2023,
+      "url_or_path": "https://www.pharmacy.uconn.edu/wp-content/uploads/sites/2740/2022/01/HO-2-slides-per-page-Ayahuosca-1.pdf",
+      "citation_id": "malcolm_2023"
     },
     {
-      "source_id": "gillman_2005_maoi_opioid_serotonin_toxicity",
-      "citation": "Gillman 2005 Maoi Opioid Serotonin Toxicity (n.d.)",
-      "title": "Gillman 2005 Maoi Opioid Serotonin Toxicity",
+      "source_id": "Gilman_2023",
+      "citation": "Gillman, P. K. (2005). Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity. British Journal of Anaesthesia, 95(4), 434–441. https://www.doi.org/10.1093/bja/aei210",
+      "title": "Monoamine oxidase inhibitors, opioid analgesics and serotonin toxicity",
       "source_type": "academic_paper",
-      "url_or_path": "sources/academic-papers/gillman_2005_maoi_opioid_serotonin_toxicity.md",
-      "citation_id": "gillman_2005_maoi_opioid_serotonin_toxicity"
+      "year": 2005,
+      "url_or_path": "https://www.doi.org/10.1093/bja/aei210",
+      "citation_id": "Gilman_2023"
     },
     {
-      "source_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review",
-      "citation": "Halman Et Al 2023 Drug Drug Interactions Involving Classic Psychedelics A Systematic Review (n.d.)",
-      "title": "Halman Et Al 2023 Drug Drug Interactions Involving Classic Psychedelics A Systematic Review",
+      "source_id": "halman_2024",
+      "citation": "Halman, A., Kong, G., Sarris, J., & Perkins, D. (2024). Drug–drug interactions involving classic psychedelics: A systematic review. Journal of Psychopharmacology, 38(1), 3–18. https://www.doi.org/10.1177/02698811231211219",
+      "title": "Drug–drug interactions involving classic psychedelics: A systematic review",
       "source_type": "academic_paper",
-      "url_or_path": "sources/academic-papers/Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review.md",
-      "citation_id": "halman_et_al_2023_drug_drug_interactions_involving_classic_psychedelics_a_systematic_review"
+      "year": 2024,
+      "url_or_path": "https://www.doi.org/10.1177/02698811231211219",
+      "citation_id": "halman_2024"
     },
     {
-      "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
-      "citation": "Perplexity Ayahuasca Interactions Synthesis 2026 (n.d.)",
-      "title": "Perplexity Ayahuasca Interactions Synthesis 2026",
+      "source_id": "entheogen_2026",
+      "citation": "In-house research using Perplexity; full citation to follow.",
+      "title": "In-house research using Perplexity",
       "source_type": "expert_guideline",
-      "url_or_path": "sources/expert-guidelines/perplexity_ayahuasca_interactions_synthesis_2026.md",
-      "citation_id": "perplexity_ayahuasca_interactions_synthesis_2026",
-      "status": "unverified"
+      "year": 2026,
+      "citation_id": "entheogen_2026"
     },
     {
-      "source_id": "Ruffell-et-al-2020-The Pharmacological-interaction-of-compounds-in-ayahuasca-a-systemic-review",
-      "citation": "Ruffell Et Al 2020 The Pharmacological Interaction Of Compounds In Ayahuasca A Systemic Review (n.d.)",
-      "title": "Ruffell Et Al 2020 The Pharmacological Interaction Of Compounds In Ayahuasca A Systemic Review",
+      "source_id": "ruffell_2023",
+      "citation": "Ruffell, S. G. D., Crosland-Wood, M., Palmer, R., Netzband, N., Tsang, W., Weiss, B., Gandy, S., Cowley-Court, T., Halman, A., McHerron, D., Jong, A., Kennedy, T., White, E., Perkins, D., Terhune, D. B., & Sarris, J. (2023). Ayahuasca: A review of historical, pharmacological, and therapeutic aspects. Psychiatry and Clinical Neurosciences Reports, 2(4), e146. https://www.doi.org/10.1002/pcn5.146",
+      "title": "Ayahuasca: A review of historical, pharmacological, and therapeutic aspects",
       "source_type": "academic_paper",
-      "url_or_path": "sources/academic-papers/Ruffell-et-al-2020-The Pharmacological-interaction-of-compounds-in-ayahuasca-a-systemic-review.md",
-      "citation_id": "ruffell_et_al_2020_the_pharmacological_interaction_of_compounds_in_ayahuasca_a_systemic_review"
+      "year": 2023,
+      "url_or_path": "https://www.doi.org/10.1002/pcn5.146",
+      "citation_id": "ruffell_2023"
     },
     {
-      "source_id": "schmid_2015_bupropion_mdma_interactions",
-      "citation": "Schmid 2015 Bupropion Mdma Interactions (n.d.)",
-      "title": "Schmid 2015 Bupropion Mdma Interactions",
+      "source_id": "schmid_2025",
+      "citation": "Schmid, Y., Rickli, A., Schaffner, A., Duthaler, U., Grouzmann, E., Hysek, C. M., & Liechti, M. E. (2015). Interactions between bupropion and 3,4-methylenedioxymethamphetamine in healthy subjects. The Journal of Pharmacology and Experimental Therapeutics, 353(1), 102–111. https://psycnet.apa.org/record/2015-18021-003",
+      "title": "Interactions between bupropion and 3,4-methylenedioxymethamphetamine in healthy subjects",
       "source_type": "academic_paper",
-      "url_or_path": "sources/academic-papers/schmid_2015_bupropion_mdma_interactions.md",
-      "citation_id": "schmid_2015_bupropion_mdma_interactions"
+      "year": 2015,
+      "url_or_path": "https://psycnet.apa.org/record/2015-18021-003",
+      "citation_id": "schmid_2025"
     }
   ]
 }

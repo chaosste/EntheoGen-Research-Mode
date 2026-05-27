@@ -1,16 +1,15 @@
 import type { UIInteraction } from './uiInteractions';
 
 export type ResearchModeFilters = {
-  showLowConfidence: boolean;
+  showSourceGaps: boolean;
   showInferredOrTheoretical: boolean;
-  showEvidenceGaps: boolean;
+  showSourceLinked: boolean;
 };
 
 const includesText = (value: string, token: string) => value.toLowerCase().includes(token.toLowerCase());
-const nonBlank = (value: unknown): value is string => typeof value === 'string' && value.trim().length > 0;
 
 export function hasActiveResearchModeFilters(filters: ResearchModeFilters): boolean {
-  return filters.showLowConfidence || filters.showInferredOrTheoretical || filters.showEvidenceGaps;
+  return filters.showSourceGaps || filters.showInferredOrTheoretical || filters.showSourceLinked;
 }
 
 export function filterInteractionsForResearchMode(
@@ -26,13 +25,12 @@ export function filterInteractionsForResearchMode(
 
     const raw = interaction.raw ?? {};
 
-    if (filters.showLowConfidence) {
-      const hasLowConfidence =
-        includesText(interaction.confidenceLabel, 'low') ||
-        includesText(interaction.confidenceLabel, 'unknown') ||
-        includesText(String(raw.confidence ?? ''), 'low') ||
-        includesText(String(raw.confidence ?? ''), 'n/a');
-      if (!hasLowConfidence) return false;
+    if (filters.showSourceGaps) {
+      const hasSourceGap =
+        !interaction.isEvidenceBacked ||
+        includesText(String(raw.sources ?? ''), 'source-gap') ||
+        includesText(String(raw.sources ?? ''), 'source_gap');
+      if (!hasSourceGap) return false;
     }
 
     if (filters.showInferredOrTheoretical) {
@@ -45,13 +43,8 @@ export function filterInteractionsForResearchMode(
       if (!hasInferredOrTheoretical) return false;
     }
 
-    if (filters.showEvidenceGaps) {
-      const hasEvidenceGap =
-        nonBlank(raw.evidence_gaps) ||
-        includesText(String(raw.sources ?? ''), 'source-gap') ||
-        includesText(String(raw.evidence_tier ?? ''), 'mechanistic') ||
-        includesText(String(raw.evidence_tier ?? ''), 'theoretical');
-      if (!hasEvidenceGap) return false;
+    if (filters.showSourceLinked) {
+      if (!interaction.isEvidenceBacked) return false;
     }
 
     return true;

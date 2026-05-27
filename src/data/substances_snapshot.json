@@ -133,6 +133,20 @@
     "notes": "Similar class to clonidine but often somewhat less sedating."
   },
   {
+    "id": "ghb_gamma_hydroxybutyrate",
+    "name": "GHB",
+    "class": "Pharmaceutical Or Recreational",
+    "mechanismTag": "CNS depressant",
+    "notes": "DrugBank DB01440 and DB09072; recreational GHB and prescription sodium oxybate share this substance_id."
+  },
+  {
+    "id": "iboga",
+    "name": "Iboga / Ibogaine",
+    "class": "Ceremonial Psychedelic",
+    "mechanismTag": "Indole alkaloid / kappa-opioid and NMDA-linked activity",
+    "notes": "Iboga/ibogaine node for addiction-treatment and interaction coverage; added after initial foundation set."
+  },
+  {
     "id": "kambo",
     "name": "Kambo",
     "class": "Ceremonial Adjunct",
@@ -198,6 +212,13 @@
     "class": "Ceremonial Psychedelic",
     "mechanismTag": "Phenethylamine psychedelic",
     "notes": "Listed with spacing guidance relative to ayahuasca."
+  },
+  {
+    "id": "mephedrone",
+    "name": "Mephedrone",
+    "class": "Recreational Stimulant",
+    "mechanismTag": "Monoamine releasing stimulant",
+    "notes": "DrugBank DB13108; cathinone stimulant with serotonergic activity in DrugBank export."
   },
   {
     "id": "methylphenidate",

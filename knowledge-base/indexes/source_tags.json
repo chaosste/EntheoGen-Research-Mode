@@ -2,7 +2,7 @@
   "version": "kb_v1",
   "source_tags": [
     {
-      "source_id": "Halman-et-al-2023-Drug-drug-interactions-involving-classic-psychedelics-a-systematic-review",
+      "source_id": "halman_2024",
       "tags": [
         "academic_paper",
         "contraindicated",
@@ -13,7 +13,7 @@
       ]
     },
     {
-      "source_id": "Ruffell-et-al-2020-The Pharmacological-interaction-of-compounds-in-ayahuasca-a-systemic-review",
+      "source_id": "ruffell_2023",
       "tags": [
         "academic_paper",
         "contraindicated",
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "source_id": "alma_ayahuasca_interactions_dataset",
+      "source_id": "alma_2026",
       "tags": [
         "5_hydroxytryptophan",
         "MAOIs",
@@ -195,7 +195,7 @@
       ]
     },
     {
-      "source_id": "perplexity_ayahuasca_interactions_synthesis_2026",
+      "source_id": "entheogen_2026",
       "tags": [
         "ai_synthesis",
         "avoid",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "source_id": "gillman_2005_maoi_opioid_serotonin_toxicity",
+      "source_id": "Gilman_2023",
       "tags": [
         "academic_paper",
         "contraindicated",
@@ -235,7 +235,7 @@
       ]
     },
     {
-      "source_id": "schmid_2015_bupropion_mdma_interactions",
+      "source_id": "schmid_2025",
       "tags": [
         "academic_paper",
         "contraindicated",
@@ -246,7 +246,7 @@
       ]
     },
     {
-      "source_id": "Benjamin-Malcolm-PharmD-MPH-2023-Ayahuasca-and-Drug-Interaction",
+      "source_id": "malcolm_2023",
       "tags": [
         "contraindicated",
         "contraindication",
