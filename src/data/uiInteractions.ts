@@ -29,6 +29,8 @@ export interface UIInteraction {
    * Prefer this for rendering; do not render raw mechanismCategory directly.
    */
   mechanismDisplayLabel: string;
+  /** Human-facing labels for primary + secondary mechanism categories. */
+  mechanismCategoryTags: string[];
   /** Stable source identifiers attached to this row, excluding placeholders/source gaps. */
   sourceIds: string[];
   /** APA-style inline citation labels derived from stable source ids. */
@@ -138,7 +140,9 @@ type NewShapeRow = {
   source_refs?: unknown;
 };
 
-type NormalizableRow = Partial<InteractionPair> & NewShapeRow;
+type NormalizableRow = Partial<InteractionPair> & NewShapeRow & {
+  mechanism_categories?: string[] | string;
+};
 
 const coerceIds = (row: NormalizableRow): [string, string] => {
   const oldA = typeof row.substance_a_id === 'string' ? row.substance_a_id : '';
@@ -200,6 +204,38 @@ const warnIfBlankDisplayContract = (interaction: UIInteraction) => {
   }
 };
 
+const mechanismTagsForRow = (
+  row: NormalizableRow,
+  mechanismCategory: MechanismCategory | 'unknown',
+  isSelfPair: boolean
+): string[] => {
+  if (isSelfPair) return [];
+
+  const rawCategories = typeof row.mechanism_categories !== 'undefined' && Array.isArray(row.mechanism_categories)
+    ? row.mechanism_categories.filter((entry): entry is string => typeof entry === 'string')
+    : [];
+
+  const parsedFromString = typeof row.mechanism_categories === 'string'
+    ? row.mechanism_categories
+      .replace(/^\[/, '')
+      .replace(/\]$/, '')
+      .split(/\s+/)
+      .map((entry) => entry.trim())
+      .filter(Boolean)
+    : [];
+
+  const categories = rawCategories.length > 0 ? rawCategories : parsedFromString;
+  const ordered = categories.length > 0
+    ? categories
+    : (mechanismCategory !== 'unknown' ? [mechanismCategory] : []);
+
+  const labels = ordered.map((category) =>
+    asNonBlank(MECHANISM_DISPLAY_LABELS[category as MechanismCategory], category.replace(/_/g, ' '))
+  );
+
+  return [...new Set(labels)];
+};
+
 export function normalizeInteraction(row: NormalizableRow): UIInteraction {
   const { drugNameById, interactionRowByKey } = getAppDatasetRegistry();
   const [substanceAId, substanceBId] = coerceIds(row);
@@ -226,6 +262,7 @@ export function normalizeInteraction(row: NormalizableRow): UIInteraction {
   const mechanismDisplayLabel = isSelfPair
     ? SELF_DISPLAY
     : asNonBlank(MECHANISM_DISPLAY_LABELS[mechanismCategory as MechanismCategory], UNKNOWN_DISPLAY);
+  const mechanismCategoryTags = mechanismTagsForRow(row, mechanismCategory, isSelfPair);
 
   const headline = isSelfPair
     ? SELF_DISPLAY
@@ -243,6 +280,7 @@ export function normalizeInteraction(row: NormalizableRow): UIInteraction {
     riskDisplayLabel,
     mechanismCategory,
     mechanismDisplayLabel,
+    mechanismCategoryTags,
     sourceIds,
     citationLabels,
     isEvidenceBacked: sourceIds.length > 0,
@@ -274,6 +312,7 @@ export function getUIInteraction(substanceAId: string, substanceBId: string): UI
       riskDisplayLabel: SELF_DISPLAY,
       mechanismCategory: 'unknown',
       mechanismDisplayLabel: SELF_DISPLAY,
+      mechanismCategoryTags: [],
       sourceIds: [],
       citationLabels: [],
       isEvidenceBacked: false,
@@ -293,6 +332,7 @@ export function getUIInteraction(substanceAId: string, substanceBId: string): UI
     riskDisplayLabel: RISK_DISPLAY_LABELS.UNK,
     mechanismCategory: 'unknown',
     mechanismDisplayLabel: UNKNOWN_DISPLAY,
+    mechanismCategoryTags: [],
     sourceIds: [],
     citationLabels: [],
     isEvidenceBacked: false,

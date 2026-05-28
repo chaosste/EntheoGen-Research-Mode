@@ -25,6 +25,7 @@ const KNOWN_INLINE_CITATIONS: Record<string, string> = {
   Gilman_2023: '(Gillman, 2005)',
   halman_2024: '(Halman et al., 2024)',
   entheogen_2026: '(EntheoGen, 2026)',
+  ruffell_2020: '(Ruffell et al., 2020)',
   ruffell_2023: '(Ruffell et al., 2023)',
   schmid_2025: '(Schmid et al., 2015)'
 };
@@ -99,3 +100,9 @@ export const formatInlineCitation = (sourceId: string): string => {
 
 export const formatInlineCitations = (sourceIds: string[]): string[] =>
   unique(sourceIds.map(formatInlineCitation));
+
+export const getSourceTitle = (sourceId: string): string | undefined => {
+  const entry = sourceById.get(sourceId);
+  const title = entry?.title?.trim();
+  return title || undefined;
+};

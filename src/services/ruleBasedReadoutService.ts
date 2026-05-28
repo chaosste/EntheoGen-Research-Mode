@@ -1,11 +1,15 @@
 import type { MechanismCategory } from '../data/drugData';
+import type { PairCoverageMeta } from '../data/interactionDataset';
+import { getSourceTitle } from '../data/sourceCitations';
 
-type EvidenceContext = {
+export type EvidenceContext = {
   riskScale?: number;
   confidence?: string;
   evidenceTier?: string | null;
   mechanism?: string;
   mechanismCategory?: MechanismCategory;
+  mechanismCategoryDisplayLabel?: string;
+  mechanismCategoryTags?: string[];
   practicalGuidance?: string;
   timing?: string;
   evidenceGaps?: string;
@@ -15,6 +19,8 @@ type EvidenceContext = {
   sourceIds?: string[];
   sourceTitles?: string[];
   chunkRefs?: string[];
+  coverage?: PairCoverageMeta;
+  evidenceExcerpts?: string;
 };
 
 const RISK_ACTIONS: Record<number, string> = {
@@ -56,22 +62,90 @@ const nonEmptyList = (values?: string[]): string[] =>
 
 const MECHANISM_FAMILY_TEXT: Partial<Record<MechanismCategory, string>> = {
   serotonergic: 'serotonergic interaction pattern',
+  serotonergic_toxicity: 'serotonergic toxicity interaction pattern',
   maoi: 'MAOI-mediated interaction pattern',
+  maoi_potentiation: 'MAOI potentiation interaction pattern',
   qt_prolongation: 'QT / rhythm-load interaction pattern',
+  qt_or_arrhythmia_risk: 'QT or arrhythmia risk interaction pattern',
   sympathomimetic: 'sympathomimetic interaction pattern',
+  sympathomimetic_load: 'sympathomimetic load interaction pattern',
   cns_depressant: 'CNS-depressant interaction pattern',
   pharmacodynamic_cns_depression: 'pharmacodynamic CNS-depression pattern',
   anticholinergic: 'anticholinergic interaction pattern',
+  anticholinergic_delirium: 'anticholinergic delirium interaction pattern',
   dopaminergic: 'dopaminergic interaction pattern',
+  dopaminergic_load: 'dopaminergic load interaction pattern',
   glutamatergic: 'glutamatergic interaction pattern',
+  glutamatergic_dissociation: 'glutamatergic dissociation interaction pattern',
   glutamate_modulation: 'glutamate-modulation interaction pattern',
   gabaergic: 'GABAergic interaction pattern',
+  gabaergic_modulation: 'GABAergic modulation interaction pattern',
   stimulant_stack: 'stacked stimulant-load interaction pattern',
   psychedelic_potentiation: 'psychedelic potentiation pattern',
+  psychedelic_intensification: 'psychedelic intensification pattern',
   cardiovascular_load: 'cardiovascular-load interaction pattern',
   hemodynamic_interaction: 'hemodynamic interaction pattern',
+  psychiatric_destabilization: 'psychiatric destabilization interaction pattern',
   noradrenergic_suppression: 'noradrenergic suppression pattern',
-  ion_channel_modulation: 'ion-channel modulation pattern'
+  adrenergic_rebound: 'adrenergic rebound interaction pattern',
+  rebound_hypertension: 'rebound hypertension interaction pattern',
+  ion_channel_modulation: 'ion-channel modulation pattern',
+  seizure_threshold: 'seizure threshold interaction pattern',
+  respiratory_depression: 'respiratory depression interaction pattern',
+  dehydration_or_electrolyte_risk: 'dehydration or electrolyte risk interaction pattern',
+  operational_or_behavioral_risk: 'operational or behavioral risk interaction pattern'
+};
+
+const resolveMechanismFamily = (context?: EvidenceContext): string | undefined => {
+  if (context?.mechanismCategory) {
+    const mapped = MECHANISM_FAMILY_TEXT[context.mechanismCategory];
+    if (mapped) return mapped;
+  }
+  const displayLabel = context?.mechanismCategoryDisplayLabel?.trim();
+  if (displayLabel && displayLabel !== 'Unknown' && displayLabel !== 'Same substance / not an interaction') {
+    return `${displayLabel.toLowerCase()} interaction pattern`;
+  }
+  return undefined;
+};
+
+const formatSourceListing = (sourceIds: string[], sourceTitles: string[]): string | null => {
+  if (sourceIds.length === 0) return null;
+
+  const normalizedTitles = sourceTitles.flatMap((title) => {
+    if (title.includes('|')) {
+      return title.split('|').map((part) => part.trim()).filter(Boolean);
+    }
+    return [title.trim()].filter(Boolean);
+  });
+
+  const lines = sourceIds.map((sourceId, index) => {
+    const title = getSourceTitle(sourceId) ?? normalizedTitles[index] ?? normalizedTitles[0] ?? '';
+    return title ? `- ${sourceId} — ${title}` : `- ${sourceId}`;
+  });
+
+  return ['Sources:', ...lines].join('\n');
+};
+
+const formatChunkSummary = (
+  chunkRefs: string[],
+  coverage?: PairCoverageMeta
+): string | null => {
+  if (chunkRefs.length === 0) return null;
+
+  if (coverage && coverage.exact_chunk_count + coverage.class_level_chunk_count > 0) {
+    const exactCount = coverage.exact_chunk_count;
+    const classCount = coverage.class_level_chunk_count;
+    if (exactCount > 0 && classCount > 0) {
+      return `Linked chunks: ${chunkRefs.length} total (${exactCount} pair-specific mention${exactCount === 1 ? '' : 's'}, ${classCount} class-level mechanism/context)`;
+    }
+    if (exactCount > 0) {
+      return `Linked chunks: ${chunkRefs.length} total (${exactCount} pair-specific)`;
+    }
+    return `Linked chunks: ${chunkRefs.length} total (${classCount} class-level mechanism/context)`;
+  }
+
+  const chunkSample = chunkRefs.slice(0, 3).join('; ');
+  return `Linked chunks: ${chunkRefs.length}${chunkSample ? ` (sample: ${chunkSample})` : ''}`;
 };
 
 export async function getInteractionExplanation(
@@ -95,7 +169,10 @@ export async function getInteractionExplanation(
   const sourceIds = nonEmptyList(context?.sourceIds);
   const sourceTitles = nonEmptyList(context?.sourceTitles);
   const chunkRefs = nonEmptyList(context?.chunkRefs);
-  const chunkSample = chunkRefs.slice(0, 3).join('; ');
+  const mechanismFamily = resolveMechanismFamily(context);
+  const mechanismTags = nonEmptyList(context?.mechanismCategoryTags);
+  const sourceListing = formatSourceListing(sourceIds, sourceTitles);
+  const chunkSummary = formatChunkSummary(chunkRefs, context?.coverage);
   const hasEvidenceDetail = !!(
     confidence ||
     evidenceTier ||
@@ -103,9 +180,6 @@ export async function getInteractionExplanation(
     sourceTitles.length ||
     chunkRefs.length
   );
-  const mechanismFamily = context?.mechanismCategory
-    ? MECHANISM_FAMILY_TEXT[context.mechanismCategory]
-    : undefined;
 
   const lines = [
     `### Source-linked interaction readout`,
@@ -119,17 +193,20 @@ export async function getInteractionExplanation(
       ? `**Source status:** Evidence-backed ${citationText}`
       : `**Source status:** Source gap`,
     confidence ? `**Confidence tag:** ${confidence}` : "",
+    Number.isFinite(riskScale) && riskScale >= 0 ? `**Risk scale:** ${riskScale} / 5` : "",
     mechanismFamily ? `**Mechanism family:** ${mechanismFamily}.` : "",
+    mechanismTags.length ? `**Mechanism tags:** ${mechanismTags.join('; ')}` : "",
     hasEvidenceDetail
       ? [
         `#### Dataset evidence detail`,
         evidenceTier ? `Tier: ${evidenceTier}` : "",
         sourceIds.length ? `Source IDs (${sourceIds.length}): ${sourceIds.join('; ')}` : "",
-        sourceTitles.length ? `Source titles: ${sourceTitles.join('; ')}` : "",
-        chunkRefs.length ? `Linked chunks: ${chunkRefs.length}${chunkSample ? ` (sample: ${chunkSample})` : ""}` : ""
+        sourceListing ?? (sourceTitles.length ? `Source titles: ${sourceTitles.join('; ')}` : ""),
+        chunkSummary ?? ""
       ].filter(Boolean).join('\n')
       : "",
     mechanism ? `#### Mechanism of concern\n${mechanism}` : "",
+    context?.evidenceExcerpts ?? "",
     practicalGuidance ? `#### Practical guidance\n${practicalGuidance}` : "",
     timing ? `#### Timing / spacing\n${timing}` : "",
     fieldNotes ? `#### Field notes\n${fieldNotes}` : "",
@@ -153,9 +230,7 @@ export async function getDrugSummary(
     const fieldNotes = context?.fieldNotes;
     const evidenceGaps = context?.evidenceGaps;
     const citationText = context?.citationLabels?.join('; ');
-    const mechanismFamily = context?.mechanismCategory
-      ? MECHANISM_FAMILY_TEXT[context.mechanismCategory]
-      : undefined;
+    const mechanismFamily = resolveMechanismFamily(context);
 
     return [
       `### Combined-effects estimate (rule-based)`,

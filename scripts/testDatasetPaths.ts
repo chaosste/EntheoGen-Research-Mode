@@ -65,5 +65,13 @@ assert.ok(
   publicBundle.interactionPairs.endsWith(path.join('public', 'dataset', 'interaction_pairs.json')),
   'public interaction_pairs path should resolve under public/dataset'
 );
+assert.ok(
+  publicBundle.chunkExcerpts.endsWith(path.join('public', 'dataset', 'chunk_excerpts.json')),
+  'public chunk_excerpts path should resolve under public/dataset'
+);
+assert.ok(
+  appExports.chunkExcerptsExport.endsWith(path.join('src', 'exports', 'chunk_excerpts.json')),
+  'chunkExcerptsExport path should resolve to app export snapshot file'
+);
 
 console.log('dataset path helper checks passed');

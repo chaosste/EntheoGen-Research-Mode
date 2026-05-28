@@ -1,6 +1,7 @@
 {
   "schemaVersion": "1",
-  "generatedAt": "2026-05-27T23:42:51.185Z",
-  "interactionPairsSha256": "3facf8217e35f202bbc97394b692c2491a47d57db82d6b7201155cbee8752c10",
-  "substancesSnapshotSha256": "c88bb55817245700eddcaf45733ef6a27712d2d0951dc39d89bcd45fdb0f6322"
+  "generatedAt": "2026-05-28T09:12:48.899Z",
+  "interactionPairsSha256": "b6e936bb8be95bc2bf32283137c36ef7489521d45392aa060a07be235f9765b0",
+  "substancesSnapshotSha256": "c88bb55817245700eddcaf45733ef6a27712d2d0951dc39d89bcd45fdb0f6322",
+  "chunkExcerptsSha256": "4f7f86d93a95236381984b4c49778e891f36dc5772322322af03fd320c5e4ebd"
 }

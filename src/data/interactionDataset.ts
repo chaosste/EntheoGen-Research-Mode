@@ -12,6 +12,12 @@ export type InteractionCode =
   | 'THEORETICAL'
   | 'DETERMINISTIC';
 
+export interface PairCoverageMeta {
+  exact_chunk_count: number;
+  class_level_chunk_count: number;
+  exact_chunk_ids: string[];
+}
+
 export interface InteractionPair {
   substance_a_id: string;
   substance_b_id: string;
@@ -24,6 +30,8 @@ export interface InteractionPair {
   confidence: string;
   mechanism: string | null;
   mechanism_category: string;
+  mechanism_categories?: string[];
+  coverage?: PairCoverageMeta;
   timing: string | null;
   evidence_gaps: string | null;
   evidence_tier: string | null;
