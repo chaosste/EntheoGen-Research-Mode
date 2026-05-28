@@ -1,8 +1,9 @@
 /**
  * Reads EntheoGen-Dataset-Beta-0-1 CSV exports and writes app snapshot artifacts:
  * - src/exports/interaction_pairs.json
+ * - src/exports/chunk_excerpts.json
  * - src/data/substances_snapshot.json
- * - public/dataset/{interaction_pairs.json,substances_snapshot.json,manifest.json}
+ * - public/dataset/{interaction_pairs.json,chunk_excerpts.json,substances_snapshot.json,manifest.json}
  *
  * Usage:
  *   npx tsx scripts/buildAppDatasetFromBeta.ts [path/to/beta/data]
@@ -27,6 +28,7 @@ import {
   getPublicDatasetBundlePaths
 } from './datasetPaths';
 import { APP_DATASET_SCHEMA_VERSION } from '../src/data/datasetManifest';
+import { buildChunkExcerptRecord, type ChunkExcerptIndex } from '../src/data/chunkExcerpts';
 
 type AppInteractionCode =
   | 'LOW'
@@ -44,7 +46,24 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 
 type CsvRow = Record<string, string>;
-type PairCoverageByKey = Map<string, { sourceRefs: string[]; sourceTitles: string[]; chunkRefs: string[] }>;
+type PairCoverageEntry = {
+  sourceRefs: string[];
+  sourceTitles: string[];
+  chunkRefs: string[];
+  exactChunkCount: number;
+  classLevelChunkCount: number;
+  exactChunkIds: string[];
+};
+type PairCoverageByKey = Map<string, PairCoverageEntry>;
+
+const DEFAULT_FOUNDATION_CHUNKS_JSONL = path.join(
+  root,
+  'src',
+  'curation',
+  'foundation-bundles',
+  '20260527-allowlist-merge-v3',
+  'chunks.jsonl'
+);
 
 function cleanCsvValue(value?: string | null): string {
   const trimmed = value?.trim() ?? '';
@@ -72,6 +91,22 @@ function splitDelimitedRefs(value: string | undefined): string[] {
     .filter(Boolean);
 }
 
+function splitSourceTitles(value: string | undefined): string[] {
+  const refs = splitDelimitedRefs(value);
+  if (refs.length === 1 && refs[0].includes('|')) {
+    return refs[0].split('|').map((entry) => entry.trim()).filter(Boolean);
+  }
+  return refs;
+}
+
+function parseMechanismCategories(value: string | undefined): string[] {
+  const cleaned = cleanCsvValue(value);
+  if (!cleaned) return [];
+  const inner = cleaned.replace(/^\[/, '').replace(/\]$/, '').trim();
+  if (!inner) return [];
+  return inner.split(/\s+/).map((entry) => entry.trim()).filter(Boolean);
+}
+
 function buildPairCoverageIndex(rows: CsvRow[]): PairCoverageByKey {
   const byKey: PairCoverageByKey = new Map();
   for (const row of rows) {
@@ -79,8 +114,11 @@ function buildPairCoverageIndex(rows: CsvRow[]): PairCoverageByKey {
     if (!pairKey) continue;
     byKey.set(pairKey, {
       sourceRefs: splitDelimitedRefs(row.source_ids),
-      sourceTitles: splitDelimitedRefs(row.source_titles),
-      chunkRefs: splitDelimitedRefs(row.all_chunk_ids)
+      sourceTitles: splitSourceTitles(row.source_titles),
+      chunkRefs: splitDelimitedRefs(row.all_chunk_ids),
+      exactChunkCount: Number.parseInt(cleanCsvValue(row.exact_chunk_count), 10) || 0,
+      classLevelChunkCount: Number.parseInt(cleanCsvValue(row.class_level_chunk_count), 10) || 0,
+      exactChunkIds: splitDelimitedRefs(row.exact_chunk_ids)
     });
   }
   return byKey;
@@ -150,6 +188,7 @@ function buildInteractions(rows: CsvRow[], pairCoverageByKey: PairCoverageByKey,
     const risk_scale = Number.isFinite(riskNum) ? riskNum : defaultRiskScale(interaction_code);
 
     const mechanism_category = cleanCsvValue(row.primary_mechanism_category) || 'unknown';
+    const mechanism_categories = parseMechanismCategories(row.mechanism_categories);
     const sourceRefs = pairCoverage?.sourceRefs.length
       ? pairCoverage.sourceRefs
       : (hasPairCoverage ? [] : ['beta_dataset']);
@@ -168,6 +207,14 @@ function buildInteractions(rows: CsvRow[], pairCoverageByKey: PairCoverageByKey,
       confidence: normalizeBetaConfidence(row.classification_confidence ?? ''),
       mechanism: cleanCsvValue(row.mechanism_summary) || null,
       mechanism_category,
+      mechanism_categories: mechanism_categories.length ? mechanism_categories : undefined,
+      coverage: pairCoverage
+        ? {
+          exact_chunk_count: pairCoverage.exactChunkCount,
+          class_level_chunk_count: pairCoverage.classLevelChunkCount,
+          exact_chunk_ids: pairCoverage.exactChunkIds
+        }
+        : undefined,
       timing: cleanCsvValue(row.timing_guidance) || null,
       evidence_gaps: cleanCsvValue(row.evidence_gaps) || null,
       evidence_tier: null,
@@ -199,6 +246,32 @@ function buildSubstances(rows: CsvRow[]) {
       supersededBy
     };
   });
+}
+
+function buildChunkExcerptIndex(
+  chunkIds: Set<string>,
+  chunksJsonlPath: string
+): ChunkExcerptIndex {
+  if (chunkIds.size === 0 || !fs.existsSync(chunksJsonlPath)) {
+    return {};
+  }
+
+  const index: ChunkExcerptIndex = {};
+  const lines = fs.readFileSync(chunksJsonlPath, 'utf8').split('\n');
+  for (const line of lines) {
+    if (!line.trim()) continue;
+    const chunk = JSON.parse(line) as {
+      chunk_id: string;
+      source_id: string;
+      source_title: string;
+      year?: number;
+      authors?: string[];
+      chunk_text: string;
+    };
+    if (!chunkIds.has(chunk.chunk_id)) continue;
+    index[chunk.chunk_id] = buildChunkExcerptRecord(chunk);
+  }
+  return index;
 }
 
 function main() {
@@ -235,30 +308,45 @@ function main() {
 
   const substanceRows = readCsvObjects(betaCsv.substancesCsv);
   const interactionRows = readCsvObjects(betaCsv.interactionsCsv);
-  const hasPairCoverage = fs.existsSync(betaCsv.pairCoverageCsv);
-  const pairCoverageRows = hasPairCoverage ? readCsvObjects(betaCsv.pairCoverageCsv) : [];
+  const pairCoverageCsv = fs.existsSync(betaCsv.pairCoverageCsv)
+    ? betaCsv.pairCoverageCsv
+    : path.join(root, 'src/curation/foundation-bundles/20260527-allowlist-merge-v3/pair_coverage.csv');
+  const hasPairCoverage = fs.existsSync(pairCoverageCsv);
+  const pairCoverageRows = hasPairCoverage ? readCsvObjects(pairCoverageCsv) : [];
   const pairCoverageByKey = buildPairCoverageIndex(pairCoverageRows);
 
   const substances = buildSubstances(substanceRows);
   const interactions = buildInteractions(interactionRows, pairCoverageByKey, hasPairCoverage);
+  const chunkIds = new Set<string>();
+  for (const interaction of interactions) {
+    for (const chunkId of interaction.chunk_refs ?? []) {
+      chunkIds.add(chunkId);
+    }
+  }
+  const chunkExcerptIndex = buildChunkExcerptIndex(chunkIds, DEFAULT_FOUNDATION_CHUNKS_JSONL);
 
   const outSubstances = exports.substancesSnapshot;
   const outInteractions = exports.interactionPairsExport;
+  const outChunkExcerpts = exports.chunkExcerptsExport;
 
   const substancesJson = `${JSON.stringify(substances, null, 2)}\n`;
   const interactionsJson = `${JSON.stringify(interactions, null, 2)}\n`;
+  const chunkExcerptsJson = `${JSON.stringify(chunkExcerptIndex, null, 2)}\n`;
 
   fs.writeFileSync(outSubstances, substancesJson, 'utf8');
   fs.writeFileSync(outInteractions, interactionsJson, 'utf8');
+  fs.writeFileSync(outChunkExcerpts, chunkExcerptsJson, 'utf8');
 
   fs.mkdirSync(publicBundle.dir, { recursive: true });
   fs.writeFileSync(publicBundle.substancesSnapshot, substancesJson, 'utf8');
   fs.writeFileSync(publicBundle.interactionPairs, interactionsJson, 'utf8');
+  fs.writeFileSync(publicBundle.chunkExcerpts, chunkExcerptsJson, 'utf8');
   const manifest = {
     schemaVersion: APP_DATASET_SCHEMA_VERSION,
     generatedAt: new Date().toISOString(),
     interactionPairsSha256: createHash('sha256').update(interactionsJson, 'utf8').digest('hex'),
-    substancesSnapshotSha256: createHash('sha256').update(substancesJson, 'utf8').digest('hex')
+    substancesSnapshotSha256: createHash('sha256').update(substancesJson, 'utf8').digest('hex'),
+    chunkExcerptsSha256: createHash('sha256').update(chunkExcerptsJson, 'utf8').digest('hex')
   };
   fs.writeFileSync(publicBundle.manifest, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
 
@@ -267,6 +355,9 @@ function main() {
   );
   console.log(
     `Wrote ${interactions.length} interactions -> ${path.relative(process.cwd(), outInteractions)}`
+  );
+  console.log(
+    `Wrote ${Object.keys(chunkExcerptIndex).length} chunk excerpts -> ${path.relative(process.cwd(), outChunkExcerpts)}`
   );
   console.log(
     `Source refs enriched from pair coverage: ${hasPairCoverage ? 'yes' : 'no (fallback to beta_dataset)'}`

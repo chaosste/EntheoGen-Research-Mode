@@ -74,6 +74,18 @@ assert.match(sourcedPairReadout, /Source IDs: /);
 assert.match(sourcedPairReadout, /Dataset evidence detail/);
 assert.match(sourcedPairReadout, /Linked chunks:/);
 
+const enrichedPairReadout = await renderPairReadout(context, 'ayahuasca', 'cocaine', true);
+assert.match(enrichedPairReadout, /Pair: Ayahuasca \+ Cocaine/);
+assert.match(enrichedPairReadout, /\(Ruffell et al\., 2020\)/);
+assert.match(enrichedPairReadout, /\*\*Risk scale:\*\* 5 \/ 5/);
+assert.match(enrichedPairReadout, /Mechanism tags:/);
+assert.match(enrichedPairReadout, /Sympathomimetic load; Serotonergic toxicity/);
+assert.match(enrichedPairReadout, /1 pair-specific mention, 19 class-level mechanism\/context/);
+assert.match(enrichedPairReadout, /#### Mechanism of concern/);
+assert.match(enrichedPairReadout, /#### Supporting source excerpts/);
+assert.match(enrichedPairReadout, /Evidence linkage note:/);
+assert.doesNotMatch(enrichedPairReadout, /#### Field notes/);
+
 const csv = buildCsvReadouts(context, resolveCsvSubject(context, 'Antipsychotics'));
 assert.ok(csv.startsWith('pair,readout\n'), 'CSV should use pair,readout header');
 assert.match(csv, /Antipsychotics \+ Ayahuasca/);

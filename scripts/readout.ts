@@ -6,6 +6,8 @@ import { LEGEND } from '../src/data/drugData';
 import type { InteractionPair } from '../src/data/interactionDataset';
 import { registerAppDataset } from '../src/data/datasetRegistry';
 import { getUIInteraction, type UIInteraction } from '../src/data/uiInteractions';
+import type { ChunkExcerptIndex } from '../src/data/chunkExcerpts';
+import { buildReadoutEvidenceContext } from '../src/data/readoutEvidenceContext';
 import { getInteractionExplanation } from '../src/services/ruleBasedReadoutService';
 import { getPublicDatasetBundlePaths } from './datasetPaths';
 
@@ -31,6 +33,7 @@ export type ReadoutContext = {
   drugs: Drug[];
   pairs: InteractionPair[];
   drugById: Map<string, Drug>;
+  chunkExcerptIndex: ChunkExcerptIndex;
 };
 
 type CsvSubject =
@@ -256,13 +259,17 @@ export function createReadoutContext(root = defaultRoot): ReadoutContext {
   const paths = getPublicDatasetBundlePaths(root);
   const drugs = readJsonFile<Drug[]>(paths.substancesSnapshot);
   const pairs = readJsonFile<InteractionPair[]>(paths.interactionPairs);
+  const chunkExcerptIndex = fs.existsSync(paths.chunkExcerpts)
+    ? readJsonFile<ChunkExcerptIndex>(paths.chunkExcerpts)
+    : {};
   registerAppDataset(drugs, pairs);
 
   return {
     root,
     drugs,
     pairs,
-    drugById: new Map(drugs.map((drug) => [drug.id, drug] as const))
+    drugById: new Map(drugs.map((drug) => [drug.id, drug] as const)),
+    chunkExcerptIndex
   };
 }
 
@@ -420,23 +427,7 @@ export async function renderPairReadout(
     substanceB.name,
     interaction.riskDisplayLabel,
     interaction.headline,
-    {
-      riskScale: riskScaleForInteraction(row, interaction),
-      mechanism: row?.mechanism ?? undefined,
-      mechanismCategory: interaction.mechanismCategory === 'unknown'
-        ? undefined
-        : interaction.mechanismCategory as MechanismCategory,
-      timing: row?.timing ?? undefined,
-      evidenceGaps: row?.evidence_gaps ?? undefined,
-      confidence: row?.confidence ?? undefined,
-      evidenceTier: row?.evidence_tier ?? null,
-      fieldNotes: row?.field_notes ?? undefined,
-      isEvidenceBacked: interaction.isEvidenceBacked,
-      citationLabels: interaction.citationLabels,
-      sourceIds: sourceIdsListForPair(row),
-      sourceTitles: sourceTitlesForPair(row),
-      chunkRefs: chunkRefsForPair(row)
-    }
+    buildReadoutEvidenceContext(interaction, row, context.chunkExcerptIndex)
   );
 
   const sourceLine = includeSources ? [`Source IDs: ${sourceIdsForPair(row)}`] : [];

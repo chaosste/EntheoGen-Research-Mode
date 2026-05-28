@@ -19,6 +19,7 @@
     "changelog:dataset": "tsx scripts/generateDatasetChangelog.ts",
     "test:changelog": "tsx scripts/testDatasetChangelog.ts",
     "test:readout": "tsx scripts/testReadoutCli.ts",
+    "test:readout-enrichment": "tsx scripts/testReadoutEnrichment.ts",
     "test:dataset-paths": "tsx scripts/testDatasetPaths.ts",
     "test:local-dataset-audit": "tsx scripts/testLocalDatasetAudit.ts",
     "test:beta-mapping": "tsx scripts/testBetaDatasetMapping.ts",

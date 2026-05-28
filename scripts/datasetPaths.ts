@@ -26,6 +26,7 @@ export interface CanonicalDatasetSourcePaths {
 export interface AppDatasetExportPaths {
   interactionPairsExport: string;
   substancesSnapshot: string;
+  chunkExcerptsExport: string;
 }
 
 /** Static files copied into Vite `public/` for runtime fetch (Mode A). */
@@ -34,6 +35,7 @@ export interface PublicDatasetBundlePaths {
   manifest: string;
   interactionPairs: string;
   substancesSnapshot: string;
+  chunkExcerpts: string;
 }
 
 export interface BetaCsvPaths {
@@ -63,7 +65,8 @@ export function getCanonicalDatasetSourcePaths(root = repoRoot): CanonicalDatase
 export function getAppDatasetExportPaths(root = repoRoot): AppDatasetExportPaths {
   return {
     interactionPairsExport: path.join(root, 'src', 'exports', 'interaction_pairs.json'),
-    substancesSnapshot: path.join(root, 'src', 'data', 'substances_snapshot.json')
+    substancesSnapshot: path.join(root, 'src', 'data', 'substances_snapshot.json'),
+    chunkExcerptsExport: path.join(root, 'src', 'exports', 'chunk_excerpts.json')
   };
 }
 
@@ -73,7 +76,8 @@ export function getPublicDatasetBundlePaths(root = repoRoot): PublicDatasetBundl
     dir,
     manifest: path.join(dir, 'manifest.json'),
     interactionPairs: path.join(dir, 'interaction_pairs.json'),
-    substancesSnapshot: path.join(dir, 'substances_snapshot.json')
+    substancesSnapshot: path.join(dir, 'substances_snapshot.json'),
+    chunkExcerpts: path.join(dir, 'chunk_excerpts.json')
   };
 }
 

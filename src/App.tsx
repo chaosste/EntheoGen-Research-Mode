@@ -39,6 +39,9 @@ import {
   type ResearchModeFilters
 } from './data/researchMode';
 import { getInteractionExplanation, getDrugSummary } from './services/ruleBasedReadoutService';
+import { buildReadoutEvidenceContext } from './data/readoutEvidenceContext';
+import { getChunkExcerptIndex } from './data/chunkExcerptRegistry';
+import { getAppDatasetRegistry } from './data/datasetRegistry';
 import logoVine from './assets/logo-vine.png';
 import referencesMd from '../knowledge-base/sources/Reference_List.md?raw';
 import publicDocsMd from '../docs/public-documentation.md?raw';
@@ -419,7 +422,6 @@ export default function App() {
     const localResolvedInteraction = selectedDrug1 && selectedDrug2
       ? getUIInteraction(selectedDrug1, selectedDrug2)
       : null;
-    const localMechanismCategory = localResolvedInteraction?.mechanismCategory;
     const localInteractionCode = localResolvedInteraction?.riskLabel || null;
     const localInteraction = localInteractionCode ? LEGEND[localInteractionCode] : null;
 
@@ -427,42 +429,23 @@ export default function App() {
     const d2Obj = getDRUGS().find(d => d.id === selectedDrug2);
     const d1Name = d1Obj?.name || selectedDrug1;
     const d2Name = d2Obj?.name || selectedDrug2;
-    const rawSourceIds = Array.isArray(localResolvedInteraction?.raw?.source_refs)
-      ? localResolvedInteraction.raw.source_refs.filter((value): value is string => typeof value === 'string')
-      : [];
-    const rawSourceTitles = Array.isArray(localResolvedInteraction?.raw?.source_titles)
-      ? localResolvedInteraction.raw.source_titles.filter((value): value is string => typeof value === 'string')
-      : [];
-    const rawChunkRefs = Array.isArray(localResolvedInteraction?.raw?.chunk_refs)
-      ? localResolvedInteraction.raw.chunk_refs.filter((value): value is string => typeof value === 'string')
-      : [];
-    const rawConfidence = typeof localResolvedInteraction?.raw?.confidence === 'string'
-      ? localResolvedInteraction.raw.confidence
-      : undefined;
-    const rawEvidenceTier = typeof localResolvedInteraction?.raw?.evidence_tier === 'string'
-      ? localResolvedInteraction.raw.evidence_tier
-      : null;
+    const pairKey = [selectedDrug1 || '', selectedDrug2 || ''].sort().join('|');
+    const pairRow = getAppDatasetRegistry().interactionRowByKey.get(pairKey);
 
     try {
       // Evidence-grounded interaction explanation for paired selections.
       if (selectedDrug1 && selectedDrug2 && localInteraction && localResolvedInteraction) {
+        const readoutContext = buildReadoutEvidenceContext(
+          localResolvedInteraction,
+          pairRow,
+          getChunkExcerptIndex()
+        );
         const interactionReadout = await getInteractionExplanation(
           d1Name,
           d2Name,
           localResolvedInteraction.riskDisplayLabel,
           localResolvedInteraction.headline,
-          {
-            riskScale: localInteraction.riskScale,
-            mechanismCategory: localMechanismCategory as MechanismCategory | undefined,
-            fieldNotes: localResolvedInteraction.notes,
-            isEvidenceBacked: localResolvedInteraction.isEvidenceBacked,
-            citationLabels: localResolvedInteraction.citationLabels,
-            confidence: rawConfidence,
-            evidenceTier: rawEvidenceTier,
-            sourceIds: rawSourceIds,
-            sourceTitles: rawSourceTitles,
-            chunkRefs: rawChunkRefs
-          }
+          readoutContext
         );
         setExplanation(interactionReadout);
       }
@@ -471,13 +454,9 @@ export default function App() {
       // Rule-based summary (single or combined).
       const targetDrug1 = selectedDrug1 ? d1Name : d2Name;
       const targetDrug2 = (selectedDrug1 && selectedDrug2) ? d2Name : undefined;
-      const profile = await getDrugSummary(targetDrug1, targetDrug2, {
-        riskScale: localInteraction?.riskScale,
-        mechanismCategory: localMechanismCategory as MechanismCategory | undefined,
-        fieldNotes: localResolvedInteraction?.notes,
-        isEvidenceBacked: localResolvedInteraction?.isEvidenceBacked,
-        citationLabels: localResolvedInteraction?.citationLabels
-      });
+      const profile = await getDrugSummary(targetDrug1, targetDrug2, localResolvedInteraction
+        ? buildReadoutEvidenceContext(localResolvedInteraction, pairRow, getChunkExcerptIndex())
+        : undefined);
       setSummary(profile);
     } catch (err) {
       console.error("Readout error:", err);

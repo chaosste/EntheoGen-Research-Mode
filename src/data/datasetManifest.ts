@@ -13,4 +13,5 @@ export interface AppDatasetManifest {
   generatedAt: string;
   interactionPairsSha256: string;
   substancesSnapshotSha256: string;
+  chunkExcerptsSha256?: string;
 }
