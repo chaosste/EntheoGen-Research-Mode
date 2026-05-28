@@ -17,7 +17,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import {
-  mapBetaClassificationToAppCode,
+  resolveBetaInteractionCode,
   normalizeBetaConfidence
 } from './betaDatasetMapping';
 import {
@@ -91,8 +91,9 @@ function fingerprintPair(row: CsvRow): string {
     pair_key: row.pair_key,
     substance_a_id: row.substance_a_id,
     substance_b_id: row.substance_b_id,
-    classification_code: row.classification_code,
+    classification_code: row.classification_code ?? '',
     risk_score: row.risk_score,
+    risk_label: row.risk_label,
     headline: row.headline
   });
   return createHash('sha256').update(payload).digest('hex');
@@ -126,10 +127,11 @@ function normalizeInteractionLabel(interactionCode: AppInteractionCode, label: s
 }
 
 function deriveOrigin(row: CsvRow): 'self' | 'explicit' | 'unknown' {
-  if (row.is_self_pair?.toUpperCase() === 'TRUE' || row.classification_code === 'SELF') {
+  const interactionCode = resolveBetaInteractionCode(row.classification_code, row.risk_label, row.is_self_pair);
+  if (interactionCode === 'SELF') {
     return 'self';
   }
-  if (row.classification_code === 'INFERRED' || row.classification_code === 'THEORETICAL') {
+  if (interactionCode === 'INFERRED' || interactionCode === 'THEORETICAL') {
     return 'unknown';
   }
   return 'explicit';
@@ -137,7 +139,11 @@ function deriveOrigin(row: CsvRow): 'self' | 'explicit' | 'unknown' {
 
 function buildInteractions(rows: CsvRow[], pairCoverageByKey: PairCoverageByKey, hasPairCoverage: boolean) {
   return rows.map((row) => {
-    const interaction_code = mapBetaClassificationToAppCode(row.classification_code) as AppInteractionCode;
+    const interaction_code = resolveBetaInteractionCode(
+      row.classification_code,
+      row.risk_label,
+      row.is_self_pair
+    ) as AppInteractionCode;
     const pairCoverage = pairCoverageByKey.get(row.pair_key);
 
     const riskNum = parseRiskScore(row.risk_score);
