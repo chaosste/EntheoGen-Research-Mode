@@ -48,6 +48,6 @@
 
 @layer components {
   .markdown-body {
-    @apply prose prose-invert prose-p:font-serif prose-p:leading-relaxed prose-p:text-[1.05rem] prose-headings:font-sans prose-headings:font-semibold prose-a:text-indigo-400 prose-strong:text-white max-w-none text-[var(--text-primary)];
+    @apply prose prose-invert prose-p:font-serif prose-p:leading-8 prose-p:text-[1.05rem] prose-p:my-4 prose-headings:font-sans prose-headings:font-semibold prose-headings:mt-8 prose-headings:mb-4 prose-h3:text-[1.95rem] prose-h4:text-[1.2rem] prose-li:my-1.5 prose-a:text-indigo-400 prose-strong:text-white max-w-none text-[var(--text-primary)];
   }
 }

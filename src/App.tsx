@@ -737,65 +737,11 @@ export default function App() {
                 </div>
               )}
 
-              {/* AI Interaction Insight (Only if 2 drugs) */}
-              {drug1 && drug2 && interaction && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
-                  className="glass-panel rounded-[2rem] p-8 md:p-10 relative overflow-hidden group"
-                >
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
-
-                  <div className="flex items-center justify-between mb-8 relative z-10 border-b border-white/10 pb-4">
-                    <div className="flex items-center gap-3 text-indigo-400">
-                      <Sparkles className={`w-5 h-5 ${isLoadingExplanation ? 'animate-pulse' : ''}`} />
-                      <span className="text-xs font-bold uppercase tracking-[0.2em]">Evidence Snapshot</span>
-                    </div>
-                    {isLoadingExplanation && (
-                      <div className="flex gap-1">
-                        <motion.div animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 1.5 }} className="w-1.5 h-1.5 bg-indigo-400 rounded-full" />
-                        <motion.div animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 1.5, delay: 0.3 }} className="w-1.5 h-1.5 bg-indigo-400 rounded-full" />
-                        <motion.div animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 1.5, delay: 0.6 }} className="w-1.5 h-1.5 bg-indigo-400 rounded-full" />
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="relative z-10 mb-6 flex flex-wrap gap-2">
-                    {resolvedInteraction && (
-                      <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--text-muted)]">
-                        <ShieldAlert className="w-3.5 h-3.5 text-indigo-300" />
-                        {resolvedInteraction.isEvidenceBacked
-                          ? `Evidence-backed ${resolvedInteraction.citationLabels.join('; ')}`
-                          : 'Source gap'}
-                      </span>
-                    )}
-                    {mechanismFamilyLabel && (
-                      <span className="inline-flex items-center rounded-full border border-indigo-400/20 bg-indigo-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-indigo-200">
-                        Mechanism family: {mechanismFamilyLabel}
-                      </span>
-                    )}
-                  </div>
-
-                  {isLoadingExplanation ? (
-                    <div className="space-y-4 relative z-10 opacity-50">
-                      <div className="h-4 bg-white/10 rounded w-3/4 animate-pulse"></div>
-                      <div className="h-4 bg-white/10 rounded w-full animate-pulse delay-75"></div>
-                      <div className="h-4 bg-white/10 rounded w-5/6 animate-pulse delay-150"></div>
-                    </div>
-                  ) : (
-                    <div className="markdown-body">
-                      <Markdown>{explanation}</Markdown>
-                    </div>
-                  )}
-                </motion.div>
-              )}
-
-              {/* Detailed Summary */}
+              {/* Rule-Based Context */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
+                transition={{ delay: 0.2 }}
                 className="glass-panel rounded-[2rem] p-8 md:p-10 relative overflow-hidden"
               >
                 <div className="absolute top-0 left-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
@@ -813,6 +759,10 @@ export default function App() {
                     </div>
                   )}
                 </div>
+                <p className="relative z-10 -mt-4 mb-6 text-xs leading-relaxed text-[var(--text-muted)]">
+                  <span className="font-semibold uppercase tracking-[0.12em] text-emerald-200">Rule-based context</span>
+                  {' '}is generated from curated interaction rules and structured dataset fields rather than free-form AI prediction.
+                </p>
 
                 {isLoadingSummary ? (
                   <div className="space-y-4 relative z-10 opacity-50">
@@ -840,6 +790,64 @@ export default function App() {
                   </div>
                 )}
               </motion.div>
+
+              {/* Evidence Snapshot (Only if 2 drugs) */}
+              {drug1 && drug2 && interaction && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="glass-panel rounded-[2rem] p-8 md:p-10 relative overflow-hidden group"
+                >
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+
+                  <div className="flex items-center justify-between mb-8 relative z-10 border-b border-white/10 pb-4">
+                    <div className="flex items-center gap-3 text-indigo-400">
+                      <Sparkles className={`w-5 h-5 ${isLoadingExplanation ? 'animate-pulse' : ''}`} />
+                      <span className="text-xs font-bold uppercase tracking-[0.2em]">Evidence Snapshot</span>
+                    </div>
+                    {isLoadingExplanation && (
+                      <div className="flex gap-1">
+                        <motion.div animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 1.5 }} className="w-1.5 h-1.5 bg-indigo-400 rounded-full" />
+                        <motion.div animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 1.5, delay: 0.3 }} className="w-1.5 h-1.5 bg-indigo-400 rounded-full" />
+                        <motion.div animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 1.5, delay: 0.6 }} className="w-1.5 h-1.5 bg-indigo-400 rounded-full" />
+                      </div>
+                    )}
+                  </div>
+                  <p className="relative z-10 -mt-4 mb-6 text-xs leading-relaxed text-[var(--text-muted)]">
+                    <span className="font-semibold uppercase tracking-[0.12em] text-indigo-200">Evidence-backed</span>
+                    {' '}means this readout is anchored to linked dataset sources and chunk references, not generated without citations.
+                  </p>
+
+                  <div className="relative z-10 mb-6 flex flex-wrap gap-2">
+                    {resolvedInteraction && (
+                      <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--text-muted)]">
+                        <ShieldAlert className="w-3.5 h-3.5 text-indigo-300" />
+                        {resolvedInteraction.isEvidenceBacked
+                          ? `Evidence-backed ${resolvedInteraction.citationLabels.join('; ').toUpperCase()}`
+                          : 'Source gap'}
+                      </span>
+                    )}
+                    {mechanismFamilyLabel && (
+                      <span className="inline-flex items-center rounded-full border border-indigo-400/20 bg-indigo-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-indigo-200">
+                        Mechanism family: {mechanismFamilyLabel}
+                      </span>
+                    )}
+                  </div>
+
+                  {isLoadingExplanation ? (
+                    <div className="space-y-4 relative z-10 opacity-50">
+                      <div className="h-4 bg-white/10 rounded w-3/4 animate-pulse"></div>
+                      <div className="h-4 bg-white/10 rounded w-full animate-pulse delay-75"></div>
+                      <div className="h-4 bg-white/10 rounded w-5/6 animate-pulse delay-150"></div>
+                    </div>
+                  ) : (
+                    <div className="markdown-body">
+                      <Markdown>{explanation}</Markdown>
+                    </div>
+                  )}
+                </motion.div>
+              )}
             </motion.div>
           )}
         </AnimatePresence>

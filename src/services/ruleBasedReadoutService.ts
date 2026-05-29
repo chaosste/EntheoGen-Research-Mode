@@ -1,6 +1,5 @@
 import type { MechanismCategory } from '../data/drugData';
 import type { PairCoverageMeta } from '../data/interactionDataset';
-import { getSourceTitle } from '../data/sourceCitations';
 
 export type EvidenceContext = {
   riskScale?: number;
@@ -108,24 +107,6 @@ const resolveMechanismFamily = (context?: EvidenceContext): string | undefined =
   return undefined;
 };
 
-const formatSourceListing = (sourceIds: string[], sourceTitles: string[]): string | null => {
-  if (sourceIds.length === 0) return null;
-
-  const normalizedTitles = sourceTitles.flatMap((title) => {
-    if (title.includes('|')) {
-      return title.split('|').map((part) => part.trim()).filter(Boolean);
-    }
-    return [title.trim()].filter(Boolean);
-  });
-
-  const lines = sourceIds.map((sourceId, index) => {
-    const title = getSourceTitle(sourceId) ?? normalizedTitles[index] ?? normalizedTitles[0] ?? '';
-    return title ? `- ${sourceId} — ${title}` : `- ${sourceId}`;
-  });
-
-  return ['Sources:', ...lines].join('\n');
-};
-
 const formatChunkSummary = (
   chunkRefs: string[],
   coverage?: PairCoverageMeta
@@ -147,6 +128,38 @@ const formatChunkSummary = (
   const chunkSample = chunkRefs.slice(0, 3).join('; ');
   return `Linked chunks: ${chunkRefs.length}${chunkSample ? ` (sample: ${chunkSample})` : ''}`;
 };
+
+const includesSubstanceName = (text: string, substanceName: string): boolean =>
+  text.toLowerCase().includes(substanceName.toLowerCase());
+
+const withExplicitSubject = (
+  text: string,
+  subject: string,
+  counterpart?: string
+): string => {
+  const trimmed = text.trim();
+  if (!trimmed) return trimmed;
+
+  if (includesSubstanceName(trimmed, subject)) {
+    return trimmed;
+  }
+
+  const startsWithListed = /^listed as\s+/i.test(trimmed);
+  const startsWithContraindicated = /^contraindicated\b/i.test(trimmed);
+  if (startsWithListed || startsWithContraindicated) {
+    const normalized = trimmed.charAt(0).toLowerCase() + trimmed.slice(1);
+    return `${subject} is ${normalized}`;
+  }
+
+  if (counterpart && includesSubstanceName(trimmed, counterpart)) {
+    return `${subject}: ${trimmed}`;
+  }
+
+  return trimmed;
+};
+
+const formatLabeledParagraph = (label: string, value: string): string =>
+  `**${label}:**\n\n${value}`;
 
 export async function getInteractionExplanation(
   drug1: string,
@@ -171,8 +184,11 @@ export async function getInteractionExplanation(
   const chunkRefs = nonEmptyList(context?.chunkRefs);
   const mechanismFamily = resolveMechanismFamily(context);
   const mechanismTags = nonEmptyList(context?.mechanismCategoryTags);
-  const sourceListing = formatSourceListing(sourceIds, sourceTitles);
   const chunkSummary = formatChunkSummary(chunkRefs, context?.coverage);
+  const coreInterpretation = withExplicitSubject(interactionDescription, drug2, drug1);
+  const clarifiedFieldNotes = fieldNotes
+    ? withExplicitSubject(fieldNotes, drug2, drug1)
+    : undefined;
   const hasEvidenceDetail = !!(
     confidence ||
     evidenceTier ||
@@ -181,39 +197,44 @@ export async function getInteractionExplanation(
     chunkRefs.length
   );
 
-  const lines = [
+  const primaryFacts = [
     `### Source-linked interaction readout`,
-    `**Classification:** ${interactionLabel}`,
-    `**Core interpretation:** ${interactionDescription}`,
-    ``,
-    `**Action posture:** ${action}`,
-    special ? `**Specific consensus note:** ${special}` : "",
-    ``,
-    context?.isEvidenceBacked && citationText
-      ? `**Source status:** Evidence-backed ${citationText}`
-      : `**Source status:** Source gap`,
-    confidence ? `**Confidence tag:** ${confidence}` : "",
-    Number.isFinite(riskScale) && riskScale >= 0 ? `**Risk scale:** ${riskScale} / 5` : "",
-    mechanismFamily ? `**Mechanism family:** ${mechanismFamily}.` : "",
-    mechanismTags.length ? `**Mechanism tags:** ${mechanismTags.join('; ')}` : "",
-    hasEvidenceDetail
-      ? [
-        `#### Dataset evidence detail`,
-        evidenceTier ? `Tier: ${evidenceTier}` : "",
-        sourceIds.length ? `Source IDs (${sourceIds.length}): ${sourceIds.join('; ')}` : "",
-        sourceListing ?? (sourceTitles.length ? `Source titles: ${sourceTitles.join('; ')}` : ""),
-        chunkSummary ?? ""
-      ].filter(Boolean).join('\n')
-      : "",
+    formatLabeledParagraph('Classification', interactionLabel),
+    formatLabeledParagraph('Core interpretation', coreInterpretation),
+    formatLabeledParagraph('Action posture', action),
+    special ? formatLabeledParagraph('Specific consensus note', special) : "",
+    confidence ? formatLabeledParagraph('Confidence tag', confidence) : "",
+    Number.isFinite(riskScale) && riskScale >= 0 ? formatLabeledParagraph('Risk scale', `${riskScale} / 5`) : "",
+  ].filter(Boolean).join('\n\n');
+
+  const evidenceDetails = hasEvidenceDetail
+    ? [
+      `#### Dataset evidence detail`,
+      evidenceTier ? `Tier: ${evidenceTier}` : "",
+      sourceIds.length ? `Source IDs (${sourceIds.length}): ${sourceIds.join('; ')}` : "",
+      chunkSummary ?? ""
+    ].filter(Boolean).join('\n\n')
+    : "";
+
+  const sections = [
+    primaryFacts,
     mechanism ? `#### Mechanism of concern\n${mechanism}` : "",
+    mechanismFamily ? formatLabeledParagraph('Mechanism family', `${mechanismFamily}.`) : "",
+    mechanismTags.length ? formatLabeledParagraph('Mechanism tags', mechanismTags.join('; ')) : "",
+    context?.isEvidenceBacked && citationText
+      ? formatLabeledParagraph('Source status', `Evidence-backed ${citationText}`)
+      : formatLabeledParagraph('Source status', 'Source gap'),
+    hasEvidenceDetail
+      ? evidenceDetails
+      : "",
     context?.evidenceExcerpts ?? "",
     practicalGuidance ? `#### Practical guidance\n${practicalGuidance}` : "",
     timing ? `#### Timing / spacing\n${timing}` : "",
-    fieldNotes ? `#### Field notes\n${fieldNotes}` : "",
+    clarifiedFieldNotes ? `#### Field notes\n${clarifiedFieldNotes}` : "",
     evidenceGaps ? `#### Remaining uncertainty\n${evidenceGaps}` : ""
   ].filter(Boolean);
 
-  return lines.join("\n");
+  return sections.join("\n\n");
 }
 
 export async function getDrugSummary(
@@ -231,31 +252,33 @@ export async function getDrugSummary(
     const evidenceGaps = context?.evidenceGaps;
     const citationText = context?.citationLabels?.join('; ');
     const mechanismFamily = resolveMechanismFamily(context);
+    const sourceStatusText = context?.isEvidenceBacked && citationText
+      ? `Evidence-backed ${citationText}.`
+      : 'Source gap';
+
+    const clarifiedFieldNotes = fieldNotes
+      ? withExplicitSubject(fieldNotes, drug2Name, drug1Name)
+      : undefined;
 
     return [
       `### Combined-effects estimate (rule-based)`,
       `This section is generated from curated interaction rules, not free-form AI prediction.`,
-      ``,
-      `**Pair:** ${drug1Name} + ${drug2Name}`,
-      `**Risk posture:** ${action}`,
-      special ? `**Consensus note:** ${special}` : "",
-      context?.isEvidenceBacked && citationText
-        ? `**Source status:** Evidence-backed ${citationText}`
-        : `**Source status:** Source gap`,
-      mechanismFamily ? `**Mechanism family:** ${mechanismFamily}.` : "",
-      ``,
+      formatLabeledParagraph('Pair', `${drug1Name} + ${drug2Name}`),
+      formatLabeledParagraph('Risk posture', action),
+      special ? formatLabeledParagraph('Consensus note', special) : "",
+      mechanismFamily ? formatLabeledParagraph('Mechanism family', `${mechanismFamily}.`) : "",
+      formatLabeledParagraph('Source status', sourceStatusText),
       practicalGuidance ? `### Operational guidance\n${practicalGuidance}` : "",
       timing ? `### Timing / washout\n${timing}` : "",
-      fieldNotes ? `### Field-use note\n${fieldNotes}` : "",
+      clarifiedFieldNotes ? `### Field-use note\n${clarifiedFieldNotes}` : "",
       evidenceGaps ? `### What remains uncertain\n${evidenceGaps}` : "",
       `### Why this is limited`,
       `Subjective psychoactive effects vary by dose, route, physiology, medications, and context. This tool intentionally does not claim precise personal effect prediction.`,
-      ``,
       `### Safety boundary`,
       `This is educational harm-reduction information, not medical advice.`
     ]
       .filter(Boolean)
-      .join("\n");
+      .join("\n\n");
   }
 
   return [
